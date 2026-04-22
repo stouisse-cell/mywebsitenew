@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Spotlight | Rabat-Salé-Kénitra & Kénitra | Rahim International</title>
+<meta name="description" content="A grounded market spotlight on the Rabat-Salé-Kénitra region, with Kénitra as an emerging property opportunity shaped by rail, industry, affordability, coastline, and under-served buyer information.">
+<meta name="keywords" content="Rabat Salé Kénitra real estate, Kenitra property investment, Morocco market spotlight, Kenitra apartments, Morocco emerging property market">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Didact+Gothic&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #081a33;
+    --navy-mid: #10294a;
+    --navy-soft: #17375f;
+    --ink: #07111f;
+    --gold: #d2b486;
+    --gold-deep: #b76a3f;
+    --copper: #b76a3f;
+    --copper-dark: #87452c;
+    --cream: #f4f7f8;
+    --steel: #e6edf1;
+    --white: #ffffff;
+    --text-dark: #07111f;
+    --text-muted: #657384;
+    --border: rgba(8, 26, 51, 0.12);
+    --border-warm: rgba(210, 180, 134, 0.24);
+    --shadow: 0 28px 80px rgba(8, 26, 51, 0.18);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Didact Gothic', sans-serif;
+    background: var(--navy);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+  a { color: inherit; }
+  img, video, svg { display: block; max-width: 100%; }
+
+  .site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    min-height: 70px;
+    padding: 0.8rem 5%;
+    background: rgba(7, 17, 31, 0.96);
+    border-bottom: 1px solid var(--border-warm);
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    text-decoration: none;
+    min-width: max-content;
+  }
+  .brand-mark { width: 38px; height: 32px; flex: 0 0 auto; }
+  .brand-name {
+    font-family: 'Perandory', 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+  }
+  .brand-name span { color: var(--white); }
+  .brand-text {
+    display: grid;
+    gap: 0.1rem;
+    line-height: 1;
+  }
+  .brand-subtitle {
+    font-size: 0.54rem;
+    font-weight: 500;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.58);
+    white-space: nowrap;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.8rem, 1.8vw, 2rem);
+    list-style: none;
+  }
+  .nav-links a,
+  .nav-dropdown-toggle,
+  .nav-cta {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: inherit;
+    transition: color 0.3s, background 0.3s, border-color 0.3s;
+  }
+  .nav-dropdown-toggle {
+    border: 0;
+    background: transparent;
+    cursor: default;
+  }
+  .nav-links a,
+  .nav-dropdown-toggle { color: rgba(255, 255, 255, 0.7); }
+  .nav-links a:hover,
+  .nav-links a:focus-visible,
+  .nav-dropdown-toggle:hover,
+  .nav-dropdown-toggle:focus-visible,
+  .nav-links a.active { color: var(--gold); }
+  .nav-dropdown { position: relative; }
+  .nav-dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .nav-dropdown-toggle::after {
+    content: '▾';
+    font-size: 0.6rem;
+    opacity: 0.75;
+  }
+  .nav-dropdown::after {
+    content: '';
+    position: absolute;
+    left: -0.75rem;
+    right: -0.75rem;
+    top: 100%;
+    height: 0;
+  }
+  .nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    min-width: 230px;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background: rgba(11, 28, 54, 0.98);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+    z-index: 300;
+    transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+  }
+  .nav-dropdown-menu a {
+    display: block;
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid rgba(212, 180, 131, 0.12);
+  }
+  .nav-dropdown-menu a:last-child { border-bottom: none; }
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown:focus-within .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%);
+  }
+  .language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .language-switcher a {
+    border: 1px solid rgba(210, 180, 134, 0.24);
+    padding: 0.35rem 0.45rem;
+    line-height: 1;
+  }
+  .language-switcher a.active {
+    background: var(--copper);
+    border-color: var(--copper);
+    color: var(--white);
+  }
+  .nav-cta {
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 0.55rem 1.2rem;
+  }
+  .nav-cta:hover,
+  .nav-cta:focus-visible {
+    background: var(--gold);
+    color: var(--navy);
+  }
+  .nav-toggle { display: none; }
+  .brand-mark-bg { fill: var(--navy); }
+  .brand-mark-gold { fill: var(--gold); }
+  .brand-mark-deep { fill: var(--gold-deep); }
+  .brand-mark-navy { fill: var(--navy); }
+  .brand-mark-line { stroke: var(--gold); }
+
+  .page-hero {
+    min-height: 78vh;
+    background:
+      radial-gradient(circle at 78% 22%, rgba(183, 106, 63, 0.22), transparent 30%),
+      linear-gradient(135deg, var(--ink) 0%, var(--navy) 52%, #172b4c 100%);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 8rem 5% 6rem;
+    overflow: hidden;
+  }
+  .page-hero-video,
+  .page-hero-bg,
+  .page-hero-fade,
+  .page-hero-pattern {
+    position: absolute;
+    inset: 0;
+  }
+  .page-hero-bg {
+    background:
+      linear-gradient(to right, rgba(7, 17, 31, 0.94) 0%, rgba(8, 26, 51, 0.72) 58%, rgba(8, 26, 51, 0.18) 100%),
+      url("market-spotlight.png") center / cover;
+  }
+  .page-hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    opacity: 0.5;
+    filter: brightness(1.08);
+    z-index: 1;
+  }
+  .page-hero-fade {
+    z-index: 2;
+    background:
+      radial-gradient(circle at 72% 25%, rgba(183, 106, 63, 0.18), transparent 30%),
+      linear-gradient(to right, var(--ink) 0%, rgba(8, 26, 51, 0.86) 42%, rgba(8, 26, 51, 0.28) 100%);
+  }
+  .page-hero-pattern {
+    z-index: 3;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(212, 180, 131, 0.04) 80px),
+      repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(212, 180, 131, 0.04) 80px);
+  }
+  .page-hero-content {
+    position: relative;
+    z-index: 4;
+    max-width: 760px;
+  }
+  .page-hero-eyebrow,
+  .section-eyebrow {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .page-hero-eyebrow { margin-bottom: 1.4rem; }
+  .page-hero-eyebrow::before,
+  .section-eyebrow::before {
+    content: '';
+    display: block;
+    width: 34px;
+    height: 1px;
+    background: var(--gold);
+    flex: 0 0 auto;
+  }
+  .page-hero-title {
+    font-family: 'Perandory', 'Cormorant Garamond', serif;
+    font-size: clamp(3.2rem, 7.5vw, 6rem);
+    font-weight: 300;
+    line-height: 1;
+    color: var(--white);
+  }
+  .page-hero-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .page-hero-divider {
+    width: 50px;
+    height: 1px;
+    background: var(--gold);
+    margin: 1.8rem 0;
+  }
+  .page-hero-sub {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.72);
+    max-width: 560px;
+  }
+
+  section { padding: 7rem 5%; }
+  .section-title {
+    font-family: 'Perandory', 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+  }
+  .body-text,
+  .intro-text,
+  .opportunity-text,
+  .cta-sub {
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.9;
+  }
+  .body-text { color: var(--text-muted); margin-bottom: 1.2rem; }
+
+  #morocco-intro {
+    background: var(--steel);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+    gap: 5rem;
+    align-items: center;
+  }
+  .stat-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+  .stat-box {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    position: relative;
+  }
+  .stat-box::before,
+  .kenitra-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--gold);
+  }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .stat-label {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  #why-morocco,
+  #opportunity,
+  #mehdiya-lifestyle { background: var(--navy); }
+  #why-morocco .section-title,
+  #opportunity .section-title,
+  #mehdiya-lifestyle .section-title { color: var(--white); }
+  .intro-text {
+    color: rgba(255, 255, 255, 0.66);
+    max-width: 720px;
+    margin-bottom: 4rem;
+  }
+  .reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(212, 180, 131, 0.16);
+  }
+  .reason-card {
+    background: var(--navy);
+    padding: 2.5rem 2rem;
+    transition: background 0.3s;
+  }
+  .reason-card:hover { background: var(--navy-mid); }
+  .reason-icon {
+    font-size: 1.6rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+  .reason-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+  }
+  .reason-desc {
+    font-size: 0.82rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .image-break {
+    min-height: 420px;
+    position: relative;
+    overflow: hidden;
+  }
+  .image-break-bg,
+  .image-break-overlay {
+    position: absolute;
+    inset: 0;
+  }
+  .image-break-bg {
+    background-image: url('kenitra1.png');
+    background-size: cover;
+    background-position: center;
+  }
+  .image-break-overlay {
+    background: rgba(13, 30, 58, 0.56);
+  }
+  .image-break-content {
+    position: relative;
+    z-index: 2;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 5%;
+  }
+  .image-break-eyebrow {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .image-break-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .image-break-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .image-break-sub {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.72);
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.9;
+  }
+
+  #why-kenitra { background: var(--steel); }
+  .kenitra-intro {
+    color: var(--text-muted);
+    max-width: 740px;
+    margin-bottom: 4rem;
+  }
+  .kenitra-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .kenitra-card {
+    border: 1px solid var(--border);
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .kenitra-card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-2px);
+  }
+  .kenitra-card-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 300;
+    color: rgba(212, 180, 131, 0.2);
+    line-height: 1;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+  .kenitra-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    max-width: 80%;
+  }
+  .kenitra-card-text {
+    font-size: 0.84rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--text-muted);
+  }
+  .kenitra-card-stat {
+    margin-top: 1.2rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+  }
+  .kenitra-card-stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--gold-deep);
+    line-height: 1;
+  }
+  .kenitra-card-stat-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+  }
+
+  #opportunity {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+    gap: 5rem;
+    align-items: start;
+  }
+  .opportunity-text {
+    color: rgba(255, 255, 255, 0.66);
+    margin-bottom: 1.2rem;
+  }
+  .pull-quote-inline {
+    border-left: 2px solid var(--gold);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    background: rgba(212, 180, 131, 0.04);
+  }
+  .pull-quote-inline p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.86);
+    line-height: 1.6;
+  }
+  .pull-quote-inline cite {
+    display: block;
+    margin-top: 0.8rem;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-style: normal;
+  }
+  .table-title {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+  }
+  .table-wrap { overflow-x: auto; }
+  .compare-table {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+  }
+  .compare-table th {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.04);
+    text-align: left;
+    border-bottom: 1px solid rgba(212, 180, 131, 0.15);
+  }
+  .compare-table td {
+    padding: 0.8rem 1rem;
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.66);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table .highlight {
+    color: var(--gold);
+    font-weight: 400;
+  }
+  .compare-caption {
+    font-size: 0.72rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.45);
+    margin-top: 1rem;
+    line-height: 1.7;
+  }
+
+  .mehdiya-intro {
+    color: rgba(255, 255, 255, 0.66);
+    max-width: 780px;
+    margin-bottom: 4rem;
+  }
+  .section-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .photo-collage {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 6px;
+    margin-bottom: 5rem;
+  }
+  .photo-collage-item {
+    position: relative;
+    overflow: hidden;
+    background: var(--navy-mid);
+  }
+  .photo-collage-item img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+  .photo-collage-item:hover img { transform: scale(1.04); }
+  .photo-collage-item.large img { height: 526px; }
+  .photo-collage-item.wide { grid-column: 1 / 3; }
+  .photo-collage-item.wide img { height: 320px; }
+  .photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 1.8rem;
+    background: linear-gradient(to top, rgba(11, 28, 54, 0.88) 0%, transparent 100%);
+  }
+  .photo-caption-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.3;
+  }
+  .photo-caption-sub {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 0.3rem;
+  }
+  .connectivity-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+  }
+  .connectivity-copy {
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.58);
+    max-width: 680px;
+    line-height: 1.9;
+  }
+  .connectivity-strip {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: rgba(212, 180, 131, 0.16);
+    margin-top: 4rem;
+  }
+  .conn-item {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: background 0.3s;
+  }
+  .conn-item:hover { background: rgba(255, 255, 255, 0.07); }
+  .conn-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.6rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .conn-unit {
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+  }
+  .conn-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+    margin-top: 0.6rem;
+    line-height: 1.5;
+  }
+  .conn-dest {
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.78);
+    margin-top: 0.3rem;
+  }
+  .lifestyle-highlight {
+    background: rgba(212, 180, 131, 0.06);
+    border: 1px solid rgba(212, 180, 131, 0.2);
+    padding: 2.5rem 3rem;
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: minmax(180px, 0.6fr) 2fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .lifestyle-highlight-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .lifestyle-highlight-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 0.4rem;
+  }
+  .lifestyle-highlight-body p {
+    font-size: 0.88rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.66);
+  }
+  .lifestyle-highlight-body strong {
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  #cta {
+    background:
+      linear-gradient(105deg, rgba(7, 17, 31, 0.94), rgba(8, 26, 51, 0.72)),
+      url('market-start.png') center / cover;
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }
+  #cta .section-eyebrow { justify-content: center; }
+  #cta .section-title {
+    margin-bottom: 1rem;
+    color: var(--white);
+  }
+  #cta .section-eyebrow { color: var(--gold); }
+  .cta-sub {
+    color: rgba(255, 255, 255, 0.72);
+    max-width: 560px;
+    margin: 0 auto 2.5rem;
+  }
+  .cta-actions {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-gold,
+  .btn-outline-dark {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 1rem 2.2rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    transition: opacity 0.3s, background 0.3s, color 0.3s;
+  }
+  .btn-gold {
+    background: var(--copper);
+    color: var(--white);
+    border: 1px solid var(--copper);
+  }
+  .btn-gold:hover { opacity: 0.9; }
+  .btn-outline-dark {
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    color: var(--white);
+  }
+  .btn-outline-dark:hover {
+    background: var(--white);
+    color: var(--navy);
+  }
+
+  footer {
+    background: #080f1d;
+    border-top: 1px solid rgba(212, 180, 131, 0.1);
+    padding: 2.5rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-copy {
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.36);
+    letter-spacing: 0.05em;
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 1180px) {
+    .site-nav { flex-wrap: wrap; }
+    .nav-links {
+      order: 3;
+      width: 100%;
+      justify-content: flex-start;
+      overflow: visible;
+      padding: 0.3rem 0 0.2rem;
+    }
+    .reasons-grid { grid-template-columns: repeat(2, 1fr); }
+    .connectivity-strip { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (max-width: 900px) {
+    section { padding: 5rem 5%; }
+    #morocco-intro,
+    .kenitra-grid,
+    #opportunity,
+    .lifestyle-highlight {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    .page-hero { min-height: 680px; }
+    .stat-row { grid-template-columns: 1fr 1fr; }
+    .photo-collage { grid-template-columns: 1fr; }
+    .photo-collage-item.large img,
+    .photo-collage-item.wide img { height: 320px; }
+    .photo-collage-item.wide { grid-column: auto; }
+  }
+
+  @media (max-width: 680px) {
+    .site-nav {
+      height: 70px;
+      min-height: 70px;
+      flex-wrap: nowrap;
+    }
+    .brand-name { font-size: 1.1rem; }
+    .brand-subtitle { font-size: 0.45rem; letter-spacing: 0.12em; }
+    .brand-mark { width: 32px; height: 27px; }
+    .nav-links {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      display: none;
+      width: 100%;
+      padding: 1rem 5%;
+      background: rgba(11, 28, 54, 0.98);
+      border-bottom: 1px solid var(--border);
+      overflow: visible;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .nav-links.is-open { display: flex; }
+    .nav-dropdown { width: 100%; }
+    .nav-dropdown-toggle::after { display: none; }
+    .nav-dropdown::after { display: none; }
+    .nav-dropdown-menu {
+      position: static;
+      min-width: 0;
+      width: 100%;
+      margin-top: 0.4rem;
+      padding-left: 1rem;
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      background: transparent;
+      border: none;
+      backdrop-filter: none;
+    }
+    .nav-dropdown-menu a {
+      padding: 0.45rem 0;
+      border-bottom: none;
+      color: rgba(255, 255, 255, 0.56);
+    }
+    .nav-cta { display: none; }
+    .nav-toggle {
+      display: inline-flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--gold);
+      cursor: pointer;
+    }
+    .nav-toggle span,
+    .nav-toggle::before,
+    .nav-toggle::after {
+      content: '';
+      width: 18px;
+      height: 1px;
+      background: currentColor;
+      display: block;
+      position: absolute;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .nav-toggle::before { transform: translateY(-6px); }
+    .nav-toggle::after { transform: translateY(6px); }
+    .nav-toggle[aria-expanded="true"] span { opacity: 0; }
+    .nav-toggle[aria-expanded="true"]::before { transform: rotate(45deg); }
+    .nav-toggle[aria-expanded="true"]::after { transform: rotate(-45deg); }
+    .page-hero {
+      min-height: auto;
+      padding: 8.5rem 5% 5rem;
+    }
+    .page-hero-title { font-size: clamp(2.7rem, 15vw, 3.8rem); }
+    .page-hero-eyebrow,
+    .section-eyebrow { letter-spacing: 0.18em; }
+    .reasons-grid,
+    .stat-row,
+    .connectivity-strip { grid-template-columns: 1fr; }
+    .kenitra-card { padding: 2rem 1.5rem; }
+    .kenitra-card-title { max-width: 100%; }
+    .connectivity-strip .conn-item:last-child { grid-column: auto; }
+    .lifestyle-highlight { padding: 2rem 1.5rem; }
+    .cta-actions,
+    .btn-gold,
+    .btn-outline-dark { width: 100%; }
+    .footer-copy { width: 100%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Primary navigation">
+  <a href="index.html" class="brand" aria-label="Rahim International home">
+    <svg class="brand-mark" viewBox="100 80 480 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="60" y="10" width="560" height="540" rx="16" class="brand-mark-bg"/>
+      <rect x="168" y="318" width="344" height="9" rx="1" class="brand-mark-gold"/>
+      <rect x="168" y="310" width="44" height="22" rx="2" class="brand-mark-deep"/>
+      <rect x="468" y="310" width="44" height="22" rx="2" class="brand-mark-deep"/>
+      <path d="M340,88 C310,160 274,240 295,318 L315,318 C298,240 328,162 340,100 Z" class="brand-mark-gold"/>
+      <path d="M340,88 C370,160 406,240 385,318 L365,318 C382,240 352,162 340,100 Z" class="brand-mark-gold"/>
+      <path d="M340,88 C322,155 308,240 310,318 L318,318 C316,240 330,158 340,100 Z" class="brand-mark-navy"/>
+      <path d="M340,88 C358,155 372,240 370,318 L362,318 C370,240 350,158 340,100 Z" class="brand-mark-navy"/>
+      <line x1="340" y1="88" x2="185" y2="318" class="brand-mark-line" stroke-width="1.4" opacity="0.95"/>
+      <line x1="340" y1="106" x2="210" y2="318" class="brand-mark-line" stroke-width="1.25" opacity="0.88"/>
+      <line x1="340" y1="128" x2="236" y2="318" class="brand-mark-line" stroke-width="1.1" opacity="0.82"/>
+      <line x1="340" y1="88" x2="495" y2="318" class="brand-mark-line" stroke-width="1.4" opacity="0.95"/>
+      <line x1="340" y1="106" x2="470" y2="318" class="brand-mark-line" stroke-width="1.25" opacity="0.88"/>
+      <line x1="340" y1="128" x2="444" y2="318" class="brand-mark-line" stroke-width="1.1" opacity="0.82"/>
+    </svg>
+    <span class="brand-text">
+      <span class="brand-name">Rahim <span>International</span></span>
+      <span class="brand-subtitle">Real Estate Advisory &amp; Consulting</span>
+    </span>
+  </a>
+  <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false">
+    <span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-toggle" type="button" aria-haspopup="true">Buyers</button>
+      <div class="nav-dropdown-menu" aria-label="Buyer categories">
+        <a href="investors-international.html">International Investors</a>
+        <a href="investors-mre.html">Moroccan Diaspora / MRE</a>
+        <a href="investors-local.html">Local Investors</a>
+      </div>
+    </li>
+    <li><a href="services-developers.html">Developers</a></li>
+    <li><a href="why-morocco.html" class="active" aria-current="page">Market Spotlight</a></li>
+    <li><a href="index.html#portfolio">Elaf Sky View</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li class="language-switcher" aria-label="Language selection">
+      <a href="why-morocco.html" class="active" aria-current="page">EN</a>
+      <a href="fr/why-morocco.html">FR</a>
+      <a href="ar/why-morocco.html">AR</a>
+    </li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Enquire</a>
+</nav>
+
+<main>
+  <section class="page-hero">
+    <div class="page-hero-bg" aria-hidden="true"></div>
+    <video class="page-hero-video" autoplay muted loop playsinline>
+      <source src="kenitratgv.mp4" type="video/mp4">
+    </video>
+    <div class="page-hero-fade" aria-hidden="true"></div>
+    <div class="page-hero-pattern" aria-hidden="true"></div>
+    <div class="page-hero-content">
+      <p class="page-hero-eyebrow">Market Spotlight · Rabat-Salé-Kénitra</p>
+      <h1 class="page-hero-title">Why Kénitra<br><em>Deserves Attention.</em></h1>
+      <div class="page-hero-divider"></div>
+      <p class="page-hero-sub">We work across the Rabat-Salé-Kénitra region, with Kénitra as a market we believe buyers should understand early: connected, practical, still affordable, and stronger than its visibility suggests.</p>
+    </div>
+  </section>
+
+  <section id="morocco-intro">
+    <div>
+      <p class="section-eyebrow">The Market Gap</p>
+      <h2 class="section-title">Strong Fundamentals.<br>Weak Visibility.</h2>
+      <p class="body-text">Morocco's established buyer markets are easy to understand from the outside. Marrakech, Agadir, Essaouira, Casablanca, and Tangier have visible agencies, polished listings, and a more familiar path for foreign and diaspora buyers.</p>
+      <p class="body-text">Rabat-Salé-Kénitra is different. The region has real economic weight, strong transport links, and growing residential demand, but the market is less organized and harder to read. Good projects are often discovered through calls, contacts, site visits, and word of mouth.</p>
+      <p class="body-text">That is why we call this a market spotlight. Kénitra is not a fantasy story. It is a practical, under-marketed city where rail, industry, affordability, and coastline are creating a clearer case than the market presentation currently shows.</p>
+    </div>
+    <div class="stat-row">
+      <div class="stat-box reveal">
+        <div class="stat-num">+52%</div>
+        <div class="stat-label">Reported FDI growth in Moroccan real estate, 2024</div>
+      </div>
+      <div class="stat-box reveal">
+        <div class="stat-num">4.99%</div>
+        <div class="stat-label">Projected annual real estate market growth to 2029</div>
+      </div>
+      <div class="stat-box reveal">
+        <div class="stat-num">19.8M</div>
+        <div class="stat-label">Tourist arrivals in 2025, record high</div>
+      </div>
+      <div class="stat-box reveal">
+        <div class="stat-num">$41B</div>
+        <div class="stat-label">Reported infrastructure spending tied to 2030 preparations</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why-morocco">
+    <p class="section-eyebrow">The Foundation</p>
+    <h2 class="section-title">Why Morocco Gives<br>the Region a Base.</h2>
+    <p class="intro-text">The opportunity starts with the country. Morocco has political stability, infrastructure investment, a clear formal purchase process, and growing interest from diaspora, foreign, and local buyers. That gives secondary cities like Kénitra a stronger base than they had a decade ago.</p>
+    <div class="reasons-grid">
+      <article class="reason-card reveal">
+        <div class="reason-icon">01</div>
+        <h3 class="reason-title">Clear Ownership Path</h3>
+        <p class="reason-desc">Foreign and Moroccan buyers can purchase through a formal notarial process, with ownership registered and documented through the land registry system.</p>
+      </article>
+      <article class="reason-card reveal">
+        <div class="reason-icon">02</div>
+        <h3 class="reason-title">Formal Money Movement</h3>
+        <p class="reason-desc">For foreign buyers, proper banking and foreign exchange structure matter. When handled correctly, the process is clearer and easier to plan around.</p>
+      </article>
+      <article class="reason-card reveal">
+        <div class="reason-icon">03</div>
+        <h3 class="reason-title">Stability and Growth</h3>
+        <p class="reason-desc">Morocco combines macroeconomic stability with long-term investment in transport, tourism, industry, and urban development.</p>
+      </article>
+      <article class="reason-card reveal">
+        <div class="reason-icon">04</div>
+        <h3 class="reason-title">2030 Momentum</h3>
+        <p class="reason-desc">World Cup preparation is accelerating attention on airports, rail, roads, hospitality, and city infrastructure across Morocco's main corridors.</p>
+      </article>
+      <article class="reason-card reveal">
+        <div class="reason-icon">05</div>
+        <h3 class="reason-title">Atlantic Gateway</h3>
+        <p class="reason-desc">Morocco sits between Europe and Africa, and Kénitra is embedded in the Atlantic logistics, manufacturing, and transport corridor.</p>
+      </article>
+      <article class="reason-card reveal">
+        <div class="reason-icon">06</div>
+        <h3 class="reason-title">Practical Entry Pricing</h3>
+        <p class="reason-desc">Kénitra still offers a price-quality ratio that is harder to find in Morocco's more mature and heavily marketed buyer destinations.</p>
+      </article>
+    </div>
+  </section>
+
+  <div class="image-break">
+    <div class="image-break-bg" aria-hidden="true"></div>
+    <div class="image-break-overlay" aria-hidden="true"></div>
+    <div class="image-break-content">
+      <div>
+        <p class="image-break-eyebrow">Kénitra, Atlantic Morocco</p>
+        <h2 class="image-break-title">Connected City.<br><em>Under-Read Market.</em></h2>
+        <p class="image-break-sub">A city at the meeting point of motorway, rail, industry, capital proximity, and Atlantic coastline, but still without the polished real estate visibility of Morocco's better-known buyer markets.</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="why-kenitra">
+    <p class="section-eyebrow">Kénitra Property Investment</p>
+    <h2 class="section-title">Why Kénitra Belongs<br>on the Shortlist.</h2>
+    <p class="body-text kenitra-intro">Kénitra's case is not built on hype. It is built on things buyers can understand: jobs, transport, affordability, city-centre demand, coast access, and a market that is still less crowded than Morocco's most visible real estate destinations.</p>
+    <div class="kenitra-grid">
+      <article class="kenitra-card reveal">
+        <div class="kenitra-card-num">01</div>
+        <h3 class="kenitra-card-title">Industrial Employment Base</h3>
+        <p class="kenitra-card-text">Kénitra's manufacturing ecosystem, led by major automotive investment, creates a real employment base. That matters for housing because demand is tied to people who live, work, and build their lives in the city.</p>
+        <div class="kenitra-card-stat">
+          <div class="kenitra-card-stat-num">€1.2B</div>
+          <div class="kenitra-card-stat-label">Manufacturing expansion</div>
+        </div>
+      </article>
+      <article class="kenitra-card reveal">
+        <div class="kenitra-card-num">02</div>
+        <h3 class="kenitra-card-title">Capital Proximity by TGV</h3>
+        <p class="kenitra-card-text">Kénitra is integrated into Morocco's Al Boraq high-speed network, placing Rabat close by and Casablanca within reach. For residents and investors, this gives the city capital access without capital-city pricing.</p>
+        <div class="kenitra-card-stat">
+          <div class="kenitra-card-stat-num">20 min</div>
+          <div class="kenitra-card-stat-label">To Rabat by high-speed rail</div>
+        </div>
+      </article>
+      <article class="kenitra-card reveal">
+        <div class="kenitra-card-num">03</div>
+        <h3 class="kenitra-card-title">Atlantic Free Zone Demand</h3>
+        <p class="kenitra-card-text">The Atlantic Free Zone supports sustained housing demand from workers, managers, suppliers, and service businesses. This is not only seasonal or tourist demand; it is tied to daily economic activity.</p>
+        <div class="kenitra-card-stat">
+          <div class="kenitra-card-stat-num">20,000+</div>
+          <div class="kenitra-card-stat-label">Workers in the industrial zone</div>
+        </div>
+      </article>
+      <article class="kenitra-card reveal">
+        <div class="kenitra-card-num">04</div>
+        <h3 class="kenitra-card-title">Price-Quality Gap</h3>
+        <p class="kenitra-card-text">Well-located apartments in Kénitra can still offer a price-quality ratio that is difficult to find in Rabat, Casablanca, Marrakech, or comparable coastal markets.</p>
+        <div class="kenitra-card-stat">
+          <div class="kenitra-card-stat-num">~11,500 MAD/m²</div>
+          <div class="kenitra-card-stat-label">Premium residential pricing</div>
+        </div>
+      </article>
+      <article class="kenitra-card reveal">
+        <div class="kenitra-card-num">05</div>
+        <h3 class="kenitra-card-title">Rabat Commuter Alternative</h3>
+        <p class="kenitra-card-text">Many people who work in Rabat are priced out of buying there, so they continue renting. Kénitra offers a different option: own at a lower price point while staying within commuting distance of the capital by train or motorway.</p>
+        <div class="kenitra-card-stat">
+          <div class="kenitra-card-stat-num">~50%</div>
+          <div class="kenitra-card-stat-label">Often materially below Rabat pricing</div>
+        </div>
+      </article>
+      <article class="kenitra-card reveal">
+        <div class="kenitra-card-num">06</div>
+        <h3 class="kenitra-card-title">Young, Growing Population</h3>
+        <p class="kenitra-card-text">Kénitra's population is young, practical, and increasingly connected to industry and services, supporting both rental demand and owner-occupied residential growth.</p>
+        <div class="kenitra-card-stat">
+          <div class="kenitra-card-stat-num">450,000+</div>
+          <div class="kenitra-card-stat-label">City population</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="opportunity">
+    <div>
+      <p class="section-eyebrow">Market Positioning</p>
+      <h2 class="section-title">The Gap Is Between<br>Fundamentals and Visibility.</h2>
+      <p class="opportunity-text">Kénitra does not need to become Marrakech or Casablanca to make sense. Its opportunity is different: a working city with infrastructure, jobs, affordability, and a real need for better housing stock.</p>
+      <p class="opportunity-text">The fundamentals are easier to see than the marketing. That is the gap Rahim International is focused on: helping buyers understand the city properly and helping strong projects reach the audience they deserve.</p>
+      <div class="pull-quote-inline">
+        <p>"Kénitra is not a polished story yet. That is exactly why the work matters: the fundamentals are there, but buyers need help seeing them clearly."</p>
+        <cite>Ali Rahim · Founder, Rahim International</cite>
+      </div>
+    </div>
+    <div>
+      <p class="table-title">Price Per m² · Kénitra vs Comparable Markets</p>
+      <div class="table-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Market</th>
+              <th>Avg. Price / m²</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lisbon, Portugal</td>
+              <td>€4,500-6,000</td>
+              <td>Mature / fully priced</td>
+            </tr>
+            <tr>
+              <td>Madrid, Spain</td>
+              <td>€3,500-5,500</td>
+              <td>Mature / competitive</td>
+            </tr>
+            <tr>
+              <td>Marrakech, Morocco</td>
+              <td>~€1,200-1,800</td>
+              <td>Discovered / rising fast</td>
+            </tr>
+            <tr>
+              <td>Casablanca, Morocco</td>
+              <td>~€1,100-1,500</td>
+              <td>Established / stable</td>
+            </tr>
+            <tr>
+              <td class="highlight">Kénitra, Morocco</td>
+              <td class="highlight">~€980-1,100</td>
+              <td class="highlight">Emerging / early entry</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-caption">Prices are approximate and market-dependent. Kénitra figures reflect well-located residential stock and should be checked against live developer pricing before any decision. Past performance does not guarantee future returns.</p>
+    </div>
+  </section>
+
+  <section id="mehdiya-lifestyle">
+    <p class="section-eyebrow">Coastal Living &amp; Natural Assets</p>
+    <h2 class="section-title">Atlantic Coastline.<br><em>National Parks. Ancient Heritage.</em></h2>
+    <p class="body-text mehdiya-intro">Kénitra is not only an industrial and rail story. The lifestyle case matters too. Mehdiya's beach, the harbour, the kasbah, and Sidi Boughaba National Park give the city a coastal dimension that many working cities do not have. For buyers, that combination of everyday function and Atlantic access is part of the opportunity.</p>
+
+    <div class="photo-collage">
+      <figure class="photo-collage-item large reveal">
+        <img src="plagemehdia.webp" alt="Plage Mehdiya Atlantic coastline near Kénitra, Morocco">
+        <figcaption class="photo-caption">
+          <div class="photo-caption-title">Plage Mehdiya · Atlantic Coastline</div>
+          <div class="photo-caption-sub">5 minutes from Kénitra city centre</div>
+        </figcaption>
+      </figure>
+      <figure class="photo-collage-item reveal">
+        <img src="mehdia.png" alt="The harbour at Mehdiya near Kénitra">
+        <figcaption class="photo-caption">
+          <div class="photo-caption-title">The Harbour at Mehdiya</div>
+          <div class="photo-caption-sub">Working Atlantic port</div>
+        </figcaption>
+      </figure>
+      <figure class="photo-collage-item reveal">
+        <img src="kasbah.png" alt="Kasbah of Mehdiya fortress near Kénitra, Morocco">
+        <figcaption class="photo-caption">
+          <div class="photo-caption-title">Kasbah of Mehdiya</div>
+          <div class="photo-caption-sub">Ancient fortress</div>
+        </figcaption>
+      </figure>
+      <figure class="photo-collage-item wide reveal">
+        <img src="sidiboughaba.png" alt="Lac Sidi Boughaba National Park near Kénitra, Morocco">
+        <figcaption class="photo-caption">
+          <div class="photo-caption-title">Lac Sidi Boughaba National Park</div>
+          <div class="photo-caption-sub">Protected wetland and nature reserve</div>
+        </figcaption>
+      </figure>
+    </div>
+
+    <p class="section-eyebrow">Connectivity &amp; Strategic Position</p>
+    <h3 class="connectivity-title">Capital access. Coast access.<br>Motorway and rail in one city.</h3>
+    <p class="connectivity-copy">Kénitra sits at the intersection of Morocco's Atlantic motorway and high-speed rail network, placing the capital, the coastline, and major economic hubs within reach.</p>
+
+    <div class="connectivity-strip">
+      <div class="conn-item reveal">
+        <div class="conn-num">20<span class="conn-unit"> min</span></div>
+        <div class="conn-dest">Rabat</div>
+        <div class="conn-label">Capital city by TGV or motorway</div>
+      </div>
+      <div class="conn-item reveal">
+        <div class="conn-num">~90<span class="conn-unit"> min</span></div>
+        <div class="conn-dest">CMN Airport</div>
+        <div class="conn-label">Mohammed V International Airport by road or rail connection</div>
+      </div>
+      <div class="conn-item reveal">
+        <div class="conn-num">~50<span class="conn-unit"> min</span></div>
+        <div class="conn-dest">Tangier</div>
+        <div class="conn-label">Port city and industrial hub by high-speed rail</div>
+      </div>
+      <div class="conn-item reveal">
+        <div class="conn-num">5<span class="conn-unit"> min</span></div>
+        <div class="conn-dest">Mehdiya Beach</div>
+        <div class="conn-label">Atlantic coastline and national park</div>
+      </div>
+      <div class="conn-item reveal">
+        <div class="conn-num">LGV<span class="conn-unit">*</span></div>
+        <div class="conn-dest">Marrakech</div>
+        <div class="conn-label">Future high-speed rail extension under construction</div>
+      </div>
+    </div>
+
+    <div class="lifestyle-highlight">
+      <div>
+        <div class="lifestyle-highlight-num">LGV</div>
+        <div class="lifestyle-highlight-label">Kénitra on Morocco's high-speed rail corridor</div>
+      </div>
+      <div class="lifestyle-highlight-body">
+        <p>As Morocco expands its high-speed rail network, cities already connected to that system become more important. Kénitra's position gives it a practical advantage: it is not isolated, not purely coastal, and not dependent on one source of demand.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta">
+    <p class="section-eyebrow">Market Guidance</p>
+    <h2 class="section-title">Interested in the<br>Rabat-Salé-Kénitra Region?</h2>
+    <p class="cta-sub">Speak with our team about what is actually available, how Kénitra compares, and which current opportunities deserve a closer look.</p>
+    <div class="cta-actions">
+      <a href="index.html#contact" class="btn-gold">Begin a Conversation</a>
+      <a href="index.html#portfolio" class="btn-outline-dark">View Current Opportunity</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a href="index.html" class="brand" aria-label="Rahim International home">
+    <svg class="brand-mark" viewBox="100 80 480 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="60" y="10" width="560" height="540" rx="16" class="brand-mark-bg"/>
+      <rect x="168" y="318" width="344" height="9" rx="1" class="brand-mark-gold"/>
+      <rect x="168" y="310" width="44" height="22" rx="2" class="brand-mark-deep"/>
+      <rect x="468" y="310" width="44" height="22" rx="2" class="brand-mark-deep"/>
+      <path d="M340,88 C310,160 274,240 295,318 L315,318 C298,240 328,162 340,100 Z" class="brand-mark-gold"/>
+      <path d="M340,88 C370,160 406,240 385,318 L365,318 C382,240 352,162 340,100 Z" class="brand-mark-gold"/>
+      <path d="M340,88 C322,155 308,240 310,318 L318,318 C316,240 330,158 340,100 Z" class="brand-mark-navy"/>
+      <path d="M340,88 C358,155 372,240 370,318 L362,318 C370,240 350,158 340,100 Z" class="brand-mark-navy"/>
+      <line x1="340" y1="88" x2="185" y2="318" class="brand-mark-line" stroke-width="1.4" opacity="0.95"/>
+      <line x1="340" y1="106" x2="210" y2="318" class="brand-mark-line" stroke-width="1.25" opacity="0.88"/>
+      <line x1="340" y1="88" x2="495" y2="318" class="brand-mark-line" stroke-width="1.4" opacity="0.95"/>
+      <line x1="340" y1="106" x2="470" y2="318" class="brand-mark-line" stroke-width="1.25" opacity="0.88"/>
+    </svg>
+    <span class="brand-name">Rahim <span>International</span></span>
+  </a>
+  <div class="footer-copy">© 2026 Rahim International. All rights reserved.</div>
+</footer>
+
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('#nav-links');
+
+  navToggle.addEventListener('click', () => {
+    const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!isOpen));
+    navToggle.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
+    navLinks.classList.toggle('is-open', !isOpen);
+  });
+
+  navLinks.addEventListener('click', (event) => {
+    if (event.target.matches('a')) {
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open menu');
+      navLinks.classList.remove('is-open');
+    }
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+</script>
+</body>
+</html>
