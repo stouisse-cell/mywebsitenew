@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elaf Sky View القنيطرة | Rahim International</title>
+<meta name="description" content="Elaf Sky View مشروع سكني من 35 شقة في وسط القنيطرة، مع تشطيبات عالية، تجهيزات جاهزة للطاقة، موقف سيارات مدمج في الرسم العقاري، بعض الوحدات المؤهلة لدعم السكن، ووصول عملي إلى محطة القطار فائق السرعة والطريق السيار.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Didact+Gothic&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #081a33;
+    --navy-mid: #10294a;
+    --navy-soft: #17375f;
+    --ink: #07111f;
+    --gold: #d2b486;
+    --gold-deep: #b76a3f;
+    --copper: #b76a3f;
+    --copper-dark: #87452c;
+    --cream: #f4f7f8;
+    --steel: #e6edf1;
+    --white: #ffffff;
+    --text-dark: #07111f;
+    --text-muted: #657384;
+    --border: rgba(8, 26, 51, 0.12);
+    --border-warm: rgba(210, 180, 134, 0.24);
+    --line-dark: rgba(255, 255, 255, 0.14);
+    --shadow: 0 28px 80px rgba(8, 26, 51, 0.18);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Didact Gothic', sans-serif;
+    background: var(--navy);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+  a { color: inherit; }
+  img, video, svg { display: block; max-width: 100%; }
+
+  .site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: 70px;
+    padding: 0 5%;
+    background: rgba(7, 17, 31, 0.96);
+    border-bottom: 1px solid var(--border-warm);
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    text-decoration: none;
+    min-width: max-content;
+  }
+  .brand-mark { width: 38px; height: 32px; flex: 0 0 auto; }
+  .brand-name {
+    font-family: 'Perandory', 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+  }
+  .brand-name span { color: var(--white); }
+  .brand-text {
+    display: grid;
+    gap: 0.1rem;
+    line-height: 1;
+  }
+  .brand-subtitle {
+    font-size: 0.54rem;
+    font-weight: 500;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.58);
+    white-space: nowrap;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.8rem, 1.8vw, 2rem);
+    list-style: none;
+  }
+  .nav-links a,
+  .nav-dropdown-toggle,
+  .nav-cta {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: inherit;
+    transition: color 0.3s, background 0.3s, border-color 0.3s;
+  }
+  .nav-dropdown-toggle {
+    border: 0;
+    background: transparent;
+    cursor: default;
+  }
+  .nav-links a,
+  .nav-dropdown-toggle { color: rgba(255, 255, 255, 0.7); }
+  .nav-links a:hover,
+  .nav-links a:focus-visible,
+  .nav-dropdown-toggle:hover,
+  .nav-dropdown-toggle:focus-visible,
+  .nav-links a.active { color: var(--copper); }
+  .nav-dropdown { position: relative; }
+  .nav-dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .nav-dropdown-toggle::after {
+    content: '▾';
+    font-size: 0.6rem;
+    opacity: 0.75;
+  }
+  .nav-dropdown::after {
+    content: '';
+    position: absolute;
+    left: -0.75rem;
+    right: -0.75rem;
+    top: 100%;
+    height: 0;
+  }
+  .nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    min-width: 230px;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background: rgba(7, 17, 31, 0.98);
+    border: 1px solid var(--border-warm);
+    backdrop-filter: blur(10px);
+    z-index: 300;
+    transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+  }
+  .nav-dropdown-menu a {
+    display: block;
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid rgba(210, 180, 134, 0.14);
+  }
+  .nav-dropdown-menu a:last-child { border-bottom: none; }
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown:focus-within .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%);
+  }
+  .language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .language-switcher a {
+    border: 1px solid rgba(210, 180, 134, 0.24);
+    padding: 0.35rem 0.45rem;
+    line-height: 1;
+  }
+  .language-switcher a.active {
+    background: var(--copper);
+    border-color: var(--copper);
+    color: var(--white);
+  }
+  .nav-cta {
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 0.55rem 1.2rem;
+  }
+  .nav-cta:hover,
+  .nav-cta:focus-visible {
+    background: var(--copper);
+    color: var(--white);
+  }
+  .nav-toggle { display: none; }
+
+  .brand-mark-bg { fill: var(--navy); }
+  .brand-mark-gold { fill: var(--gold); }
+  .brand-mark-deep { fill: var(--gold-deep); }
+  .brand-mark-navy { fill: var(--navy); }
+  .brand-mark-line { stroke: var(--gold); }
+
+  #home {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at 78% 22%, rgba(183, 106, 63, 0.22), transparent 30%),
+      linear-gradient(135deg, var(--ink) 0%, var(--navy) 52%, #172b4c 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .page-hero {
+    background: var(--navy);
+    position: relative;
+    display: flex;
+    overflow: hidden;
+  }
+  .page-hero-bg,
+  .page-hero-fade,
+  .page-hero-pattern {
+    position: absolute;
+    inset: 0;
+  }
+  .page-hero-bg { z-index: 1; }
+  .page-hero-fade {
+    z-index: 2;
+    background:
+      radial-gradient(circle at 72% 25%, rgba(183, 106, 63, 0.18), transparent 30%),
+      linear-gradient(to bottom, rgba(7, 17, 31, 0.18), rgba(7, 17, 31, 0.74));
+  }
+  .page-hero-pattern {
+    z-index: 3;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(210, 180, 134, 0.035) 80px),
+      repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(210, 180, 134, 0.035) 80px);
+  }
+  .page-hero-content {
+    position: relative;
+    z-index: 4;
+    width: min(920px, 90%);
+  }
+  .page-hero-eyebrow {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .page-hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 34px;
+    height: 1px;
+    background: currentColor;
+    flex: 0 0 auto;
+  }
+  .page-hero-title {
+    font-family: 'Perandory', 'Cormorant Garamond', serif;
+    font-size: clamp(3.2rem, 7vw, 6rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 2rem;
+  }
+  .page-hero-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .page-hero-sub {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.72);
+    max-width: 650px;
+    margin-bottom: 3rem;
+  }
+  .hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.68;
+    z-index: 1;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+      radial-gradient(circle at 72% 25%, rgba(183, 106, 63, 0.18), transparent 30%),
+      linear-gradient(to right, rgba(7, 17, 31, 0.96) 0%, rgba(8, 26, 51, 0.72) 50%, rgba(8, 26, 51, 0.28) 100%),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.62) 100%);
+  }
+  .hero-pattern {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(210, 180, 134, 0.035) 80px),
+      repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(210, 180, 134, 0.035) 80px);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 4;
+    width: min(920px, 90%);
+    margin-top: 70px;
+    padding: 5rem 0 6rem;
+    margin-left: 5%;
+  }
+  .hero-eyebrow,
+  .section-eyebrow {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .hero-eyebrow { margin-bottom: 1.8rem; }
+  .hero-eyebrow::before,
+  .section-eyebrow::before {
+    content: '';
+    display: block;
+    width: 34px;
+    height: 1px;
+    background: currentColor;
+    flex: 0 0 auto;
+  }
+  .hero-title {
+    font-family: 'Perandory', 'Cormorant Garamond', serif;
+    font-size: clamp(3.2rem, 7vw, 6rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 2rem;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-sub {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.72);
+    max-width: 650px;
+    margin-bottom: 3rem;
+  }
+  .hero-actions,
+  .button-row {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+  .services-actions { margin-top: 3rem; }
+  .btn-primary,
+  .btn-outline,
+  .btn-light {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 1rem 2.2rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    transition: opacity 0.3s, color 0.3s, border-color 0.3s, background 0.3s;
+  }
+  .btn-primary {
+    background: var(--copper);
+    color: var(--white);
+    border: 1px solid var(--copper);
+  }
+  .btn-primary:hover,
+  .btn-primary:focus-visible { opacity: 0.9; }
+  .btn-outline,
+  .btn-light {
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: rgba(255, 255, 255, 0.84);
+    background: transparent;
+  }
+  .btn-outline:hover,
+  .btn-outline:focus-visible,
+  .btn-light:hover,
+  .btn-light:focus-visible {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+  .hero-scroll {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 5%;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .hero-scroll::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent);
+  }
+
+  section { padding: 7rem 5%; }
+  .section-title {
+    font-family: 'Perandory', 'Cormorant Garamond', serif;
+    font-size: clamp(2.25rem, 4vw, 3.55rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+  }
+
+  #about {
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+    gap: 5rem;
+    align-items: center;
+  }
+  .about-text,
+  .portfolio-intro,
+  .contact-text,
+  .services-intro {
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.9;
+  }
+  .about-text,
+  .portfolio-intro { color: var(--text-muted); }
+  .about-text { margin-bottom: 1.2rem; }
+  .about-quote {
+    margin: 2.5rem 0 0;
+    border-left: 2px solid var(--copper);
+    padding-left: 1.8rem;
+  }
+  .about-quote p {
+    font-family: 'Perandory', 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--navy);
+  }
+  .about-quote cite {
+    display: block;
+    margin-top: 0.8rem;
+    font-size: 0.68rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--copper-dark);
+  }
+  .about-right { display: grid; gap: 1.2rem; }
+  .about-stat {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 1.8rem 2rem;
+    position: relative;
+  }
+  .about-stat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--copper);
+  }
+  .about-stat-num {
+    font-family: 'Perandory', 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+  .about-stat-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  #services { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); }
+  #services .section-title { color: var(--white); }
+  .services-intro {
+    color: rgba(255, 255, 255, 0.66);
+    max-width: 690px;
+    margin-bottom: 4rem;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1px;
+    background: var(--line-dark);
+  }
+  .service-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem 2rem;
+    transition: background 0.3s;
+  }
+  .service-card:hover { background: rgba(255, 255, 255, 0.08); }
+  .service-num {
+    font-family: 'Perandory', 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: rgba(183, 106, 63, 0.48);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .service-title {
+    font-family: 'Perandory', 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+  .service-desc {
+    font-size: 0.82rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .service-link {
+    display: inline-flex;
+    margin-top: 1.4rem;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(210, 180, 134, 0.35);
+    padding-bottom: 0.25rem;
+    transition: color 0.3s, border-color 0.3s;
+  }
+  .service-link:hover,
+  .service-link:focus-visible {
+    color: var(--copper);
+    border-color: var(--copper);
+  }
+
+  #portfolio { background: var(--cream); }
+  .portfolio-intro {
+    max-width: 620px;
+    margin-bottom: 3.5rem;
+  }
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 780px);
+  }
+  .portfolio-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .portfolio-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+  }
+  .portfolio-img {
+    min-height: 320px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    background: var(--navy);
+  }
+  .portfolio-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.35s ease, transform 0.5s ease;
+  }
+  .portfolio-slide.is-active { opacity: 1; }
+  .portfolio-card:hover .portfolio-slide.is-active { transform: scale(1.04); }
+  .portfolio-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(8, 26, 51, 0.88) 0%, transparent 62%);
+  }
+  .gallery-btn {
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-50%);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(7, 17, 31, 0.58);
+    color: var(--white);
+    font-family: 'Perandory', 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, border-color 0.3s, color 0.3s;
+  }
+  .gallery-btn:hover,
+  .gallery-btn:focus-visible {
+    background: var(--copper);
+    border-color: var(--copper);
+  }
+  .gallery-prev { left: 1rem; }
+  .gallery-next { right: 1rem; }
+  .gallery-dots {
+    position: absolute;
+    right: 1.4rem;
+    bottom: 1.35rem;
+    z-index: 4;
+    display: flex;
+    gap: 0.45rem;
+  }
+  .gallery-dot {
+    width: 8px;
+    height: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 999px;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+  }
+  .gallery-dot.is-active {
+    background: var(--gold);
+    border-color: var(--gold);
+  }
+  .portfolio-img-label {
+    position: relative;
+    z-index: 2;
+    padding: 1.2rem 1.5rem;
+    width: 100%;
+  }
+  .portfolio-location,
+  .portfolio-kpi-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+  }
+  .portfolio-name {
+    font-family: 'Perandory', 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--white);
+  }
+  .portfolio-body { padding: 1.5rem; }
+  .portfolio-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  .tag {
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border: 1px solid var(--border);
+    padding: 0.3rem 0.8rem;
+    color: var(--text-muted);
+  }
+  .portfolio-desc {
+    font-size: 0.82rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--text-muted);
+  }
+  .portfolio-desc p + p { margin-top: 0.85rem; }
+  .portfolio-kpis {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .portfolio-kpi-value {
+    font-family: 'Perandory', 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--navy);
+  }
+  .portfolio-actions {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .portfolio-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--copper-dark);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+  }
+  .portfolio-cta:hover,
+  .portfolio-cta:focus-visible { border-color: var(--copper-dark); }
+  .portfolio-cta::after { content: '>'; }
+
+  .split-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.9fr);
+    gap: 5rem;
+    align-items: center;
+  }
+  .dark-section {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--ink) 100%);
+  }
+  .dark-section .section-title { color: var(--white); }
+  .section-copy {
+    font-size: 0.92rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--text-muted);
+    margin-bottom: 1.1rem;
+  }
+  .dark-section .section-copy,
+  .dark-section .detail-text,
+  .dark-section .location-copy,
+  .dark-section .unit-text {
+    color: rgba(255, 255, 255, 0.66);
+  }
+  .quick-facts {
+    background: var(--white);
+    padding: 0;
+  }
+  .facts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+  }
+  .fact-item {
+    min-height: 150px;
+    padding: 2rem 1.5rem;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--cream);
+  }
+  .fact-value {
+    font-family: 'Perandory', 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3vw, 2.65rem);
+    font-weight: 300;
+    line-height: 1;
+    color: var(--navy);
+    margin-bottom: 0.7rem;
+  }
+  .fact-label {
+    font-size: 0.64rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    line-height: 1.45;
+    text-transform: uppercase;
+    color: var(--copper-dark);
+  }
+  .media-panel {
+    min-height: 430px;
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .media-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(7, 17, 31, 0.64), transparent 58%);
+    z-index: 1;
+  }
+  .media-panel img,
+  .media-panel .media-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    object-fit: cover;
+  }
+  .media-placeholder {
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+    background:
+      linear-gradient(135deg, rgba(183, 106, 63, 0.3), rgba(8, 26, 51, 0.2)),
+      var(--navy-mid);
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .detail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line-dark);
+    margin-top: 3.5rem;
+  }
+  .detail-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.35rem 2rem;
+  }
+  .detail-title,
+  .location-title,
+  .unit-title {
+    font-family: 'Perandory', 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--gold);
+    margin-bottom: 0.85rem;
+  }
+  .detail-text,
+  .location-copy,
+  .unit-text {
+    font-size: 0.84rem;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+  .location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .location-item {
+    border-left: 2px solid var(--copper);
+    padding-left: 1.2rem;
+  }
+  .location-section .section-title { color: var(--white); }
+  .location-section .section-copy,
+  .location-section .location-copy {
+    color: rgba(255, 255, 255, 0.68);
+  }
+  .location-section .location-title { color: var(--gold); }
+  .map-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 1.3rem;
+  }
+  .map-card .media-panel {
+    min-height: 360px;
+    box-shadow: none;
+  }
+  .unit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    margin-top: 3rem;
+  }
+  .unit-card {
+    background: var(--white);
+    padding: 2.35rem 2rem;
+  }
+  .unit-card .tag {
+    display: inline-flex;
+    margin-bottom: 1.2rem;
+    color: var(--copper-dark);
+    border-color: rgba(183, 106, 63, 0.24);
+  }
+  .investment-panel {
+    border: 1px solid var(--border-warm);
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.05);
+  }
+  .investment-panel + .investment-panel { margin-top: 1.2rem; }
+  .investment-kicker {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 0.8rem;
+  }
+  .investment-title {
+    font-family: 'Perandory', 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 300;
+    line-height: 1.45;
+    color: var(--white);
+  }
+  .guide-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 1.8rem;
+  }
+  .guide-links a {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--gold);
+    border: 1px solid rgba(210, 180, 134, 0.32);
+    padding: 0.75rem 1rem;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+  }
+  .guide-links a:hover,
+  .guide-links a:focus-visible {
+    background: var(--copper);
+    border-color: var(--copper);
+    color: var(--white);
+  }
+
+  #contact {
+    background: var(--ink);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+    gap: 5rem;
+    align-items: start;
+  }
+  #contact .section-title { color: var(--white); }
+  .contact-text {
+    color: rgba(255, 255, 255, 0.66);
+    margin-bottom: 2.5rem;
+  }
+  .contact-info { display: grid; gap: 1.5rem; }
+  .contact-item {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+  }
+  .contact-icon {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--border-warm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.9rem;
+    color: var(--copper);
+  }
+  .contact-item-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 0.2rem;
+  }
+  .contact-item-value,
+  .contact-item-value a {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.78);
+    text-decoration: none;
+  }
+  .contact-form { display: grid; gap: 1.2rem; }
+  .form-group { display: grid; gap: 0.5rem; }
+  .form-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.58);
+  }
+  .form-input,
+  .form-select,
+  .form-textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-warm);
+    color: var(--white);
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    padding: 0.85rem 1rem;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.3s, background 0.3s;
+    border-radius: 0;
+  }
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    border-color: var(--copper);
+    background: rgba(255, 255, 255, 0.08);
+  }
+  .form-input::placeholder,
+  .form-textarea::placeholder { color: rgba(255, 255, 255, 0.32); }
+  .form-select option {
+    background: var(--navy);
+    color: var(--white);
+  }
+  .form-textarea {
+    resize: vertical;
+    min-height: 130px;
+  }
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+  .form-submit {
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    background: var(--copper);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2.4rem;
+    cursor: pointer;
+    transition: opacity 0.3s, background 0.3s;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  .form-submit:hover,
+  .form-submit:focus-visible { opacity: 0.9; }
+  .form-status {
+    min-height: 1.4rem;
+    font-size: 0.82rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.72);
+  }
+  .form-status.is-success { color: #9ee6b3; }
+  .form-status.is-error { color: #f3a6a6; }
+
+  footer {
+    background: var(--ink);
+    border-top: 1px solid rgba(210, 180, 134, 0.14);
+    padding: 2.5rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-copy {
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.36);
+    letter-spacing: 0.05em;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 1180px) {
+    .site-nav { height: auto; min-height: 70px; flex-wrap: wrap; padding-top: 0.8rem; padding-bottom: 0.8rem; }
+    .nav-links { order: 3; width: 100%; justify-content: flex-start; overflow: visible; padding: 0.3rem 0 0.2rem; }
+    .hero-content { margin-top: 96px; }
+  }
+
+  @media (max-width: 900px) {
+    section { padding: 5rem 5%; }
+    #about,
+    #contact,
+    .split-section { grid-template-columns: 1fr; gap: 3rem; }
+    .facts-grid,
+    .detail-grid,
+    .unit-grid { grid-template-columns: 1fr 1fr; }
+    .form-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 680px) {
+    .site-nav {
+      height: 70px;
+      min-height: 70px;
+      flex-wrap: nowrap;
+    }
+    .brand-name { font-size: 1.05rem; }
+    .brand-subtitle { font-size: 0.45rem; letter-spacing: 0.12em; }
+    .brand-mark { width: 32px; height: 27px; }
+    .nav-links {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      display: none;
+      width: 100%;
+      padding: 1rem 5%;
+      background: rgba(7, 17, 31, 0.98);
+      border-bottom: 1px solid var(--border-warm);
+      overflow: visible;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .nav-links.is-open { display: flex; }
+    .nav-dropdown { width: 100%; }
+    .nav-dropdown-toggle::after { display: none; }
+    .nav-dropdown::after { display: none; }
+    .nav-dropdown-menu {
+      position: static;
+      min-width: 0;
+      width: 100%;
+      margin-top: 0.4rem;
+      padding-left: 1rem;
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      background: transparent;
+      border: none;
+      backdrop-filter: none;
+    }
+    .nav-dropdown-menu a {
+      padding: 0.45rem 0;
+      border-bottom: none;
+      color: rgba(255, 255, 255, 0.56);
+    }
+    .nav-cta { display: none; }
+    .nav-toggle {
+      display: inline-flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--gold);
+      cursor: pointer;
+    }
+    .nav-toggle span,
+    .nav-toggle::before,
+    .nav-toggle::after {
+      content: '';
+      width: 18px;
+      height: 1px;
+      background: currentColor;
+      display: block;
+      position: absolute;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .nav-toggle::before { transform: translateY(-6px); }
+    .nav-toggle::after { transform: translateY(6px); }
+    .nav-toggle[aria-expanded="true"] span { opacity: 0; }
+    .nav-toggle[aria-expanded="true"]::before { transform: rotate(45deg); }
+    .nav-toggle[aria-expanded="true"]::after { transform: rotate(-45deg); }
+    #home { min-height: auto; }
+    .hero-content {
+      width: 90%;
+      margin: 70px auto 0;
+      padding: 6rem 0 7rem;
+    }
+    .hero-title { font-size: clamp(2.35rem, 15vw, 3.4rem); }
+    .hero-eyebrow,
+    .section-eyebrow { letter-spacing: 0.18em; }
+    .hero-actions,
+    .button-row { width: 100%; }
+    .btn-primary,
+    .btn-outline,
+    .btn-light { width: 100%; padding-left: 1rem; padding-right: 1rem; }
+    .portfolio-img { min-height: 250px; }
+    .portfolio-kpis { gap: 1.2rem; }
+    .portfolio-kpis > div { width: calc(50% - 0.6rem); }
+    .facts-grid,
+    .detail-grid,
+    .unit-grid,
+    .location-grid { grid-template-columns: 1fr; }
+    .media-panel { min-height: 300px; }
+    .footer-copy { width: 100%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="التنقل الرئيسي">
+  <a href="index.html" class="brand" aria-label="الصفحة الرئيسية Rahim International">
+    <svg class="brand-mark" viewBox="100 80 480 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="60" y="10" width="560" height="540" rx="16" class="brand-mark-bg"/>
+      <rect x="168" y="318" width="344" height="9" rx="1" class="brand-mark-gold"/>
+      <rect x="168" y="310" width="44" height="22" rx="2" class="brand-mark-deep"/>
+      <rect x="468" y="310" width="44" height="22" rx="2" class="brand-mark-deep"/>
+      <path d="M340,88 C310,160 274,240 295,318 L315,318 C298,240 328,162 340,100 Z" class="brand-mark-gold"/>
+      <path d="M340,88 C370,160 406,240 385,318 L365,318 C382,240 352,162 340,100 Z" class="brand-mark-gold"/>
+      <path d="M340,88 C322,155 308,240 310,318 L318,318 C316,240 330,158 340,100 Z" class="brand-mark-navy"/>
+      <path d="M340,88 C358,155 372,240 370,318 L362,318 C370,240 350,158 340,100 Z" class="brand-mark-navy"/>
+      <line x1="340" y1="88" x2="185" y2="318" class="brand-mark-line" stroke-width="1.4" opacity="0.95"/>
+      <line x1="340" y1="106" x2="210" y2="318" class="brand-mark-line" stroke-width="1.25" opacity="0.88"/>
+      <line x1="340" y1="128" x2="236" y2="318" class="brand-mark-line" stroke-width="1.1" opacity="0.82"/>
+      <line x1="340" y1="153" x2="262" y2="318" class="brand-mark-line" stroke-width="1.0" opacity="0.75"/>
+      <line x1="340" y1="88" x2="495" y2="318" class="brand-mark-line" stroke-width="1.4" opacity="0.95"/>
+      <line x1="340" y1="106" x2="470" y2="318" class="brand-mark-line" stroke-width="1.25" opacity="0.88"/>
+      <line x1="340" y1="128" x2="444" y2="318" class="brand-mark-line" stroke-width="1.1" opacity="0.82"/>
+      <line x1="340" y1="153" x2="418" y2="318" class="brand-mark-line" stroke-width="1.0" opacity="0.75"/>
+    </svg>
+    <span class="brand-text">
+      <span class="brand-name">Rahim <span>International</span></span>
+      <span class="brand-subtitle">استشارات وتوجيه عقاري</span>
+    </span>
+  </a>
+  <button class="nav-toggle" type="button" aria-label="فتح القائمة" aria-controls="nav-links" aria-expanded="false">
+    <span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="about.html">من نحن</a></li>
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-toggle" type="button" aria-haspopup="true">المشترون</button>
+      <div class="nav-dropdown-menu" aria-label="فئات المشترين">
+        <a href="investors-international.html">المشترون الدوليون</a>
+        <a href="investors-mre.html">مغاربة العالم / MRE</a>
+        <a href="investors-local.html">المستثمرون المحليون</a>
+      </div>
+    </li>
+    <li><a href="services-developers.html">المطورون العقاريون</a></li>
+    <li><a href="guides/index.html">أدلة المشترين</a></li>
+    <li><a href="why-morocco.html">فرصة السوق</a></li>
+    <li><a href="elaf-sky-view.html" class="active" aria-current="page">Elaf Sky View</a></li>
+    <li><a href="index.html#contact">اتصل بنا</a></li>
+    <li class="language-switcher" aria-label="اختيار اللغة">
+      <a href="../elaf-sky-view.html">EN</a>
+      <a href="../fr/elaf-sky-view.html">FR</a>
+      <a href="elaf-sky-view.html" class="active" aria-current="page">AR</a>
+    </li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">استفسار</a>
+</nav>
+<main>
+  <section id="home" class="page-hero" style="min-height:78vh;align-items:flex-end;padding:9rem 5% 5rem;">
+    <div class="page-hero-bg" style="background:linear-gradient(to right,rgba(7,17,31,.96),rgba(8,26,51,.7),rgba(8,26,51,.25)),url('../elaf.jpg') center / cover;opacity:.9" aria-hidden="true"></div>
+    <div class="page-hero-fade" aria-hidden="true"></div>
+    <div class="page-hero-pattern" aria-hidden="true"></div>
+    <div class="page-hero-content">
+      <p class="page-hero-eyebrow">الفرصة الحالية · وسط مدينة القنيطرة</p>
+      <h1 class="page-hero-title">Elaf Sky View<br><em>جودة ميسرة بتصميم عملي.</em></h1>
+      <p class="page-hero-sub">مشروع سكني من 35 شقة في وسط القنيطرة، يجمع بين تشطيبات عالية، تجهيزات جاهزة للطاقة، موقف سيارات مدمج في الرسم العقاري، بعض الوحدات المؤهلة لدعم السكن، وموقع مناسب للحياة اليومية.</p>
+      <div class="hero-actions"><a href="#contact" class="btn-primary">اطلب التفاصيل</a><a href="../elaf-sky-view-brochure.pdf" class="btn-outline" target="_blank" rel="noopener">عرض الكتيب</a><a href="#gallery" class="btn-outline">عرض المشروع</a></div>
+    </div>
+  </section>
+
+  <section class="quick-facts" aria-label="أرقام Elaf Sky View">
+    <div class="facts-grid">
+      <div class="fact-item reveal"><div class="fact-value">35</div><div class="fact-label">شقة سكنية</div></div>
+      <div class="fact-item reveal"><div class="fact-value" dir="ltr">61-108 m²</div><div class="fact-label">مساحات الوحدات</div></div>
+      <div class="fact-item reveal"><div class="fact-value">11,500</div><div class="fact-label">درهم للمتر المربع</div></div>
+      <div class="fact-item reveal"><div class="fact-value">6</div><div class="fact-label">طوابق في وسط القنيطرة</div></div>
+      <div class="fact-item reveal"><div class="fact-value">10 دقائق</div><div class="fact-label">مشيا إلى محطة TGV</div></div>
+      <div class="fact-item reveal"><div class="fact-value">5 دقائق</div><div class="fact-label">بالسيارة إلى الطريق السيار</div></div>
+      <div class="fact-item reveal"><div class="fact-value">1</div><div class="fact-label">موقف سيارات مدمج في الرسم لكل وحدة</div></div>
+      <div class="fact-item reveal"><div class="fact-value">Daam</div><div class="fact-label">بعض الوحدات قد تكون مؤهلة</div></div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <p class="section-eyebrow">نظرة على المشروع</p>
+    <h2 class="section-title">شقق بتشطيبات عالية<br>في وسط مدينة القنيطرة.</h2>
+    <p class="portfolio-intro">يقدم Elaf Sky View شققا مصممة بعناية في إحدى المدن المغربية سريعة النمو، مع توازن نادر بين جودة ميسرة، بنية عملية، وراحة يومية.</p>
+    <div class="portfolio-grid">
+      <article class="portfolio-card reveal">
+        <div class="portfolio-img" id="gallery" data-gallery>
+          <img src="../elaf.jpg" alt="مشروع Elaf Sky View السكني في وسط القنيطرة" class="portfolio-slide is-active">
+          <img src="../elaf-interior.png" alt="تشطيبات داخلية في Elaf Sky View" class="portfolio-slide">
+          <img src="../elaf-kitchen.png" alt="مطبخ مجهز في Elaf Sky View" class="portfolio-slide">
+          <img src="../elaf-location.png" alt="موقع ومحيط Elaf Sky View" class="portfolio-slide">
+          <div class="portfolio-img-overlay" aria-hidden="true"></div>
+          <button class="gallery-btn gallery-prev" type="button" aria-label="الصورة السابقة">&lsaquo;</button>
+          <button class="gallery-btn gallery-next" type="button" aria-label="الصورة التالية">&rsaquo;</button>
+          <div class="gallery-dots" aria-label="معرض صور Elaf Sky View"><button class="gallery-dot is-active" type="button" aria-label="عرض الصورة 1"></button><button class="gallery-dot" type="button" aria-label="عرض الصورة 2"></button><button class="gallery-dot" type="button" aria-label="عرض الصورة 3"></button><button class="gallery-dot" type="button" aria-label="عرض الصورة 4"></button></div>
+          <div class="portfolio-img-label"><div class="portfolio-location">القنيطرة · وسط المدينة</div><h3 class="portfolio-name">Elaf Sky View</h3></div>
+        </div>
+        <div class="portfolio-body">
+          <div class="portfolio-tags"><span class="tag">شقق</span><span class="tag">وسط المدينة</span><span class="tag">جاهز للطاقة</span><span class="tag">تشطيبات عالية</span><span class="tag">مؤهل لدعم السكن</span><span class="tag">تفويض نشط</span></div>
+          <div class="portfolio-desc"><p>يقع Elaf Sky View في وسط المدينة، في حي قائم وأخضر بجانب حديقة عمومية، على بعد حوالي عشر دقائق مشيا من محطة القطار فائق السرعة وحوالي خمس دقائق بالسيارة من الطريق السيار.</p><p>صمم المشروع ليناسب الاستثمار الإيجاري والسكن طويل الأمد. كل شقة تتضمن تهيئة مسبقة للتكييف، نوافذ وأبواب زجاجية بعزل مزدوج، أبوابا مستوردة من تركيا بنظام إغلاق ثلاثي، مطابخ مجهزة، مقاعد مدمجة في الدش، وتشطيبات داخلية مرتفعة المستوى.</p><p>تستفيد كل شقة أيضا من مساحة خاصة على السطح لتركيب ألواح شمسية مستقبلا، مرتبطة مباشرة بالوحدة، ما يساعد على خفض تكاليف الكهرباء بعد التركيب. كما تخصص لكل شقة مساحة ركن تحت أرضية مدمجة في الرسم العقاري.</p></div>
+          <div class="portfolio-kpis"><div><div class="portfolio-kpi-label">عدد الوحدات</div><div class="portfolio-kpi-value">35</div></div><div><div class="portfolio-kpi-label">المساحات</div><div class="portfolio-kpi-value" dir="ltr">61-108 m²</div></div><div><div class="portfolio-kpi-label">السعر</div><div class="portfolio-kpi-value" dir="ltr">11,500 MAD/m²</div></div><div><div class="portfolio-kpi-label">الطوابق</div><div class="portfolio-kpi-value">6</div></div></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="split-section location-section">
+    <div>
+      <p class="section-eyebrow">لماذا هذا المشروع</p>
+      <h2 class="section-title">نسبة قوية بين السعر والجودة<br>في مدينة حقيقية.</h2>
+      <p class="section-copy">لا يقدم Elaf Sky View كفخامة مضاربية. إنه مشروع سكني في موقع جيد وبمستوى تشطيب واضح، داخل مدينة تعرف طلبا يوميا حقيقيا وأسعارا لا تزال أيسر من الأسواق المغربية الأكثر رسوخا.</p>
+      <p class="section-copy">قوته عملية: عنوان ناضج في وسط المدينة، خدمات على مسافة مشي، ربط قوي، موقف سيارات مدمج في الرسم العقاري، وتشطيبات تجعل الشقق مناسبة للسكن الفعلي لا للعرض فقط.</p>
+      <div class="button-row"><a href="why-morocco.html" class="btn-primary">فرصة السوق</a><a href="guides/kenitra-vs-rabat.html" class="btn-outline" style="color:var(--navy);border-color:var(--border);">دليل القنيطرة مقابل الرباط</a></div>
+    </div>
+    <div class="media-panel reveal">
+      <img src="../elaf-building.png" alt="صورة خارجية لمبنى Elaf Sky View">
+    </div>
+  </section>
+
+  <section class="dark-section">
+    <p class="section-eyebrow">جودة البناء</p>
+    <h2 class="section-title">الفرق يظهر<br>في المواصفات.</h2>
+    <p class="services-intro">عند هذا السعر، التفاصيل مهمة. صمم Elaf Sky View ليمنح إحساسا أكثر اكتمالا وكفاءة وأمانا من الشقة المتوسطة المعتادة.</p>
+    <div class="detail-grid">
+      <article class="detail-card reveal"><h3 class="detail-title">جاهز للطاقة الشمسية</h3><p class="detail-text">لكل وحدة مساحة خاصة على السطح للألواح الشمسية المستقبلية، مع تهيئة مسبقة لربط النظام بالشقة وبالمدخل الكهربائي الخاص بموقفها تحت الأرض.</p></article>
+      <article class="detail-card reveal"><h3 class="detail-title">راحة وعزل</h3><p class="detail-text">تهيئة مسبقة للتكييف ونوافذ وأبواب زجاجية بعزل مزدوج تساعد على تحسين الراحة، تقليل الضجيج، ورفع الكفاءة الطاقية.</p></article>
+      <article class="detail-card reveal"><h3 class="detail-title">الأمان والأبواب</h3><p class="detail-text">الأبواب الرئيسية والداخلية مستوردة من تركيا، مع نظام إغلاق ثلاثي في الأبواب الرئيسية.</p></article>
+      <article class="detail-card reveal"><h3 class="detail-title">مطابخ مجهزة</h3><p class="detail-text">الشقق تتضمن مطابخ مجهزة، ما يقلل من العمل المطلوب للتجهيز سواء للاستعمال الشخصي أو للإيجار.</p></article>
+      <article class="detail-card reveal"><h3 class="detail-title">حمامات مكتملة</h3><p class="detail-text">مقاعد الدش المدمجة تضيف راحة وعملية، خاصة للعائلات وكبار السن والإقامات الطويلة.</p></article>
+      <article class="detail-card reveal"><h3 class="detail-title">تشطيبات داخلية</h3><p class="detail-text">الأرضيات، الطلاء، اللوحات الجدارية واختيارات التشطيب تهدف إلى إحساس أكثر رقيا دون الدخول في أسعار الفخامة العالية.</p></article>
+    </div>
+  </section>
+
+  <section class="split-section location-section">
+    <div class="map-card reveal">
+      <div class="media-panel">
+        <img src="../elaf-map.png" alt="خريطة توضح موقع Elaf Sky View في وسط مدينة القنيطرة">
+      </div>
+    </div>
+    <div>
+      <p class="section-eyebrow">الموقع</p>
+      <h2 class="section-title">راحة وسط المدينة.<br>وربط بالجهة.</h2>
+      <p class="section-copy">يقع المشروع في جزء ناضج وأخضر من وسط القنيطرة، بجانب حديقة عمومية وعلى مسافة مشي من خدمات الحياة اليومية. هذا مهم للسكان والمستأجرين والعائلات التي تريد عقارا يعمل فعلا بعد قرار الشراء.</p>
+      <div class="location-grid">
+        <div class="location-item reveal"><h3 class="location-title">قرب محطة TGV</h3><p class="location-copy">حوالي عشر دقائق مشيا من محطة القطار فائق السرعة في القنيطرة.</p></div>
+        <div class="location-item reveal"><h3 class="location-title">قرب الطريق السيار</h3><p class="location-copy">حوالي خمس دقائق بالسيارة من الطريق السيار نحو الرباط، سلا، الدار البيضاء وطنجة.</p></div>
+        <div class="location-item reveal"><h3 class="location-title">خدمات يومية</h3><p class="location-copy">موقع مركزي قريب من المتاجر، الخدمات، المقاهي، المدارس والاحتياجات اليومية.</p></div>
+        <div class="location-item reveal"><h3 class="location-title">محيط أخضر</h3><p class="location-copy">نسيج حضري قائم مع مساحات خضراء قريبة، وليس مشروعا معزولا في أطراف المدينة.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <p class="section-eyebrow">ملاءمة المشترين</p>
+    <h2 class="section-title">مشترون مختلفون.<br>وأسباب مختلفة للنظر.</h2>
+    <p class="services-intro">Elaf Sky View ليس عرضا واحدا للجميع. أنواع الوحدات المختلفة قد تناسب مشترين لأول مرة، عائلات MRE، مستثمرين محليين، وأجانب يخططون للانتقال إلى المغرب.</p>
+    <div class="services-grid">
+      <article class="service-card reveal"><div class="service-num">01</div><h3 class="service-title">المشترون الدوليون</h3><p class="service-desc">قاعدة مركزية في القنيطرة للتخطيط للانتقال، السكن طويل الأمد، الدخل الإيجاري أو امتلاك عقار مغربي مع متابعة.</p><a href="investors-international.html" class="service-link">مسار المشتري الدولي</a></article>
+      <article class="service-card reveal"><div class="service-num">02</div><h3 class="service-title">مشترو MRE</h3><p class="service-desc">سكن ثان، قاعدة عائلية، استثمار إيجاري أو عقار للعودة المستقبلية مع دعم أثناء وجودك خارج المغرب.</p><a href="investors-mre.html" class="service-link">مسار MRE</a></article>
+      <article class="service-card reveal"><div class="service-num">03</div><h3 class="service-title">المشترون المحليون</h3><p class="service-desc">فرصة في مدينة متصلة لمن يقارن بين أسعار منطقة الرباط، الاستخدام الإيجاري والقيمة طويلة الأمد.</p><a href="investors-local.html" class="service-link">مسار المشتري المحلي</a></article>
+      <article class="service-card reveal"><div class="service-num">04</div><h3 class="service-title">مشترو دعم السكن</h3><p class="service-desc">بعض الوحدات قد تكون مؤهلة لدعم السكن، ما يمنح المشترين المؤهلين مدخلا أيسر إلى مبنى بجودة أعلى.</p><a href="guides/daam-sakani-guide.html" class="service-link">قراءة دليل الدعم</a></article>
+    </div>
+  </section>
+
+  <section>
+    <p class="section-eyebrow">استراتيجية اختيار الوحدة</p>
+    <h2 class="section-title">اختر الوحدة<br>حسب الاستعمال.</h2>
+    <p class="portfolio-intro">الشراء الجيد لا يعني فقط اختيار أجمل شقة. الوحدة المناسبة تعتمد على طريقة استعمالها: السكن، الإيجار، العودة، الاستفادة من الدعم أو الاحتفاظ بقيمة طويلة الأمد.</p>
+    <div class="unit-grid">
+      <article class="unit-card reveal"><span class="tag">مدخل أيسر</span><h3 class="unit-title">وحدات مؤهلة للدعم</h3><p class="unit-text">للمشترين المؤهلين، قد توفر بعض الوحدات نقطة دخول أيسر إلى مبنى بجودة أفضل. يجب التأكد من الشروط والالتزامات قبل الحجز.</p></article>
+      <article class="unit-card reveal"><span class="tag">استعمال عائلي</span><h3 class="unit-title">وحدات أكبر</h3><p class="unit-text">المساحات الأكبر تناسب السكن الثاني، الإقامات العائلية، السكن الطويل أو المشترين الذين يخططون للعودة إلى المغرب.</p></article>
+      <article class="unit-card reveal"><span class="tag">منطق إيجاري</span><h3 class="unit-title">وحدات مناسبة للمستثمر</h3><p class="unit-text">للمشتري الباحث عن الإيجار، الأولوية للمساحة، تكلفة التأثيث، نوع المستأجر، الإدارة، وهل يدعم الموقع طلبا منتظما.</p></article>
+    </div>
+  </section>
+
+  <section class="dark-section split-section">
+    <div>
+      <p class="section-eyebrow">المنطق الاستثماري</p>
+      <h2 class="section-title">لماذا القنيطرة،<br>ولماذا الآن.</h2>
+      <p class="section-copy">القنيطرة ليست الرباط، وهذا جزء من الفكرة. المشترون الذين لم تعد أسعار العاصمة مناسبة لهم، والعائلات التي تبحث عن مساحة أكبر، والمستثمرون الذين يريدون سعر دخول أقوى يمكن أن يجدوا نقاشا أكثر عملية في المدن المتصلة.</p>
+      <p class="section-copy">يقع Elaf Sky View داخل هذه الفرصة: موقع مركزي، ربط قوي، مساحات عملية، ومستوى مواصفات يساعد المشروع على التميز في سوق لا تزال فيه مشاريع كثيرة تباع بطرق غير منظمة.</p>
+      <div class="guide-links"><a href="guides/kenitra-vs-rabat.html">القنيطرة مقابل الرباط</a><a href="guides/buying-property-morocco.html">شراء عقار في المغرب</a><a href="guides/preconstruction-guide.html">دليل البيع على التصميم</a></div>
+    </div>
+    <div>
+      <article class="investment-panel reveal"><p class="investment-kicker">للمشترين المرتبطين بالرباط</p><h3 class="investment-title">امتلاك عقار في مدينة متصلة مع البقاء ضمن نطاق العاصمة.</h3></article>
+      <article class="investment-panel reveal"><p class="investment-kicker">لمشتري MRE</p><h3 class="investment-title">قاعدة في البلد يمكن أن تخدم العائلة، الإيجار أو التخطيط للعودة طويلة الأمد.</h3></article>
+      <article class="investment-panel reveal"><p class="investment-kicker">للمشترين الدوليين</p><h3 class="investment-title">دخول عملي إلى المغرب خارج الأسواق السياحية المسعرة بالكامل.</h3></article>
+    </div>
+  </section>
+
+  <section class="split-section">
+    <div>
+      <p class="section-eyebrow">Rahim International</p>
+      <h2 class="section-title">نساعدك على قراءة<br>المشروع بشكل صحيح.</h2>
+      <p class="section-copy">دورنا هو جعل الفرصة أوضح قبل الالتزام. نساعد على مقارنة أنواع الوحدات، شرح نسبة السعر إلى الجودة، تنسيق الأسئلة مع المطور العقاري، وتنظيم الخطوات التالية بمتابعة جدية.</p>
+      <p class="section-copy">للمشترين الموجودين خارج المغرب، يعني ذلك أيضا الحفاظ على تنظيم التواصل، تحديثات الموقع، أسئلة الوثائق وتوقيت القرار.</p>
+    </div>
+    <div class="unit-grid" style="grid-template-columns:1fr;gap:1px;margin-top:0;">
+      <article class="unit-card reveal"><span class="tag">01</span><h3 class="unit-title">اختيار الوحدة</h3><p class="unit-text">نساعد على مطابقة الميزانية، المساحة، الاستعمال وملف المشتري.</p></article>
+      <article class="unit-card reveal"><span class="tag">02</span><h3 class="unit-title">قراءة المشروع</h3><p class="unit-text">نوضح التشطيبات، السعر، التسليم، الأهلية والأسئلة المهمة قبل الحجز.</p></article>
+      <article class="unit-card reveal"><span class="tag">03</span><h3 class="unit-title">المتابعة</h3><p class="unit-text">نحافظ على تنظيم المسار من أول استفسار إلى الخطوة الجدية التالية.</p></article>
+    </div>
+  </section>
+
+  <section id="contact" style="background:var(--navy);">
+    <div>
+      <p class="section-eyebrow">اطلب التفاصيل</p>
+      <h2 class="section-title" style="color:var(--white);">هل تريد ملف<br>Elaf Sky View الكامل؟</h2>
+      <p class="contact-text">أخبرنا هل تشتري للسكن، الدخل الإيجاري، دعم السكن، الانتقال أو الاستثمار طويل الأمد. سنرسل لك المعلومات المناسبة ونوضح أي نوع من الوحدات يناسب هدفك.</p>
+    </div>
+    <div>
+      <form id="contact-form" class="contact-form" action="https://formspree.io/f/xojypvlq" method="POST">
+        <input type="hidden" name="subject" value="طلب Elaf Sky View">
+        <div class="form-grid"><div class="form-group"><label class="form-label" for="first-name">الاسم</label><input id="first-name" name="first_name" type="text" class="form-input" placeholder="اسمك" required></div><div class="form-group"><label class="form-label" for="last-name">النسب</label><input id="last-name" name="last_name" type="text" class="form-input" placeholder="النسب" required></div></div>
+        <div class="form-group"><label class="form-label" for="email">البريد الإلكتروني</label><input id="email" name="email" type="email" class="form-input" placeholder="your@email.com" required dir="ltr"></div>
+        <div class="form-group"><label class="form-label" for="profile">الملف</label><select id="profile" name="profile" class="form-select" required><option value="">اختر ملفك</option><option>مشتري دولي</option><option>مشتري MRE</option><option>مشتري محلي / مستثمر</option><option>مشتري دعم السكن</option><option>آخر</option></select></div>
+        <div class="form-group"><label class="form-label" for="message">الرسالة</label><textarea id="message" name="message" class="form-textarea" placeholder="أخبرنا ماذا تريد أن تعرف عن Elaf Sky View..."></textarea></div>
+        <p id="form-status" class="form-status" aria-live="polite"></p>
+        <button type="submit" class="form-submit">اطلب التفاصيل</button>
+      </form>
+    </div>
+  </section>
+</main><footer>
+  <a href="#home" class="brand" aria-label="الصفحة الرئيسية Rahim International">
+    <svg class="brand-mark" viewBox="100 80 480 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="60" y="10" width="560" height="540" rx="16" class="brand-mark-bg"/>
+      <rect x="168" y="318" width="344" height="9" rx="1" class="brand-mark-gold"/>
+      <rect x="168" y="310" width="44" height="22" rx="2" class="brand-mark-deep"/>
+      <rect x="468" y="310" width="44" height="22" rx="2" class="brand-mark-deep"/>
+      <path d="M340,88 C310,160 274,240 295,318 L315,318 C298,240 328,162 340,100 Z" class="brand-mark-gold"/>
+      <path d="M340,88 C370,160 406,240 385,318 L365,318 C382,240 352,162 340,100 Z" class="brand-mark-gold"/>
+      <path d="M340,88 C322,155 308,240 310,318 L318,318 C316,240 330,158 340,100 Z" class="brand-mark-navy"/>
+      <path d="M340,88 C358,155 372,240 370,318 L362,318 C370,240 350,158 340,100 Z" class="brand-mark-navy"/>
+      <line x1="340" y1="88" x2="185" y2="318" class="brand-mark-line" stroke-width="1.4" opacity="0.95"/>
+      <line x1="340" y1="106" x2="210" y2="318" class="brand-mark-line" stroke-width="1.25" opacity="0.88"/>
+      <line x1="340" y1="88" x2="495" y2="318" class="brand-mark-line" stroke-width="1.4" opacity="0.95"/>
+      <line x1="340" y1="106" x2="470" y2="318" class="brand-mark-line" stroke-width="1.25" opacity="0.88"/>
+    </svg>
+    <span class="brand-name">Rahim <span>International</span></span>
+  </a>
+  <div class="footer-copy">© 2026 Rahim International. جميع الحقوق محفوظة.</div>
+</footer>
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('#nav-links');
+
+  navToggle.addEventListener('click', () => {
+    const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!isOpen));
+    navToggle.setAttribute('aria-label', isOpen ? 'فتح القائمة' : 'إغلاق القائمة');
+    navLinks.classList.toggle('is-open', !isOpen);
+  });
+
+  navLinks.addEventListener('click', (event) => {
+    if (event.target.matches('a')) {
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'فتح القائمة');
+      navLinks.classList.remove('is-open');
+    }
+  });
+
+  document.querySelector('#contact-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const btn = form.querySelector('.form-submit');
+    const status = form.querySelector('#form-status');
+    const originalText = btn.textContent;
+
+    btn.textContent = 'جار الإرسال...';
+    btn.disabled = true;
+    status.textContent = '';
+    status.className = 'form-status';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (!response.ok) {
+        throw new Error('Form submission failed');
+      }
+
+      form.reset();
+      status.textContent = 'تم إرسال الرسالة. شكرا، سنتواصل معك قريبا.';
+      status.classList.add('is-success');
+    } catch (error) {
+      status.textContent = 'عذرا، حدث خطأ. يمكنك مراسلتنا مباشرة على contact@RahimInternational.com.';
+      status.classList.add('is-error');
+    } finally {
+      btn.textContent = originalText;
+      btn.disabled = false;
+    }
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+  document.querySelectorAll('[data-gallery]').forEach((gallery) => {
+    const slides = Array.from(gallery.querySelectorAll('.portfolio-slide'));
+    const dots = Array.from(gallery.querySelectorAll('.gallery-dot'));
+    const prev = gallery.querySelector('.gallery-prev');
+    const next = gallery.querySelector('.gallery-next');
+    let activeIndex = 0;
+
+    const showSlide = (index) => {
+      activeIndex = (index + slides.length) % slides.length;
+      slides.forEach((slide, slideIndex) => {
+        slide.classList.toggle('is-active', slideIndex === activeIndex);
+      });
+      dots.forEach((dot, dotIndex) => {
+        dot.classList.toggle('is-active', dotIndex === activeIndex);
+      });
+    };
+
+    prev.addEventListener('click', () => showSlide(activeIndex - 1));
+    next.addEventListener('click', () => showSlide(activeIndex + 1));
+    dots.forEach((dot, dotIndex) => {
+      dot.addEventListener('click', () => showSlide(dotIndex));
+    });
+  });
+</script>
+
+</body>
+</html>
