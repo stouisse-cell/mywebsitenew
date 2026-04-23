@@ -301,6 +301,7 @@
   .intro-text { max-width: 740px; margin-bottom: 3.5rem; }
 
   #problem,
+  #how-we-help,
   #support,
   #cta { background: var(--cream); }
   #process { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); }
@@ -436,36 +437,80 @@
   }
 
   .steps-list {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1px;
-    background: rgba(210, 180, 134, 0.16);
-    border: 1px solid rgba(210, 180, 134, 0.12);
+    gap: 1.6rem;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
+  .steps-list::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    transform: translateX(-50%);
+    background: linear-gradient(to bottom, rgba(210, 180, 134, 0.12), rgba(183, 106, 63, 0.75), rgba(210, 180, 134, 0.12));
   }
   .step {
-    display: grid;
-    grid-template-columns: 72px 1fr;
-    gap: 1.5rem;
-    align-items: start;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.035);
-    border-bottom: none;
-    min-height: 180px;
+    position: relative;
+    width: calc(50% - 2.5rem);
+    padding: 2rem 2rem 2rem 2.2rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(183, 106, 63, 0.06));
+    border: 1px solid rgba(210, 180, 134, 0.16);
+    box-shadow: 0 18px 44px rgba(7, 17, 31, 0.18);
+    min-height: 190px;
+  }
+  .step:nth-child(odd) { justify-self: start; }
+  .step:nth-child(even) { justify-self: end; }
+  .step::before {
+    content: '';
+    position: absolute;
+    top: 2.1rem;
+    width: 2.4rem;
+    height: 1px;
+    background: rgba(210, 180, 134, 0.55);
+  }
+  .step:nth-child(odd)::before {
+    right: -2.4rem;
+  }
+  .step:nth-child(even)::before {
+    left: -2.4rem;
   }
   .step-num {
+    position: absolute;
+    top: 1.2rem;
+    width: 3.15rem;
+    height: 3.15rem;
+    border-radius: 999px;
+    border: 1px solid rgba(210, 180, 134, 0.55);
+    background: linear-gradient(135deg, rgba(183, 106, 63, 0.96), rgba(135, 69, 44, 0.96));
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: 3rem;
+    font-size: 1.15rem;
     font-weight: 300;
     line-height: 1;
-    color: rgba(183, 106, 63, 0.38);
+    color: var(--white);
+    box-shadow: 0 0 0 8px rgba(8, 26, 51, 0.85);
+  }
+  .step:nth-child(odd) .step-num {
+    right: -4.1rem;
+  }
+  .step:nth-child(even) .step-num {
+    left: -4.1rem;
   }
   .step-title {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     line-height: 1.3;
     color: var(--gold);
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.75rem;
+    max-width: 28rem;
   }
-  .step-text { color: rgba(255, 255, 255, 0.62); }
+  .step-text { color: rgba(255, 255, 255, 0.7); }
 
   .support-grid {
     display: grid;
@@ -649,7 +694,33 @@
     .support-grid,
     .feature-section,
     .reality-inner { grid-template-columns: 1fr; gap: 3rem; }
-    .steps-list { grid-template-columns: 1fr; }
+    .steps-list::before { left: 1.6rem; transform: none; }
+    .step,
+    .step:nth-child(odd),
+    .step:nth-child(even) {
+      width: auto;
+      justify-self: stretch;
+      margin-left: 3.6rem;
+      padding: 1.8rem 1.6rem 1.8rem 1.8rem;
+      min-height: auto;
+    }
+    .step::before,
+    .step:nth-child(odd)::before,
+    .step:nth-child(even)::before {
+      left: -2rem;
+      right: auto;
+      width: 2rem;
+    }
+    .step-num,
+    .step:nth-child(odd) .step-num,
+    .step:nth-child(even) .step-num {
+      left: -3.15rem;
+      right: auto;
+      top: 1.35rem;
+      width: 2.8rem;
+      height: 2.8rem;
+      font-size: 1rem;
+    }
     .page-hero { min-height: 620px; }
     .step { grid-template-columns: 60px 1fr; }
   }
@@ -808,43 +879,76 @@
     <div class="page-hero-content">
       <p class="page-hero-eyebrow">Moroccan Diaspora / MRE</p>
       <h1 class="page-hero-title">Buying Back Home<br><em>Shouldn't Feel Foreign.</em></h1>
-      <p class="page-hero-sub">Buying property in Morocco should feel familiar, not confusing. We help MRE buyers compare projects, verify the details, and keep the process moving when they are no longer in the country.</p>
+      <p class="page-hero-sub">For many MRE buyers, buying in Morocco is emotional and practical at the same time: a place for family, a future return base, or an investment that should make sense while you are abroad. We help you slow the process down, verify the details, and move forward with clearer information.</p>
     </div>
   </section>
 
   <section id="problem">
-    <p class="section-eyebrow">The Reality</p>
-    <h2 class="section-title">A Short Visit Should Not<br>Carry the Whole Decision.</h2>
-    <p class="intro-text">Buying a second residence, rental property, or future return base often starts with family advice and local contacts. That can open doors, but it is not the same as structured research, pricing context, project checks, legal-process guidance, and follow-up from Morocco.</p>
+    <p class="section-eyebrow">The MRE Buying Reality</p>
+    <h2 class="section-title">The Hard Part Is Not<br>Wanting to Buy.</h2>
+    <p class="intro-text">The hard part is getting enough reliable information before you commit. Many MRE buyers are trying to make a serious property decision from another country, in another time zone, with limited access to the people and documents that matter.</p>
+    <p class="intro-text">If you are abroad, you may rely on family to hear about projects, attend viewings, speak to salespeople, take photos, and report back. Family support can be valuable, but it is not the same as market due diligence. A relative may not know how to compare price per square metre, question the stated surface area, ask about title and permits, review finishes, or push for written answers before a reservation is made.</p>
+    <p class="intro-text">If you are in Morocco for only a few weeks, the pressure is different. You may be trying to see several projects between family visits, errands, travel, and a fixed return date. Sales teams know your time is limited. That can create urgency around a unit, a price, or a payment deadline before you have had time to check whether the project actually fits your needs.</p>
+    <p class="intro-text">The market itself does not always make this easy. Many middle-market developments have no proper website, limited photos, and very little information available online. Sometimes the public presentation is one basic ad with a phone number. Floor plans, finishes, delivery timelines, legal details, pricing logic, and clear project images may only be available through direct conversations.</p>
+    <p class="intro-text">That is why the details matter before money changes hands: real market price, developer track record, legal structure, stated versus actual surface area, payment schedule, delivery timeline, reservation terms, and who will keep following up once you are no longer in Morocco.</p>
     <div class="cards-grid">
-      <article class="info-card reveal"><p class="card-kicker">Second Home</p><h3 class="card-title">A place for family and return.</h3><p class="card-text">We help you assess whether the property is comfortable, well-located, and worth holding long term.</p></article>
-      <article class="info-card reveal"><p class="card-kicker">Rental Investment</p><h3 class="card-title">Income needs structure.</h3><p class="card-text">We look at rental logic, furnishing, management, local demand, and whether the unit fits the income goal.</p></article>
-      <article class="info-card reveal"><p class="card-kicker">Pre-Construction</p><h3 class="card-title">Early pricing needs protection.</h3><p class="card-text">We help check the real estate developer, delivery timeline, payment schedule, promised finishes, and progress after you return abroad.</p></article>
-      <article class="info-card reveal"><p class="card-kicker">Daam Sakani</p><h3 class="card-title">Support may be available.</h3><p class="card-text">MRE buyers may be eligible, but the rules and obligations need to be checked before a purchase is built around the subsidy.</p></article>
+      <article class="info-card reveal"><p class="card-kicker">Second Home</p><h3 class="card-title">A property your family can actually use.</h3><p class="card-text">A second home is not just about having a key in Morocco. It needs to work during summer visits, family stays, and possible future return. We look at neighbourhood, access, building management, parking, finishes, security, and whether the property will still make sense when it is empty for part of the year.</p></article>
+      <article class="info-card reveal"><p class="card-kicker">Rental Investment</p><h3 class="card-title">Rental income needs real numbers.</h3><p class="card-text">A unit can look profitable in a sales conversation and perform differently once costs are included. We review current local rents, likely tenant demand, furnishing needs, management structure, vacancy risk, building fees, maintenance, and whether the unit is realistic to manage from abroad.</p></article>
+      <article class="info-card reveal"><p class="card-kicker">Pre-Construction</p><h3 class="card-title">Early pricing needs proper protection.</h3><p class="card-text">Off-plan purchases can offer better entry pricing, but the risk is higher if the reservation is informal or the project is not properly checked. We look at the developer, land and permit status, payment schedule, delivery timeline, construction progress, promised finishes, and what proof you receive at each stage.</p></article>
+      <article class="info-card reveal"><p class="card-kicker">Daam Sakani</p><h3 class="card-title">A subsidy should be verified before it shapes your budget.</h3><p class="card-text">MRE buyers may be eligible for Daam Sakani support under specific conditions. We help check whether the property, buyer profile, price ceiling, intended use, and paperwork align before you rely on the subsidy as part of the purchase plan.</p></article>
+    </div>
+  </section>
+
+  <section id="how-we-help">
+    <div class="support-grid">
+      <div>
+        <p class="section-eyebrow">How We Help</p>
+        <h2 class="section-title">Your Eyes<br>on the Ground.</h2>
+        <p class="body-text">We help structure the decision so you are not depending only on family opinions, informal reservations, or incomplete answers. The goal is not to rush you into a property. The goal is to make sure the property, price, process, and paperwork make sense before you move forward.</p>
+        <p class="body-text">For MRE buyers, this means turning scattered information into a clearer decision: what the unit is, what it costs, who is building it, what is promised, what is documented, and what still needs to be verified.</p>
+      </div>
+      <article class="highlight-panel reveal">
+        <h3 class="highlight-title">What we help you check.</h3>
+        <div class="checklist">
+          <div class="check-item"><span class="check-mark">✓</span><span class="check-text">Compare units, locations, pricing, and actual use case.</span></div>
+          <div class="check-item"><span class="check-mark">✓</span><span class="check-text">Ask the right questions about the developer, finishes, materials, delivery, parking, and paperwork.</span></div>
+          <div class="check-item"><span class="check-mark">✓</span><span class="check-text">Support pre-construction follow-up with site updates, milestone checks, and developer communication while you are abroad.</span></div>
+          <div class="check-item"><span class="check-mark">✓</span><span class="check-text">Explain Daam Sakani when relevant, including eligibility, obligations, and what should be confirmed before relying on the subsidy.</span></div>
+          <div class="check-item"><span class="check-mark">✓</span><span class="check-text">Coordinate communication with the developer, notary, bank, and service partners where needed.</span></div>
+        </div>
+      </article>
     </div>
   </section>
 
   <section id="process">
-    <p class="section-eyebrow">How We Help</p>
-    <h2 class="section-title">We Become Your Eyes<br>on the Ground.</h2>
-    <p class="intro-text">When you only have a short time in Morocco, the hard part is not finding an apartment. It is knowing what is worth taking seriously. We help you compare the options, ask the right questions, and follow up after you leave.</p>
+    <p class="section-eyebrow">How We Work With You</p>
+    <h2 class="section-title">It Starts With<br>a Proper Consultation.</h2>
+    <p class="intro-text">Whether you are in Morocco or abroad, the process begins with a structured consultation: in person, by video, or by phone. This is not a casual discussion. It is where we establish the foundation of the acquisition by understanding why you want to buy, what the property needs to achieve, your budget and financing structure, your timeline and travel constraints, and your expectations in terms of lifestyle, usage, or return.</p>
     <div class="steps-list">
-      <article class="step reveal"><div class="step-num">01</div><div><h3 class="step-title">Understand the Goal</h3><p class="step-text">Second home, rental income, family use, future relocation, or long-term investment.</p></div></article>
-      <article class="step reveal"><div class="step-num">02</div><div><h3 class="step-title">Check the Project</h3><p class="step-text">Location, real estate developer, price, finishes, paperwork questions, and delivery timeline.</p></div></article>
-      <article class="step reveal"><div class="step-num">03</div><div><h3 class="step-title">Keep Following Up</h3><p class="step-text">If you leave Morocco before the process is finished, we keep the questions, updates, and next steps organized.</p></div></article>
+      <article class="step reveal"><div class="step-num">01</div><div><h3 class="step-title">We Build Your Buyer Profile</h3><p class="step-text">We translate your objectives into a precise acquisition framework: purpose of purchase, eligibility considerations such as Daam Sakani where relevant, preferred locations, property type, realistic budget range, and the level of involvement or management you want after purchase.</p></div></article>
+      <article class="step reveal"><div class="step-num">02</div><div><h3 class="step-title">Market Orientation and Strategy Alignment</h3><p class="step-text">Before presenting properties, we give you context. We walk you through pricing levels by area and product type, the difference between new construction, resale, and pre-construction, developer positioning, rental realities where relevant, and the risks attached to your strategy.</p></div></article>
+      <article class="step reveal"><div class="step-num">03</div><div><h3 class="step-title">We Shortlist and Compare Opportunities</h3><p class="step-text">We work from our network of vetted developers, ongoing market research, and emerging opportunities where relevant. From there, we build a structured shortlist and compare each option across price, location quality, future development potential, technical specifications, developer credibility, and suitability for your intended use.</p></div></article>
+      <article class="step reveal"><div class="step-num">04</div><div><h3 class="step-title">Pre-Screening and Remote Validation</h3><p class="step-text">For MRE clients abroad, we remove uncertainty before any trip takes place. We conduct first-level screenings, provide video walkthroughs and initial assessments, highlight strengths and inconsistencies, and eliminate weak options early so your time in Morocco is spent evaluating rather than discovering.</p></div></article>
+      <article class="step reveal"><div class="step-num">05</div><div><h3 class="step-title">We Inspect, Document, and Report</h3><p class="step-text">For each serious option, we conduct a detailed in-person evaluation with photo and video documentation, floor plan review, spatial analysis, square footage verification where possible, and inspection of materials, finishes, fixtures, installations, and overall build quality. We also assess neighbourhood quality, access, noise, amenities, livability, and building management expectations.</p></div></article>
+      <article class="step reveal"><div class="step-num">06</div><div><h3 class="step-title">Financial, Legal, and Developer Verification</h3><p class="step-text">Before any commitment, we go deeper into the file. We review the developer's track record and delivery history, available legal documentation, payment schedule structure, contractual obligations, and title or registration status where relevant. When needed, we coordinate with notaries or legal professionals for clarity.</p></div></article>
+      <article class="step reveal"><div class="step-num">07</div><div><h3 class="step-title">Decision Structuring and Negotiation Guidance</h3><p class="step-text">Once a property is selected, we guide the decision process. We confirm that the choice still matches your original objective, identify trade-offs clearly, advise on pricing and negotiation positioning, and help structure reservation and payment timing without pushing you into a rushed commitment.</p></div></article>
+      <article class="step reveal"><div class="step-num">08</div><div><h3 class="step-title">Reservation and Transaction Coordination</h3><p class="step-text">We stay involved through the transaction stage by helping with the reservation process, documentation review, coordination with the developer or seller, payment tracking, milestone clarity, and communication follow-up so delays and misunderstandings do not build up while you are away.</p></div></article>
+      <article class="step reveal"><div class="step-num">09</div><div><h3 class="step-title">Post-Purchase Follow-Up and Visibility</h3><p class="step-text">Our role does not stop at reservation. For new developments especially, we continue to help with construction follow-up, communication with the developer, updates on timelines and delivery, and support if issues or delays appear after you have returned abroad.</p></div></article>
     </div>
+    <p class="intro-text" style="margin-top:2rem; margin-bottom:0;">Our process is designed to reduce uncertainty at every stage, from the first consultation to post-purchase follow-up. Each step builds on the previous one so decisions are made with structure, context, and verification.</p>
   </section>
 
   <section id="support">
     <div class="support-grid">
       <div>
         <p class="section-eyebrow">Current Opportunity</p>
-        <h2 class="section-title">Elaf Sky View<br>for MRE Buyers.</h2>
-        <p class="body-text">Elaf Sky View can serve more than one MRE profile: selected Daam-eligible units for buyers who qualify, larger premium units for second-home or rental-investment use, and central Kénitra positioning for families who want value without being disconnected.</p>
-        <p class="body-text">The project is strongest when the buyer’s objective is clear and the unit type is matched properly: affordable entry, family use, rental potential, or long-term return base.</p>
+        <h2 class="section-title">Elaf Sky View,<br>Kénitra.</h2>
+        <p class="body-text">Elaf Sky View stands out to us because it is not a project we know only from a brochure or a sales pitch. It is a development we have followed closely, with a real estate developer we know and trust.</p>
+        <p class="body-text">We inspected the building ourselves and were present throughout the construction process. That matters. It means we are not relying on second-hand claims about materials, finishes, progress, or quality of build. We know the project directly, and we know how it has been executed over time.</p>
+        <p class="body-text">It is also where we chose to buy our own office. For MRE buyers, that gives the opportunity a different level of credibility. The project offers selected Daam-eligible units, larger apartments for second-home or rental use, and a central Kénitra location that works well for buyers who want value, trust, and a building we can speak about from direct experience.</p>
       </div>
       <article class="highlight-panel reveal">
-        <h3 class="highlight-title">Read the deeper guides before you decide.</h3>
+        <h3 class="highlight-title">Use the guides to understand the details behind the decision.</h3>
         <p class="highlight-copy"><a href="guides/mre-buying-guide.html">MRE Buying Guide</a></p>
         <p class="highlight-copy"><a href="guides/daam-sakani-guide.html">Daam Sakani Guide</a></p>
         <p class="highlight-copy"><a href="guides/preconstruction-guide.html">Pre-Construction Guide</a></p>
@@ -855,7 +959,7 @@
   <section id="cta">
     <p class="section-eyebrow">Start Your Search</p>
     <h2 class="section-title">Planning to Buy<br>Back Home?</h2>
-    <p class="cta-sub">Tell us when you are coming to Morocco, what you are trying to buy, and what you need checked before you make a decision.</p>
+    <p class="cta-sub">Tell us whether you are buying from abroad, visiting Morocco soon, or already considering a specific project. We will help you understand what needs to be checked before you commit.</p>
     <div class="cta-actions">
       <a href="index.html#contact" class="btn-primary">Begin a Conversation</a>
       <a href="guides/mre-buying-guide.html" class="btn-outline">Read the MRE Guide</a>
