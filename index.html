@@ -3,695 +3,416 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rahim International | Morocco Real Estate Advisory & Consulting</title>
-<meta name="description" content="Rahim International is a Rabat-Salé-Kénitra real estate advisory and consulting team combining market research, project strategy, marketing, and brokerage for buyers and Moroccan real estate developers.">
-<meta name="keywords" content="Morocco real estate investment, Kenitra property, international buyers Morocco, Morocco property advisory, Moroccan diaspora property, buy apartment Morocco, Kenitra real estate developer sales">
+<title>Morocco Real Estate Advisory &amp; Consulting | Kénitra &amp; Rabat-Salé Region | Rahim International</title>
+<meta name="description" content="Rahim International combines real estate advisory, market research, project strategy, marketing, and brokerage to help buyers and developers make better decisions in the Rabat-Salé-Kénitra market.">
+<link rel="canonical" href="https://rahiminternational.com/">
+<link rel="icon" type="image/png" href="logo.png">
+<meta property="og:title" content="Rahim International | Morocco Real Estate Advisory &amp; Consulting">
+<meta property="og:description" content="We bridge the distance. Real estate advisory for buyers and developers in the Rabat-Salé-Kénitra market.">
+<meta property="og:image" content="https://rahiminternational.com/elaf.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rahiminternational.com/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Rahim International","url":"https://rahiminternational.com","email":"contact@RahimInternational.com","telephone":"+212642773249","address":{"@type":"PostalAddress","streetAddress":"70 Av. Youssef Ben Tachfine","addressLocality":"Kénitra","postalCode":"14000","addressCountry":"MA"},"description":"Real estate advisory, consulting, marketing, and brokerage for buyers and developers in the Rabat-Salé-Kénitra region of Morocco."}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Didact+Gothic&amp;display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Didact+Gothic&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Didact+Gothic&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="shared.css">
 <style>
-  :root {
-    --navy: #081a33;
-    --navy-mid: #10294a;
-    --navy-soft: #17375f;
-    --ink: #07111f;
-    --gold: #d2b486;
-    --gold-deep: #b76a3f;
-    --copper: #b76a3f;
-    --copper-dark: #87452c;
-    --cream: #f4f7f8;
-    --steel: #e6edf1;
-    --white: #ffffff;
-    --text-dark: #07111f;
-    --text-muted: #657384;
-    --border: rgba(8, 26, 51, 0.12);
-    --border-warm: rgba(210, 180, 134, 0.24);
-    --line-dark: rgba(255, 255, 255, 0.14);
-    --shadow: 0 28px 80px rgba(8, 26, 51, 0.18);
-  }
+  /* ---- Index-specific styles ---- */
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Didact Gothic', sans-serif;
-    background: var(--navy);
-    color: var(--text-dark);
-    overflow-x: hidden;
-  }
-  a { color: inherit; }
-  img, video, svg { display: block; max-width: 100%; }
-
-  .site-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    height: 70px;
-    padding: 0 5%;
-    background: rgba(7, 17, 31, 0.96);
-    border-bottom: 1px solid var(--border-warm);
-    backdrop-filter: blur(12px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
-  }
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    text-decoration: none;
-    min-width: max-content;
-  }
-  .brand-mark { width: 38px; height: 32px; flex: 0 0 auto; }
-  .brand-name {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: var(--gold);
-    letter-spacing: 0.08em;
-  }
-  .brand-name span { color: var(--white); }
-  .brand-text {
-    display: grid;
-    gap: 0.1rem;
-    line-height: 1;
-  }
-  .brand-subtitle {
-    font-size: 0.54rem;
-    font-weight: 500;
-    letter-spacing: 0.17em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.58);
-    white-space: nowrap;
-  }
-  .nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: clamp(0.8rem, 1.8vw, 2rem);
-    list-style: none;
-  }
-  .nav-links a,
-  .nav-dropdown-toggle,
-  .nav-cta {
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    text-decoration: none;
-    white-space: nowrap;
-    font-family: inherit;
-    transition: color 0.3s, background 0.3s, border-color 0.3s;
-  }
-  .nav-dropdown-toggle {
-    border: 0;
-    background: transparent;
-    cursor: default;
-  }
-  .nav-links a,
-  .nav-dropdown-toggle { color: rgba(255, 255, 255, 0.7); }
-  .nav-links a:hover,
-  .nav-links a:focus-visible,
-  .nav-dropdown-toggle:hover,
-  .nav-dropdown-toggle:focus-visible,
-  .nav-links a.active { color: var(--copper); }
-  .nav-dropdown { position: relative; }
-  .nav-dropdown-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-  }
-  .nav-dropdown-toggle::after {
-    content: '▾';
-    font-size: 0.6rem;
-    opacity: 0.75;
-  }
-  .nav-dropdown::after {
-    content: '';
-    position: absolute;
-    left: -0.75rem;
-    right: -0.75rem;
-    top: 100%;
-    height: 0;
-  }
-  .nav-dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    min-width: 230px;
-    transform: translateX(-50%);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    background: rgba(7, 17, 31, 0.98);
-    border: 1px solid var(--border-warm);
-    backdrop-filter: blur(10px);
-    z-index: 300;
-    transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
-  }
-  .nav-dropdown-menu a {
-    display: block;
-    padding: 0.9rem 1rem;
-    border-bottom: 1px solid rgba(210, 180, 134, 0.14);
-  }
-  .nav-dropdown-menu a:last-child { border-bottom: none; }
-  .nav-dropdown:hover .nav-dropdown-menu,
-  .nav-dropdown:focus-within .nav-dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translateX(-50%);
-  }
-  .language-switcher {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-  }
-  .language-switcher a {
-    border: 1px solid rgba(210, 180, 134, 0.24);
-    padding: 0.35rem 0.45rem;
-    line-height: 1;
-  }
-  .language-switcher a.active {
-    background: var(--copper);
-    border-color: var(--copper);
-    color: var(--white);
-  }
-  .nav-cta {
-    color: var(--gold);
-    border: 1px solid var(--gold);
-    padding: 0.55rem 1.2rem;
-  }
-  .nav-cta:hover,
-  .nav-cta:focus-visible {
-    background: var(--copper);
-    color: var(--white);
-  }
-  .nav-toggle { display: none; }
-
-  .brand-mark-bg { fill: var(--navy); }
-  .brand-mark-gold { fill: var(--gold); }
-  .brand-mark-deep { fill: var(--gold-deep); }
-  .brand-mark-navy { fill: var(--navy); }
-  .brand-mark-line { stroke: var(--gold); }
-
-  #home {
+  /* Hero */
+  .hero {
     min-height: 100vh;
-    background:
-      radial-gradient(circle at 78% 22%, rgba(183, 106, 63, 0.22), transparent 30%),
-      linear-gradient(135deg, var(--ink) 0%, var(--navy) 52%, #172b4c 100%);
     position: relative;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 5% 6rem;
     overflow: hidden;
+    background: var(--ink);
   }
-  .hero-video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.68;
+  .hero-video-wrap {
+    position: absolute; inset: 0;
     z-index: 1;
   }
+  .hero-video-wrap img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0.62;
+  }
+  .hero-video-wrap video {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0.62;
+    position: absolute; inset: 0;
+  }
   .hero-overlay {
-    position: absolute;
-    inset: 0;
+    position: absolute; inset: 0;
     z-index: 2;
     background:
-      radial-gradient(circle at 72% 25%, rgba(183, 106, 63, 0.18), transparent 30%),
-      linear-gradient(to right, rgba(7, 17, 31, 0.96) 0%, rgba(8, 26, 51, 0.72) 50%, rgba(8, 26, 51, 0.28) 100%),
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.62) 100%);
+      radial-gradient(circle at 72% 24%, rgba(183,106,63,0.16), transparent 30%),
+      linear-gradient(to right, rgba(7,17,31,0.96) 0%, rgba(8,26,51,0.72) 52%, rgba(8,26,51,0.2) 100%),
+      linear-gradient(to top, rgba(7,17,31,0.72) 0%, transparent 55%);
   }
   .hero-pattern {
-    position: absolute;
-    inset: 0;
+    position: absolute; inset: 0;
     z-index: 3;
     background-image:
-      repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(210, 180, 134, 0.035) 80px),
-      repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(210, 180, 134, 0.035) 80px);
+      repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(210,180,134,0.03) 80px),
+      repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(210,180,134,0.03) 80px);
   }
   .hero-content {
     position: relative;
     z-index: 4;
-    width: min(920px, 90%);
-    margin-top: 70px;
-    padding: 5rem 0 6rem;
-    margin-left: 5%;
+    max-width: 860px;
   }
-  .hero-eyebrow,
-  .section-eyebrow {
+  .hero-eyebrow {
     font-size: 0.68rem;
     font-weight: 500;
-    letter-spacing: 0.28em;
+    letter-spacing: 0.26em;
     text-transform: uppercase;
     color: var(--copper);
-    margin-bottom: 1rem;
     display: flex;
     align-items: center;
     gap: 0.8rem;
+    margin-bottom: 1.2rem;
   }
-  .hero-eyebrow { margin-bottom: 1.8rem; }
-  .hero-eyebrow::before,
-  .section-eyebrow::before {
+  .hero-eyebrow::before {
     content: '';
-    display: block;
-    width: 34px;
-    height: 1px;
+    width: 30px; height: 1px;
     background: currentColor;
     flex: 0 0 auto;
   }
   .hero-title {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: clamp(3.2rem, 7vw, 6rem);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.2rem, 7.5vw, 6.2rem);
     font-weight: 300;
-    line-height: 1.1;
+    line-height: 1.04;
     color: var(--white);
-    margin-bottom: 2rem;
+    margin-bottom: 1.6rem;
   }
-  .hero-title em {
-    font-style: italic;
-    color: var(--gold);
-  }
+  .hero-title em { font-style: italic; color: var(--gold); }
   .hero-sub {
-    font-size: 0.95rem;
+    font-size: 0.96rem;
     font-weight: 300;
     line-height: 1.9;
-    color: rgba(255, 255, 255, 0.72);
-    max-width: 650px;
-    margin-bottom: 3rem;
+    color: rgba(255,255,255,0.68);
+    max-width: 620px;
+    margin-bottom: 2.5rem;
   }
-  .hero-actions,
-  .button-row {
+  .hero-actions {
     display: flex;
     gap: 1.2rem;
     flex-wrap: wrap;
   }
-  .services-actions { margin-top: 3rem; }
-  .btn-primary,
-  .btn-outline,
-  .btn-light {
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    padding: 1rem 2.2rem;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 48px;
-    transition: opacity 0.3s, color 0.3s, border-color 0.3s, background 0.3s;
-  }
-  .btn-primary {
-    background: var(--copper);
-    color: var(--white);
-    border: 1px solid var(--copper);
-  }
-  .btn-primary:hover,
-  .btn-primary:focus-visible { opacity: 0.9; }
-  .btn-outline,
-  .btn-light {
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    color: rgba(255, 255, 255, 0.84);
-    background: transparent;
-  }
-  .btn-outline:hover,
-  .btn-outline:focus-visible,
-  .btn-light:hover,
-  .btn-light:focus-visible {
-    border-color: var(--gold);
-    color: var(--gold);
-  }
   .hero-scroll {
     position: absolute;
-    bottom: 2.5rem;
-    left: 5%;
+    bottom: 2rem;
+    right: 5%;
     z-index: 4;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    color: rgba(255, 255, 255, 0.45);
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    writing-mode: vertical-rl;
   }
   .hero-scroll::after {
     content: '';
-    display: block;
     width: 1px;
-    height: 40px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent);
+    height: 48px;
+    background: linear-gradient(to bottom, rgba(210,180,134,0.6), transparent);
   }
 
-  section { padding: 7rem 5%; }
-  .section-title {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: clamp(2.25rem, 4vw, 3.55rem);
-    font-weight: 300;
-    line-height: 1.2;
-    color: var(--navy);
-    margin-bottom: 1.5rem;
-  }
-
-  #about {
-    background: var(--cream);
+  /* Problem section */
+  .problem-section { background: var(--cream); }
+  .problem-split {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+    grid-template-columns: minmax(0,1fr) minmax(280px,0.75fr);
     gap: 5rem;
-    align-items: center;
+    align-items: start;
   }
-  .about-text,
-  .portfolio-intro,
-  .contact-text,
-  .services-intro {
-    font-size: 0.9rem;
+  .body-text {
+    font-size: 0.92rem;
     font-weight: 300;
     line-height: 1.9;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
   }
-  .about-text,
-  .portfolio-intro { color: var(--text-muted); }
-  .about-text { margin-bottom: 1.2rem; }
-  .about-quote {
-    margin: 2.5rem 0 0;
-    border-left: 2px solid var(--copper);
-    padding-left: 1.8rem;
-  }
-  .about-quote p {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: 1.25rem;
-    font-style: italic;
-    font-weight: 300;
-    line-height: 1.6;
-    color: var(--navy);
-  }
-  .about-quote cite {
-    display: block;
-    margin-top: 0.8rem;
+  .service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 2rem 0;
     font-size: 0.68rem;
-    font-style: normal;
     font-weight: 500;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--copper-dark);
   }
-  .about-right { display: grid; gap: 1.2rem; }
-  .about-stat {
-    background: var(--white);
-    border: 1px solid var(--border);
-    padding: 1.8rem 2rem;
-    position: relative;
-  }
-  .about-stat::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 3px;
-    height: 100%;
-    background: var(--copper);
-  }
-  .about-stat-num {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: 2.4rem;
-    font-weight: 300;
-    color: var(--navy);
-    line-height: 1;
-    margin-bottom: 0.4rem;
-  }
-  .about-stat-label {
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-  }
-
-  #services { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); }
-  #services .section-title { color: var(--white); }
-  .services-intro {
-    color: rgba(255, 255, 255, 0.66);
-    max-width: 690px;
-    margin-bottom: 4rem;
-  }
-  .services-grid {
+  .service-tag-sep { color: var(--border); }
+  .pillars-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 1px;
-    background: var(--line-dark);
+    background: var(--border);
+    margin-top: 2rem;
   }
-  .service-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2.5rem 2rem;
-    transition: background 0.3s;
-  }
-  .service-card:hover { background: rgba(255, 255, 255, 0.08); }
-  .service-num {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: 3rem;
-    font-weight: 300;
-    color: rgba(183, 106, 63, 0.48);
-    line-height: 1;
-    margin-bottom: 1rem;
-  }
-  .service-title {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: var(--gold);
-    margin-bottom: 1rem;
-    line-height: 1.3;
-  }
-  .service-desc {
-    font-size: 0.82rem;
-    font-weight: 300;
-    line-height: 1.8;
-    color: rgba(255, 255, 255, 0.6);
-  }
-  .service-link {
-    display: inline-flex;
-    margin-top: 1.4rem;
-    font-size: 0.68rem;
-    font-weight: 500;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--gold);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(210, 180, 134, 0.35);
-    padding-bottom: 0.25rem;
-    transition: color 0.3s, border-color 0.3s;
-  }
-  .service-link:hover,
-  .service-link:focus-visible {
-    color: var(--copper);
-    border-color: var(--copper);
-  }
-
-  #portfolio { background: var(--cream); }
-  .portfolio-intro {
-    max-width: 620px;
-    margin-bottom: 3.5rem;
-  }
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 780px);
-  }
-  .portfolio-card {
+  .pillar-item {
     background: var(--white);
-    border: 1px solid var(--border);
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .portfolio-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow);
-  }
-  .portfolio-img {
-    min-height: 320px;
-    position: relative;
-    overflow: hidden;
+    padding: 1.5rem;
     display: flex;
-    align-items: flex-end;
-    background: var(--navy);
+    gap: 1rem;
+    align-items: flex-start;
   }
-  .portfolio-slide {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.35s ease, transform 0.5s ease;
-  }
-  .portfolio-slide.is-active { opacity: 1; }
-  .portfolio-card:hover .portfolio-slide.is-active { transform: scale(1.04); }
-  .portfolio-img-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(8, 26, 51, 0.88) 0%, transparent 62%);
-  }
-  .gallery-btn {
-    position: absolute;
-    top: 50%;
-    z-index: 4;
-    width: 40px;
-    height: 40px;
-    transform: translateY(-50%);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    background: rgba(7, 17, 31, 0.58);
-    color: var(--white);
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
+  .pillar-num {
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.8rem;
+    font-weight: 300;
+    color: rgba(183,106,63,0.3);
     line-height: 1;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s, border-color 0.3s, color 0.3s;
+    flex: 0 0 auto;
   }
-  .gallery-btn:hover,
-  .gallery-btn:focus-visible {
-    background: var(--copper);
-    border-color: var(--copper);
-  }
-  .gallery-prev { left: 1rem; }
-  .gallery-next { right: 1rem; }
-  .gallery-dots {
-    position: absolute;
-    right: 1.4rem;
-    bottom: 1.35rem;
-    z-index: 4;
-    display: flex;
-    gap: 0.45rem;
-  }
-  .gallery-dot {
-    width: 8px;
-    height: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.72);
-    border-radius: 999px;
-    background: transparent;
-    cursor: pointer;
-    padding: 0;
-  }
-  .gallery-dot.is-active {
-    background: var(--gold);
-    border-color: var(--gold);
-  }
-  .portfolio-img-label {
-    position: relative;
-    z-index: 2;
-    padding: 1.2rem 1.5rem;
-    width: 100%;
-  }
-  .portfolio-location,
-  .portfolio-kpi-label {
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 0.3rem;
-  }
-  .portfolio-name {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: var(--white);
-  }
-  .portfolio-body { padding: 1.5rem; }
-  .portfolio-tags {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-  }
-  .tag {
-    font-size: 0.62rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    border: 1px solid var(--border);
-    padding: 0.3rem 0.8rem;
-    color: var(--text-muted);
-  }
-  .portfolio-desc {
+  .pillar-text {
     font-size: 0.82rem;
     font-weight: 300;
     line-height: 1.7;
     color: var(--text-muted);
+    padding-top: 0.25rem;
   }
-  .portfolio-desc p + p { margin-top: 0.85rem; }
-  .portfolio-kpis {
-    display: flex;
-    gap: 2rem;
-    margin-top: 1.5rem;
-    flex-wrap: wrap;
+
+  /* Services / paths section */
+  .paths-section { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); }
+  .paths-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(210,180,134,0.14);
+    margin-top: 3.5rem;
   }
-  .portfolio-kpi-value {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
+  .path-card {
+    background: rgba(255,255,255,0.05);
+    padding: 2.5rem 2rem;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s;
+    position: relative;
+  }
+  .path-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--copper), var(--gold));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+  }
+  .path-card:hover { background: rgba(255,255,255,0.09); }
+  .path-card:hover::before { transform: scaleX(1); }
+  .path-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
     font-weight: 300;
-    color: var(--navy);
+    color: rgba(210,180,134,0.2);
+    line-height: 1;
+    margin-bottom: 1rem;
   }
-  .portfolio-actions {
-    display: flex;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-    align-items: center;
+  .path-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--gold);
+    margin-bottom: 0.9rem;
+    line-height: 1.3;
   }
-  .portfolio-cta {
+  .path-desc {
+    font-size: 0.84rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.58);
+    margin-bottom: 1.5rem;
+  }
+  .path-link {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--copper);
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    margin-top: 1.5rem;
-    font-size: 0.68rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--copper-dark);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.3s;
+    transition: color 0.2s;
   }
-  .portfolio-cta:hover,
-  .portfolio-cta:focus-visible { border-color: var(--copper-dark); }
-  .portfolio-cta::after { content: '>'; }
-
-  #contact {
-    background: var(--ink);
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
-    gap: 5rem;
-    align-items: start;
-  }
-  #contact .section-title { color: var(--white); }
-  .contact-text {
-    color: rgba(255, 255, 255, 0.66);
-    margin-bottom: 2.5rem;
-  }
-  .contact-info { display: grid; gap: 1.5rem; }
-  .contact-item {
+  .path-link::after { content: '→'; }
+  .path-card:hover .path-link { color: var(--gold); }
+  .paths-footer {
     display: flex;
-    gap: 1.2rem;
-    align-items: flex-start;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
   }
-  .contact-icon {
-    width: 36px;
-    height: 36px;
-    border: 1px solid var(--border-warm);
+
+  /* Gallery */
+  .gallery-wrap {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+    background: var(--navy-mid);
+  }
+  .gallery-slide {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .gallery-slide.is-active { opacity: 1; }
+  .gallery-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(8,26,51,0.8) 0%, transparent 55%);
+    z-index: 1;
+  }
+  .gallery-btn {
+    position: absolute;
+    top: 50%; z-index: 3;
+    width: 44px; height: 44px;
+    transform: translateY(-50%);
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(7,17,31,0.55);
+    color: var(--white);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .gallery-btn:hover { background: var(--copper); border-color: var(--copper); }
+  .gallery-prev { left: 1.2rem; }
+  .gallery-next { right: 1.2rem; }
+  .gallery-dots {
+    position: absolute;
+    right: 1.5rem; bottom: 1.5rem;
+    z-index: 3;
+    display: flex;
+    gap: 0.4rem;
+  }
+  .gallery-dot {
+    width: 8px; height: 8px;
+    border: 1px solid rgba(255,255,255,0.65);
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s;
+  }
+  .gallery-dot.is-active { background: var(--gold); border-color: var(--gold); }
+  .gallery-label {
+    position: absolute;
+    bottom: 1.5rem; left: 1.5rem;
+    z-index: 3;
+  }
+  .gallery-location {
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.25rem;
+  }
+  .gallery-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--white);
+  }
+
+  /* Elaf section */
+  .elaf-section { background: linear-gradient(135deg, var(--steel), #ead8c8); }
+  .elaf-grid {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(300px,0.75fr);
+    gap: 4rem;
+    align-items: start;
+    margin-top: 3.5rem;
+  }
+  .elaf-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin: 1.2rem 0;
+  }
+  .elaf-tag {
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.65rem;
+    color: var(--text-muted);
+    background: var(--white);
+  }
+  .elaf-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    margin: 2rem 0;
+  }
+  .elaf-stat {
+    background: var(--white);
+    padding: 1.2rem 1rem;
+  }
+  .elaf-stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem;
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .elaf-stat-label {
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+  .elaf-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  /* Contact section */
+  .contact-section { background: var(--navy); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: minmax(220px,0.65fr) minmax(0,1fr);
+    gap: 5rem;
+    align-items: start;
+  }
+  .contact-info { display: grid; gap: 1.5rem; }
+  .contact-item { display: flex; gap: 1.2rem; align-items: flex-start; }
+  .contact-icon {
+    width: 36px; height: 36px;
+    border: 1px solid var(--border-warm);
+    display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
-    font-size: 0.9rem;
     color: var(--copper);
+    font-size: 0.85rem;
   }
   .contact-item-label {
-    font-size: 0.65rem;
+    font-size: 0.62rem;
     font-weight: 500;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--copper);
     margin-bottom: 0.2rem;
@@ -700,277 +421,61 @@
   .contact-item-value a {
     font-size: 0.85rem;
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.78);
+    color: rgba(255,255,255,0.75);
     text-decoration: none;
-  }
-  .contact-form { display: grid; gap: 1.2rem; }
-  .form-group { display: grid; gap: 0.5rem; }
-  .form-label {
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.58);
-  }
-  .form-input,
-  .form-select,
-  .form-textarea {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border-warm);
-    color: var(--white);
-    font-family: 'Didact Gothic', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 300;
-    padding: 0.85rem 1rem;
-    width: 100%;
-    outline: none;
-    transition: border-color 0.3s, background 0.3s;
-    border-radius: 0;
-  }
-  .form-input:focus,
-  .form-select:focus,
-  .form-textarea:focus {
-    border-color: var(--copper);
-    background: rgba(255, 255, 255, 0.08);
-  }
-  .form-input::placeholder,
-  .form-textarea::placeholder { color: rgba(255, 255, 255, 0.32); }
-  .form-select option {
-    background: var(--navy);
-    color: var(--white);
-  }
-  .form-textarea {
-    resize: vertical;
-    min-height: 130px;
-  }
-  .form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.2rem;
-  }
-  .form-submit {
-    font-family: 'Didact Gothic', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    background: var(--copper);
-    color: var(--white);
-    border: none;
-    padding: 1rem 2.4rem;
-    cursor: pointer;
-    transition: opacity 0.3s, background 0.3s;
-    width: 100%;
-    margin-top: 0.5rem;
-  }
-  .form-submit:hover,
-  .form-submit:focus-visible { opacity: 0.9; }
-  .form-status {
-    min-height: 1.4rem;
-    font-size: 0.82rem;
-    font-weight: 300;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.72);
-  }
-  .form-status.is-success { color: #9ee6b3; }
-  .form-status.is-error { color: #f3a6a6; }
-
-  footer {
-    background: var(--ink);
-    border-top: 1px solid rgba(210, 180, 134, 0.14);
-    padding: 2.5rem 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .footer-copy {
-    font-size: 0.7rem;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.36);
-    letter-spacing: 0.05em;
-  }
-
-  .reveal {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  .reveal.is-visible {
-    opacity: 1;
-    transform: translateY(0);
   }
 
   @media (max-width: 1180px) {
-    .site-nav { height: auto; min-height: 70px; flex-wrap: wrap; padding-top: 0.8rem; padding-bottom: 0.8rem; }
-    .nav-links { order: 3; width: 100%; justify-content: flex-start; overflow: visible; padding: 0.3rem 0 0.2rem; }
-    .hero-content { margin-top: 96px; }
+    .paths-grid { grid-template-columns: 1fr 1fr; }
+    .elaf-stats { grid-template-columns: 1fr 1fr; }
   }
-
   @media (max-width: 900px) {
-    section { padding: 5rem 5%; }
-    #about,
-    #contact { grid-template-columns: 1fr; gap: 3rem; }
-    .form-grid { grid-template-columns: 1fr; }
+    .problem-split,
+    .elaf-grid,
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .gallery-wrap { height: 380px; }
   }
-
   @media (max-width: 680px) {
-    .site-nav {
-      height: 70px;
-      min-height: 70px;
-      flex-wrap: nowrap;
-    }
-    .brand-name { font-size: 1.05rem; }
-    .brand-subtitle { font-size: 0.45rem; letter-spacing: 0.12em; }
-    .brand-mark { width: 32px; height: 27px; }
-    .nav-links {
-      position: fixed;
-      top: 70px;
-      left: 0;
-      right: 0;
-      display: none;
-      width: 100%;
-      padding: 1rem 5%;
-      background: rgba(7, 17, 31, 0.98);
-      border-bottom: 1px solid var(--border-warm);
-      overflow: visible;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-    .nav-links.is-open { display: flex; }
-    .nav-dropdown { width: 100%; }
-    .nav-dropdown-toggle::after { display: none; }
-    .nav-dropdown::after { display: none; }
-    .nav-dropdown-menu {
-      position: static;
-      min-width: 0;
-      width: 100%;
-      margin-top: 0.4rem;
-      padding-left: 1rem;
-      transform: none;
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-      background: transparent;
-      border: none;
-      backdrop-filter: none;
-    }
-    .nav-dropdown-menu a {
-      padding: 0.45rem 0;
-      border-bottom: none;
-      color: rgba(255, 255, 255, 0.56);
-    }
-    .nav-cta { display: none; }
-    .nav-toggle {
-      display: inline-flex;
-      position: relative;
-      align-items: center;
-      justify-content: center;
-      width: 42px;
-      height: 42px;
-      border: 1px solid var(--border);
-      background: transparent;
-      color: var(--gold);
-      cursor: pointer;
-    }
-    .nav-toggle span,
-    .nav-toggle::before,
-    .nav-toggle::after {
-      content: '';
-      width: 18px;
-      height: 1px;
-      background: currentColor;
-      display: block;
-      position: absolute;
-      transition: transform 0.2s, opacity 0.2s;
-    }
-    .nav-toggle::before { transform: translateY(-6px); }
-    .nav-toggle::after { transform: translateY(6px); }
-    .nav-toggle[aria-expanded="true"] span { opacity: 0; }
-    .nav-toggle[aria-expanded="true"]::before { transform: rotate(45deg); }
-    .nav-toggle[aria-expanded="true"]::after { transform: rotate(-45deg); }
-    #home { min-height: auto; }
-    .hero-content {
-      width: 90%;
-      margin: 70px auto 0;
-      padding: 6rem 0 7rem;
-    }
-    .hero-title { font-size: clamp(2.35rem, 15vw, 3.4rem); }
-    .hero-eyebrow,
-    .section-eyebrow { letter-spacing: 0.18em; }
-    .hero-actions,
-    .button-row { width: 100%; }
-    .btn-primary,
-    .btn-outline,
-    .btn-light { width: 100%; padding-left: 1rem; padding-right: 1rem; }
-    .portfolio-img { min-height: 250px; }
-    .portfolio-kpis { gap: 1.2rem; }
-    .portfolio-kpis > div { width: calc(50% - 0.6rem); }
-    .footer-copy { width: 100%; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      scroll-behavior: auto !important;
-      transition-duration: 0.01ms !important;
-    }
+    .hero { padding-bottom: 5rem; }
+    .hero-title { font-size: clamp(2.8rem, 14vw, 4rem); }
+    .paths-grid { grid-template-columns: 1fr; }
+    .pillars-grid { grid-template-columns: 1fr; }
+    .elaf-stats { grid-template-columns: 1fr 1fr; }
+    .gallery-wrap { height: 300px; }
   }
 </style>
 </head>
 <body>
-<nav class="site-nav" aria-label="Primary navigation">
-  <a href="#home" class="brand" aria-label="Rahim International home">
-    <svg class="brand-mark" viewBox="100 80 480 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect x="60" y="10" width="560" height="540" rx="16" class="brand-mark-bg"/>
-      <rect x="168" y="318" width="344" height="9" rx="1" class="brand-mark-gold"/>
-      <rect x="168" y="310" width="44" height="22" rx="2" class="brand-mark-deep"/>
-      <rect x="468" y="310" width="44" height="22" rx="2" class="brand-mark-deep"/>
-      <path d="M340,88 C310,160 274,240 295,318 L315,318 C298,240 328,162 340,100 Z" class="brand-mark-gold"/>
-      <path d="M340,88 C370,160 406,240 385,318 L365,318 C382,240 352,162 340,100 Z" class="brand-mark-gold"/>
-      <path d="M340,88 C322,155 308,240 310,318 L318,318 C316,240 330,158 340,100 Z" class="brand-mark-navy"/>
-      <path d="M340,88 C358,155 372,240 370,318 L362,318 C370,240 350,158 340,100 Z" class="brand-mark-navy"/>
-      <line x1="340" y1="88" x2="185" y2="318" class="brand-mark-line" stroke-width="1.4" opacity="0.95"/>
-      <line x1="340" y1="106" x2="210" y2="318" class="brand-mark-line" stroke-width="1.25" opacity="0.88"/>
-      <line x1="340" y1="128" x2="236" y2="318" class="brand-mark-line" stroke-width="1.1" opacity="0.82"/>
-      <line x1="340" y1="153" x2="262" y2="318" class="brand-mark-line" stroke-width="1.0" opacity="0.75"/>
-      <line x1="340" y1="88" x2="495" y2="318" class="brand-mark-line" stroke-width="1.4" opacity="0.95"/>
-      <line x1="340" y1="106" x2="470" y2="318" class="brand-mark-line" stroke-width="1.25" opacity="0.88"/>
-      <line x1="340" y1="128" x2="444" y2="318" class="brand-mark-line" stroke-width="1.1" opacity="0.82"/>
-      <line x1="340" y1="153" x2="418" y2="318" class="brand-mark-line" stroke-width="1.0" opacity="0.75"/>
-    </svg>
+<div id="progress-bar" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav class="site-nav" id="home" aria-label="Primary navigation">
+  <a href="index.html" class="brand" aria-label="Rahim International home">
+    <img src="logo.png" alt="" class="brand-logo" aria-hidden="true">
     <span class="brand-text">
       <span class="brand-name">Rahim <span>International</span></span>
       <span class="brand-subtitle">Real Estate Advisory &amp; Consulting</span>
     </span>
   </a>
-  <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false">
-    <span></span>
-  </button>
+  <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false"><span></span></button>
   <ul class="nav-links" id="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="about.html">About</a></li>
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="about.html">Who We Are</a></li>
     <li class="nav-dropdown">
       <button class="nav-dropdown-toggle" type="button" aria-haspopup="true">Buyers</button>
-      <div class="nav-dropdown-menu" aria-label="Buyer categories">
-        <a href="investors-international.html">International Investors</a>
-        <a href="investors-mre.html">Moroccan Diaspora / MRE</a>
-        <a href="investors-local.html">Local Investors</a>
+      <div class="nav-dropdown-menu">
+        <a href="investors-international.html">International Buyers</a>
+        <a href="investors-mre.html">MRE Buyers</a>
+        <a href="investors-local.html">Local Buyers</a>
       </div>
     </li>
-    <li><a href="services-developers.html">Real Estate Developers</a></li>
-    <li><a href="guides/index.html">Buyer Guides</a></li>
-    <li><a href="why-morocco.html">Market Spotlight</a></li>
+    <li><a href="services-developers.html">Developer Services</a></li>
+    <li><a href="guides/index.html">Buying Guides</a></li>
+    <li><a href="why-morocco.html">Why Kénitra</a></li>
     <li><a href="elaf-sky-view.html">Elaf Sky View</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li class="language-switcher" aria-label="Language selection">
-      <a href="index.html" class="active" aria-current="page">EN</a>
+    <li class="language-switcher">
+      <a href="index.html" class="active">EN</a>
       <a href="fr/index.html">FR</a>
       <a href="ar/index.html">AR</a>
     </li>
@@ -979,352 +484,302 @@
 </nav>
 
 <main>
-  <section id="home">
-    <video class="hero-video" autoplay muted loop playsinline poster="hero-poster.jpg">
-      <source src="hero.mp4" type="video/mp4">
-    </video>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Rahim International — Morocco real estate advisory">
+    <div class="hero-video-wrap" aria-hidden="true">
+      <img src="hero-poster.jpg" alt="" style="position:absolute;inset:0;">
+      <video autoplay muted loop playsinline poster="hero-poster.jpg">
+        <source src="hero.mp4" type="video/mp4">
+      </video>
+    </div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-pattern" aria-hidden="true"></div>
     <div class="hero-content">
       <p class="hero-eyebrow">Real Estate Advisory &amp; Consulting</p>
-      <h1 class="hero-title">
-        We Bridge the Distance.<br>
-        <em>And Get You to the Other Side.</em>
-      </h1>
-      <p class="hero-sub">
-        We combine real estate advisory, market research, project strategy, marketing, and brokerage to help buyers and real estate developers make better decisions in the Rabat-Salé-Kénitra market.
-      </p>
+      <h1 class="hero-title">We Bridge the Distance.<br><em>And Get You to the Other Side.</em></h1>
+      <p class="hero-sub">We combine real estate advisory, market research, project strategy, marketing, and brokerage to help buyers and real estate developers make better decisions in the Rabat-Salé-Kénitra market.</p>
       <div class="hero-actions">
         <a href="#services" class="btn-primary">Choose Your Path</a>
         <a href="#contact" class="btn-outline">Begin a Conversation</a>
       </div>
     </div>
-    <div class="hero-scroll">Scroll</div>
+    <span class="hero-scroll" aria-hidden="true">Scroll</span>
   </section>
 
-  <section id="about">
-    <div class="about-left">
-      <p class="section-eyebrow">What We Solve</p>
-      <h2 class="section-title">Good Opportunities Need<br>Clearer Information.</h2>
-      <p class="about-text">
-        In Morocco’s most established property markets, the path to purchase is relatively straightforward. Agencies are visible, listings are well presented, and buyers understand where to begin.
-      </p>
-      <p class="about-text">
-        In emerging cities around the capital, such as Kénitra and Tamesna, the opportunity is equally real, but the information is less accessible. There is a clear gap between buyers and available projects.
-      </p>
-      <p class="about-text">
-        Many well-built developments are still introduced through personal networks, direct contacts, or limited marketing. As a result, buyers often lack the context needed to evaluate these opportunities with confidence. Real estate developers, in turn, are not always reaching the audience their projects are suited for.
-      </p>
-      <div class="about-quote">
-        <p>We address that gap by bringing structure, clarity, and visibility to both sides of the market.</p>
-        <cite>Advisory · Consulting · Marketing · Brokerage</cite>
+  <!-- WHAT WE SOLVE -->
+  <section class="problem-section" style="padding:var(--section-pad);" id="about">
+    <div class="problem-split">
+      <div>
+        <p class="section-eyebrow">What We Do</p>
+        <h2 class="section-title" style="color:var(--navy);">The Missing Bridge.</h2>
+        <p class="body-text">In Morocco's most established markets — Marrakech, Casablanca, Agadir — the path from buyer to property is organised. Agencies are visible. Listings are presented properly. Information is accessible.</p>
+        <p class="body-text">In the cities around Rabat — Kénitra, Salé, Témara — the opportunity is equally real. The infrastructure around it is not. Good projects move through personal networks. Buyers spend weeks searching for information that should take days to find. Developers reach a fraction of the audience their projects deserve.</p>
+        <p class="body-text">That gap is what we exist to close. Between buyers who need verified information before they commit, and developers whose projects deserve to reach the right audience.</p>
+        <p class="body-text" style="font-style:italic;color:var(--copper-dark);border-left:2px solid var(--copper);padding-left:1.2rem;margin-top:1.8rem;">We are the bridge that is missing from this market.</p>
+                <div class="service-tags" aria-label="What we do">
+          <span>Advisory</span>
+          <span class="service-tag-sep">·</span>
+          <span>Consulting</span>
+          <span class="service-tag-sep">·</span>
+          <span>Marketing</span>
+          <span class="service-tag-sep">·</span>
+          <span>Brokerage</span>
+        </div>
       </div>
-    </div>
-    <div class="about-right">
-      <div class="about-stat reveal">
-        <div class="about-stat-num">01</div>
-        <div class="about-stat-label">Market research before recommendations</div>
-      </div>
-      <div class="about-stat reveal">
-        <div class="about-stat-num">02</div>
-        <div class="about-stat-label">Project positioning for serious buyers</div>
-      </div>
-      <div class="about-stat reveal">
-        <div class="about-stat-num">03</div>
-        <div class="about-stat-label">Local follow-through during the process</div>
-      </div>
-      <div class="about-stat reveal">
-        <div class="about-stat-num">04</div>
-        <div class="about-stat-label">Support across Morocco, North America, and Europe</div>
+      <div class="reveal">
+        <div class="pillars-grid">
+          <div class="pillar-item"><div class="pillar-num">01</div><div class="pillar-text">Market research before recommendations</div></div>
+          <div class="pillar-item"><div class="pillar-num">02</div><div class="pillar-text">Project positioning for serious buyers</div></div>
+          <div class="pillar-item"><div class="pillar-num">03</div><div class="pillar-text">Local follow-through during the process</div></div>
+          <div class="pillar-item"><div class="pillar-num">04</div><div class="pillar-text">Support across Morocco, North America, and Europe</div></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="services">
-    <p class="section-eyebrow">Choose Your Path</p>
-    <h2 class="section-title">Start With the Path<br>That Matches Your Situation.</h2>
-    <p class="services-intro">
-      Different clients come to the market with different questions. Some need help buying from abroad. Others need local price context, project verification, or a stronger route to buyers. Start with the path that reflects your situation.
-    </p>
-    <div class="services-grid">
-      <article class="service-card reveal">
-        <div class="service-num">01</div>
-        <h3 class="service-title">International Investors</h3>
-        <p class="service-desc">For foreign nationals considering Morocco for relocation, personal residence, or a property investment with rental potential.</p>
-        <a href="investors-international.html" class="service-link">Start Here</a>
-      </article>
-      <article class="service-card reveal">
-        <div class="service-num">02</div>
-        <h3 class="service-title">Moroccan Diaspora / MRE</h3>
-        <p class="service-desc">For Moroccans abroad who want to buy back home without relying only on family, short visits, or incomplete information.</p>
-        <a href="investors-mre.html" class="service-link">Start Here</a>
-      </article>
-      <article class="service-card reveal">
-        <div class="service-num">03</div>
-        <h3 class="service-title">Local Investors</h3>
-        <p class="service-desc">For Moroccan buyers comparing opportunities outside their own city, especially in connected markets around Rabat.</p>
-        <a href="investors-local.html" class="service-link">Start Here</a>
-      </article>
-      <article class="service-card reveal">
-        <div class="service-num">04</div>
-        <h3 class="service-title">Real Estate Developers</h3>
-        <p class="service-desc">For real estate developers who need commercial strategy, professional marketing materials, and access to qualified buyers beyond local networks.</p>
-        <a href="services-developers.html" class="service-link">Start Here</a>
-      </article>
-    </div>
-    <div class="button-row services-actions">
-      <a href="about.html" class="btn-outline">About Rahim International</a>
-      <a href="why-morocco.html" class="btn-primary">Market Spotlight</a>
+  <!-- BUYER PROFILES -->
+  <section class="paths-section" style="padding:var(--section-pad);" id="services">
+    <p class="section-eyebrow" style="color:var(--copper);">Who Are You</p>
+    <h2 class="section-title" style="color:var(--white);">Find the Path<br>That Fits Your Situation.</h2>
+    <p style="font-size:.92rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,.65);max-width:640px;margin-top:.8rem;">Different buyers face different challenges in this market. Read the profile that describes you — then follow the path that leads to the right information and the right questions.</p>
+
+    <!-- 3 buyer profile cards — clickable, go directly to buyer pages -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(210,180,134,.14);margin:3rem 0 0;">
+      <a href="investors-international.html" style="background:rgba(255,255,255,.05);padding:2.8rem 2.2rem;text-decoration:none;display:block;border-top:3px solid rgba(110,143,171,.6);transition:background .3s;" onmouseover="this.style.background='rgba(255,255,255,.09)'" onmouseout="this.style.background='rgba(255,255,255,.05)'">
+        <p style="font-size:.62rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(130,190,220,.85);margin-bottom:1rem;">International Buyer</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:300;color:var(--white);margin-bottom:.9rem;line-height:1.4;">You live outside Morocco and are considering buying for relocation, a second home, or rental income.</h3>
+        <p style="font-size:.84rem;font-weight:300;line-height:1.75;color:rgba(255,255,255,.52);margin-bottom:1.6rem;">Your main challenge: navigating an unfamiliar legal system and market from abroad, with limited time on the ground.</p>
+        <span style="font-size:.65rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(130,190,220,.85);border-bottom:1px solid rgba(130,190,220,.3);padding-bottom:.2rem;">This is me →</span>
+      </a>
+      <a href="investors-mre.html" style="background:rgba(255,255,255,.05);padding:2.8rem 2.2rem;text-decoration:none;display:block;border-top:3px solid rgba(183,106,63,.8);transition:background .3s;" onmouseover="this.style.background='rgba(255,255,255,.09)'" onmouseout="this.style.background='rgba(255,255,255,.05)'">
+        <p style="font-size:.62rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">Moroccan Diaspora / MRE</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:300;color:var(--white);margin-bottom:.9rem;line-height:1.4;">You are Moroccan, living abroad, and want to buy back home — a second home, investment, or future base.</h3>
+        <p style="font-size:.84rem;font-weight:300;line-height:1.75;color:rgba(255,255,255,.52);margin-bottom:1.6rem;">Your main challenge: making a serious decision with limited visits and limited visibility from a distance.</p>
+        <span style="font-size:.65rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid rgba(210,180,134,.35);padding-bottom:.2rem;">This is me →</span>
+      </a>
+      <a href="investors-local.html" style="background:rgba(255,255,255,.05);padding:2.8rem 2.2rem;text-decoration:none;display:block;border-top:3px solid rgba(90,150,90,.6);transition:background .3s;" onmouseover="this.style.background='rgba(255,255,255,.09)'" onmouseout="this.style.background='rgba(255,255,255,.05)'">
+        <p style="font-size:.62rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(140,200,140,.85);margin-bottom:1rem;">Local Investor</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:300;color:var(--white);margin-bottom:.9rem;line-height:1.4;">You live in Morocco and are comparing options — a first home, rental investment, or a second city opportunity.</h3>
+        <p style="font-size:.84rem;font-weight:300;line-height:1.75;color:rgba(255,255,255,.52);margin-bottom:1.6rem;">Your main challenge: scattered information and an under-structured middle market where good projects are hard to find.</p>
+        <span style="font-size:.65rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(140,200,140,.85);border-bottom:1px solid rgba(140,200,140,.3);padding-bottom:.2rem;">This is me →</span>
+      </a>
     </div>
   </section>
 
-  <section id="portfolio">
+  <!-- REAL ESTATE DEVELOPERS — separate section -->
+  <section style="background:var(--ink);padding:clamp(3rem,5vw,5rem) 5%;">
+    <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.7fr);gap:4rem;align-items:center;border:1px solid rgba(210,180,134,.14);padding:3rem;">
+      <div>
+        <p style="font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--copper);margin-bottom:1rem;">Real Estate Developers</p>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;color:var(--white);margin-bottom:1rem;line-height:1.2;">Strategy, Marketing<br>and Sales Execution.</h2>
+        <p style="font-size:.9rem;font-weight:300;line-height:1.85;color:rgba(255,255,255,.6);max-width:560px;">For real estate developers who need commercial strategy, professional marketing materials, and access to qualified buyers beyond local networks. Not a broker — a commercial partner.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1rem;align-items:flex-start;">
+        <a href="services-developers.html" class="btn-gold">View Developer Services</a>
+        <a href="index.html#contact" class="btn-outline-dark">Request a Partnership Proposal</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ELAF SKY VIEW -->
+  <section class="elaf-section" style="padding:var(--section-pad);">
     <p class="section-eyebrow">Current Opportunity</p>
-    <h2 class="section-title">Elaf Sky View,<br>Centre Ville Kénitra.</h2>
-    <p class="portfolio-intro">
-      A current Rahim International mandate: 35 high-spec apartments in central Kénitra for buyers who want location, build quality, and stronger value than Rabat pricing typically allows.
-    </p>
-    <div class="portfolio-grid">
-      <article class="portfolio-card reveal">
-        <div class="portfolio-img" data-gallery>
-          <img src="elaf.jpg" alt="Elaf Sky View residential development in central Kénitra" class="portfolio-slide is-active">
-          <img src="elaf-2.jpg" alt="Elaf Sky View apartment interior" class="portfolio-slide">
-          <img src="elaf-3.jpg" alt="Elaf Sky View building detail" class="portfolio-slide">
-          <img src="elaf-4.jpg" alt="Elaf Sky View neighbourhood and city context" class="portfolio-slide">
-          <div class="portfolio-img-overlay" aria-hidden="true"></div>
-          <button class="gallery-btn gallery-prev" type="button" aria-label="Previous Elaf Sky View photo">&lsaquo;</button>
-          <button class="gallery-btn gallery-next" type="button" aria-label="Next Elaf Sky View photo">&rsaquo;</button>
-          <div class="gallery-dots" aria-label="Elaf Sky View photo gallery">
-            <button class="gallery-dot is-active" type="button" aria-label="Show photo 1"></button>
-            <button class="gallery-dot" type="button" aria-label="Show photo 2"></button>
-            <button class="gallery-dot" type="button" aria-label="Show photo 3"></button>
-            <button class="gallery-dot" type="button" aria-label="Show photo 4"></button>
+    <h2 class="section-title" style="color:var(--navy);">Elaf Sky View,<br>Centre Ville Kénitra.</h2>
+    <p class="body-text" style="max-width:680px;">A current Rahim International mandate: 35 high-spec apartments in central Kénitra for buyers who want location, build quality, and stronger value than Rabat pricing typically allows.</p>
+    <div class="elaf-grid">
+      <div>
+        <div data-gallery class="gallery-wrap">
+          <img src="elaf.jpg" alt="Elaf Sky View residential development in central Kénitra" class="gallery-slide is-active">
+          <img src="elaf-2.jpg" alt="Elaf Sky View apartment interior" class="gallery-slide">
+          <img src="elaf-3.jpg" alt="Elaf Sky View building detail" class="gallery-slide">
+          <img src="elaf-4.jpg" alt="Elaf Sky View neighbourhood and city context" class="gallery-slide">
+          <div class="gallery-overlay" aria-hidden="true"></div>
+          <button class="gallery-btn gallery-prev" type="button" aria-label="Previous photo">‹</button>
+          <button class="gallery-btn gallery-next" type="button" aria-label="Next photo">›</button>
+          <div class="gallery-dots">
+            <button class="gallery-dot is-active" type="button" aria-label="Photo 1"></button>
+            <button class="gallery-dot" type="button" aria-label="Photo 2"></button>
+            <button class="gallery-dot" type="button" aria-label="Photo 3"></button>
+            <button class="gallery-dot" type="button" aria-label="Photo 4"></button>
           </div>
-          <div class="portfolio-img-label">
-            <div class="portfolio-location">Kénitra · City Centre</div>
-            <h3 class="portfolio-name">Elaf Sky View</h3>
+          <div class="gallery-label">
+            <div class="gallery-location">Kénitra · City Centre</div>
+            <div class="gallery-name">Elaf Sky View</div>
           </div>
         </div>
-        <div class="portfolio-body">
-          <div class="portfolio-tags">
-            <span class="tag">Apartments</span>
-            <span class="tag">Centre Ville</span>
-            <span class="tag">Energy Ready</span>
-            <span class="tag">High-Spec Finishes</span>
-            <span class="tag">Daam Sakani Eligible</span>
-            <span class="tag">Active Mandate</span>
-          </div>
-          <div class="portfolio-desc">
-            <p>Elaf Sky View is a 35-unit residential development in Centre Ville Kénitra, close to the TGV station, motorway access, public gardens, and everyday amenities.</p>
-            <p>The project stands out because the specification is unusually strong for the price point: double-insulated windows and glass doors, air-conditioning pre-installation, fully equipped kitchens, Turkish-imported doors with triple deadbolt systems, elevated interior finishes, and assigned underground parking included in the title.</p>
-            <p>Each apartment also includes private rooftop allocation for future solar panels, connected to the unit and the electric input for its underground parking stall.</p>
-          </div>
-          <div class="portfolio-kpis">
-            <div>
-              <div class="portfolio-kpi-label">Total Units</div>
-              <div class="portfolio-kpi-value">35</div>
-            </div>
-            <div>
-              <div class="portfolio-kpi-label">Size Range</div>
-              <div class="portfolio-kpi-value">61-108 m²</div>
-            </div>
-            <div>
-              <div class="portfolio-kpi-label">Price</div>
-              <div class="portfolio-kpi-value">11,500 MAD/m²</div>
-            </div>
-            <div>
-              <div class="portfolio-kpi-label">Floors</div>
-              <div class="portfolio-kpi-value">6</div>
-            </div>
-          </div>
-          <div class="portfolio-actions">
-            <a href="elaf-sky-view.html" class="portfolio-cta">View Full Project Page</a>
-            <a href="elaf-sky-view-brochure.pdf" class="portfolio-cta" target="_blank" rel="noopener">View Brochure</a>
-          </div>
+        <div class="elaf-tags" style="margin-top:1rem;">
+          <span class="elaf-tag">Apartments</span>
+          <span class="elaf-tag">Centre Ville</span>
+          <span class="elaf-tag">Energy Ready</span>
+          <span class="elaf-tag">High-Spec Finishes</span>
+          <span class="elaf-tag">Daam Sakani Eligible</span>
+          <span class="elaf-tag">Active Mandate</span>
         </div>
-      </article>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div>
-      <p class="section-eyebrow">Contact</p>
-      <h2 class="section-title">Tell Us What<br>You Are Trying to Buy or Build</h2>
-      <p class="contact-text">
-        Whether you are comparing properties, buying from abroad, returning home, or bringing a development to market, the right next step depends on your situation. Tell us what you are working on and we will respond with the most relevant path forward.
-      </p>
-      <div class="contact-info">
-        <div class="contact-item">
-          <div class="contact-icon" aria-hidden="true">✉</div>
-          <div>
-            <div class="contact-item-label">Email</div>
-            <div class="contact-item-value"><a href="mailto:contact@RahimInternational.com">contact@RahimInternational.com</a></div>
-          </div>
+      </div>
+      <div class="reveal">
+        <p class="body-text">Elaf Sky View is a 35-unit residential development in Centre Ville Kénitra, close to the TGV station, motorway access, public gardens, and everyday amenities.</p>
+        <p class="body-text">The project stands out because the specification is unusually strong for the price point: double-insulated windows and glass doors, air-conditioning pre-installation, fully equipped kitchens, Turkish-imported doors with triple deadbolt systems, elevated interior finishes, and assigned underground parking included in the title.</p>
+        <p class="body-text">Each apartment also includes private rooftop allocation for future solar panels, connected to the unit and the electric input for its underground parking stall.</p>
+        <div class="elaf-stats">
+          <div class="elaf-stat"><div class="elaf-stat-num">35</div><div class="elaf-stat-label">Total Units</div></div>
+          <div class="elaf-stat"><div class="elaf-stat-num">61–108 m²</div><div class="elaf-stat-label">Size Range</div></div>
+          <div class="elaf-stat"><div class="elaf-stat-num">11,500</div><div class="elaf-stat-label">MAD per m²</div></div>
+          <div class="elaf-stat"><div class="elaf-stat-num">6</div><div class="elaf-stat-label">Floors</div></div>
         </div>
-        <div class="contact-item">
-          <div class="contact-icon" aria-hidden="true">☎</div>
-          <div>
-            <div class="contact-item-label">Phone &amp; WhatsApp</div>
-            <div class="contact-item-value"><a href="tel:+212642773249">+212 642 77 32 49</a></div>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon" aria-hidden="true">◎</div>
-          <div>
-            <div class="contact-item-label">Headquarters</div>
-            <div class="contact-item-value">70 Av. Youssef Ben Tachfine, Kénitra 14000, Morocco</div>
-          </div>
+        <div class="elaf-actions">
+          <a href="elaf-sky-view.html" class="btn-primary">View Full Project Page</a>
+          <a href="elaf-sky-view-brochure.pdf" class="btn-outline" style="color:var(--navy);border-color:var(--border);" target="_blank" rel="noopener">View Brochure</a>
         </div>
       </div>
     </div>
-    <div>
-      <form class="contact-form" id="contact-form" action="https://formspree.io/f/xojypvlq" method="POST">
-        <input type="hidden" name="_subject" value="New Rahim International website enquiry">
-        <div class="form-grid">
-          <div class="form-group">
-            <label class="form-label" for="first-name">First Name</label>
-            <input id="first-name" name="first-name" type="text" class="form-input" placeholder="Your first name" autocomplete="given-name" required>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" style="padding:var(--section-pad);" id="contact">
+    <p class="section-eyebrow">Contact</p>
+    <h2 class="section-title" style="color:var(--white);">Tell Us What You Are<br>Trying to Buy or Build.</h2>
+    <p style="font-size:.9rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,.62);max-width:640px;margin-top:.8rem;margin-bottom:3.5rem;">Whether you are comparing properties, buying from abroad, returning home, or bringing a development to market, the right next step depends on your situation. Tell us what you are working on and we will respond with the most relevant path forward.</p>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">✉</div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-value"><a href="mailto:contact@RahimInternational.com">contact@RahimInternational.com</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">☎</div>
+            <div>
+              <div class="contact-item-label">Phone &amp; WhatsApp</div>
+              <div class="contact-item-value"><a href="tel:+212642773249">+212 642 77 32 49</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">◎</div>
+            <div>
+              <div class="contact-item-label">Headquarters</div>
+              <div class="contact-item-value">70 Av. Youssef Ben Tachfine,<br>Kénitra 14000, Morocco</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xojypvlq" method="POST">
+          <input type="hidden" name="subject" value="Enquiry from RahimInternational.com">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="first-name">First Name</label>
+              <input id="first-name" name="first_name" type="text" class="form-input" placeholder="Your first name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="last-name">Last Name</label>
+              <input id="last-name" name="last_name" type="text" class="form-input" placeholder="Your last name" required>
+            </div>
           </div>
           <div class="form-group">
-            <label class="form-label" for="last-name">Last Name</label>
-            <input id="last-name" name="last-name" type="text" class="form-input" placeholder="Your last name" autocomplete="family-name" required>
+            <label class="form-label" for="email">Email</label>
+            <input id="email" name="email" type="email" class="form-input" placeholder="your@email.com" required>
           </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="email">Email</label>
-          <input id="email" name="email" type="email" class="form-input" placeholder="your@email.com" autocomplete="email" required>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="profile">I am a</label>
-          <select id="profile" name="profile" class="form-select" required>
-            <option value="">Select your profile</option>
-            <option>Real Estate Developer seeking a sales partner</option>
-            <option>International investor</option>
-            <option>Moroccan diaspora / MRE buyer</option>
-            <option>Local investor</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="message">Message</label>
-          <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about your project or interest..." required></textarea>
-        </div>
-        <button type="submit" class="form-submit">Send Enquiry</button>
-        <p class="form-status" id="form-status" aria-live="polite"></p>
-      </form>
+          <div class="form-group">
+            <label class="form-label" for="profile">I am a</label>
+            <select id="profile" name="profile" class="form-select" required>
+              <option value="">Select your profile</option>
+              <option>Real Estate Developer seeking a sales partner</option>
+              <option>International investor</option>
+              <option>Moroccan diaspora / MRE buyer</option>
+              <option>Local investor</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea id="message" name="message" class="form-textarea" placeholder="Tell us what you are working on…"></textarea>
+          </div>
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+          <button type="submit" class="form-submit">Send Enquiry</button>
+        </form>
+      </div>
     </div>
   </section>
+
 </main>
 
+<!-- FOOTER -->
 <footer>
-  <a href="#home" class="brand" aria-label="Rahim International home">
-    <svg class="brand-mark" viewBox="100 80 480 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect x="60" y="10" width="560" height="540" rx="16" class="brand-mark-bg"/>
-      <rect x="168" y="318" width="344" height="9" rx="1" class="brand-mark-gold"/>
-      <rect x="168" y="310" width="44" height="22" rx="2" class="brand-mark-deep"/>
-      <rect x="468" y="310" width="44" height="22" rx="2" class="brand-mark-deep"/>
-      <path d="M340,88 C310,160 274,240 295,318 L315,318 C298,240 328,162 340,100 Z" class="brand-mark-gold"/>
-      <path d="M340,88 C370,160 406,240 385,318 L365,318 C382,240 352,162 340,100 Z" class="brand-mark-gold"/>
-      <path d="M340,88 C322,155 308,240 310,318 L318,318 C316,240 330,158 340,100 Z" class="brand-mark-navy"/>
-      <path d="M340,88 C358,155 372,240 370,318 L362,318 C370,240 350,158 340,100 Z" class="brand-mark-navy"/>
-      <line x1="340" y1="88" x2="185" y2="318" class="brand-mark-line" stroke-width="1.4" opacity="0.95"/>
-      <line x1="340" y1="106" x2="210" y2="318" class="brand-mark-line" stroke-width="1.25" opacity="0.88"/>
-      <line x1="340" y1="88" x2="495" y2="318" class="brand-mark-line" stroke-width="1.4" opacity="0.95"/>
-      <line x1="340" y1="106" x2="470" y2="318" class="brand-mark-line" stroke-width="1.25" opacity="0.88"/>
-    </svg>
-    <span class="brand-name">Rahim <span>International</span></span>
-  </a>
-  <div class="footer-copy">© 2026 Rahim International. All rights reserved.</div>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Rahim International" class="footer-brand-logo">
+      <span class="brand-name" style="margin-top:0.5rem;">Rahim <span>International</span></span>
+      <p class="footer-tagline">Real estate advisory and consulting for buyers and developers in the Rabat-Salé-Kénitra market.</p>
+    </div>
+    <div>
+      <div class="footer-col-label">Navigate</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">Who We Are</a>
+        <a href="why-morocco.html">Why Kénitra</a>
+        <a href="elaf-sky-view.html">Elaf Sky View</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Buyers &amp; Guides</div>
+      <div class="footer-links">
+        <a href="investors-international.html">International Buyers</a>
+        <a href="investors-mre.html">MRE Buyers</a>
+        <a href="investors-local.html">Local Buyers</a>
+        <a href="services-developers.html">Developer Services</a>
+        <a href="guides/index.html">Buying Guides</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Contact</div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-icon">✉</div>
+        <div>
+          <div class="footer-contact-label">Email</div>
+          <div class="footer-contact-value"><a href="mailto:contact@RahimInternational.com">contact@RahimInternational.com</a></div>
+        </div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-icon">☎</div>
+        <div>
+          <div class="footer-contact-label">Phone &amp; WhatsApp</div>
+          <div class="footer-contact-value"><a href="tel:+212642773249">+212 642 77 32 49</a></div>
+        </div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-icon">◎</div>
+        <div>
+          <div class="footer-contact-label">Address</div>
+          <div class="footer-contact-value">70 Av. Youssef Ben Tachfine,<br>Kénitra 14000, Morocco</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Rahim International. All rights reserved.</div>
+    <div class="footer-langs">
+      <a href="index.html" class="active">EN</a>
+      <a href="fr/index.html">FR</a>
+      <a href="ar/index.html">AR</a>
+    </div>
+  </div>
 </footer>
 
-<script>
-  const navToggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('#nav-links');
+<!-- FLOAT BUTTONS -->
+<div class="float-buttons">
+  <a href="https://wa.me/212642773249" class="btn-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <button class="btn-back-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+</div>
 
-  navToggle.addEventListener('click', () => {
-    const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
-    navToggle.setAttribute('aria-expanded', String(!isOpen));
-    navToggle.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
-    navLinks.classList.toggle('is-open', !isOpen);
-  });
-
-  navLinks.addEventListener('click', (event) => {
-    if (event.target.matches('a')) {
-      navToggle.setAttribute('aria-expanded', 'false');
-      navToggle.setAttribute('aria-label', 'Open menu');
-      navLinks.classList.remove('is-open');
-    }
-  });
-
-  document.querySelector('#contact-form').addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const form = event.currentTarget;
-    const btn = form.querySelector('.form-submit');
-    const status = form.querySelector('#form-status');
-    const originalText = btn.textContent;
-
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-    status.textContent = '';
-    status.className = 'form-status';
-
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' }
-      });
-
-      if (!response.ok) {
-        throw new Error('Form submission failed');
-      }
-
-      form.reset();
-      status.textContent = 'Message sent. Thank you, we will be in touch shortly.';
-      status.classList.add('is-success');
-    } catch (error) {
-      status.textContent = 'Sorry, something went wrong. Please email contact@RahimInternational.com directly.';
-      status.classList.add('is-error');
-    } finally {
-      btn.textContent = originalText;
-      btn.disabled = false;
-    }
-  });
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-
-  document.querySelectorAll('[data-gallery]').forEach((gallery) => {
-    const slides = Array.from(gallery.querySelectorAll('.portfolio-slide'));
-    const dots = Array.from(gallery.querySelectorAll('.gallery-dot'));
-    const prev = gallery.querySelector('.gallery-prev');
-    const next = gallery.querySelector('.gallery-next');
-    let activeIndex = 0;
-
-    const showSlide = (index) => {
-      activeIndex = (index + slides.length) % slides.length;
-      slides.forEach((slide, slideIndex) => {
-        slide.classList.toggle('is-active', slideIndex === activeIndex);
-      });
-      dots.forEach((dot, dotIndex) => {
-        dot.classList.toggle('is-active', dotIndex === activeIndex);
-      });
-    };
-
-    prev.addEventListener('click', () => showSlide(activeIndex - 1));
-    next.addEventListener('click', () => showSlide(activeIndex + 1));
-    dots.forEach((dot, dotIndex) => {
-      dot.addEventListener('click', () => showSlide(dotIndex));
-    });
-  });
-</script>
+<script src="shared.js"></script>
 </body>
 </html>

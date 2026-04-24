@@ -3,1538 +3,326 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elaf Sky View Kénitra | Rahim International</title>
-<meta name="description" content="Elaf Sky View est un projet résidentiel de 35 appartements au centre de Kénitra, avec finitions soignées, infrastructure prête pour l’efficacité énergétique, parking titré, certaines unités éligibles à Daam Sakani et accès pratique au TGV et à l’autoroute.">
+<title>Elaf Sky View | Appartements en Centre Ville de Kénitra | Rahim International</title>
+<meta name="description" content="Elaf Sky View — 35 appartements résidentiels en centre-ville de Kénitra. Finitions haut de gamme, infrastructure prête pour l'énergie solaire, parking titré, éligibilité Daam Sakani sélectionnée, 11 500 MAD/m².">
+<link rel="canonical" href="https://rahiminternational.com/fr/elaf-sky-view.html">
+<link rel="icon" type="image/png" href="../logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Didact+Gothic&amp;display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Didact+Gothic&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Didact+Gothic&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="../shared.css">
 <style>
-  :root {
-    --navy: #081a33;
-    --navy-mid: #10294a;
-    --navy-soft: #17375f;
-    --ink: #07111f;
-    --gold: #d2b486;
-    --gold-deep: #b76a3f;
-    --copper: #b76a3f;
-    --copper-dark: #87452c;
-    --cream: #f4f7f8;
-    --steel: #e6edf1;
-    --white: #ffffff;
-    --text-dark: #07111f;
-    --text-muted: #657384;
-    --border: rgba(8, 26, 51, 0.12);
-    --border-warm: rgba(210, 180, 134, 0.24);
-    --line-dark: rgba(255, 255, 255, 0.14);
-    --shadow: 0 28px 80px rgba(8, 26, 51, 0.18);
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Didact Gothic', sans-serif;
-    background: var(--navy);
-    color: var(--text-dark);
-    overflow-x: hidden;
-  }
-  a { color: inherit; }
-  img, video, svg { display: block; max-width: 100%; }
-
-  .site-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    height: 70px;
-    padding: 0 5%;
-    background: rgba(7, 17, 31, 0.96);
-    border-bottom: 1px solid var(--border-warm);
-    backdrop-filter: blur(12px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
-  }
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    text-decoration: none;
-    min-width: max-content;
-  }
-  .brand-mark { width: 38px; height: 32px; flex: 0 0 auto; }
-  .brand-name {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: var(--gold);
-    letter-spacing: 0.08em;
-  }
-  .brand-name span { color: var(--white); }
-  .brand-text {
-    display: grid;
-    gap: 0.1rem;
-    line-height: 1;
-  }
-  .brand-subtitle {
-    font-size: 0.54rem;
-    font-weight: 500;
-    letter-spacing: 0.17em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.58);
-    white-space: nowrap;
-  }
-  .nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: clamp(0.8rem, 1.8vw, 2rem);
-    list-style: none;
-  }
-  .nav-links a,
-  .nav-dropdown-toggle,
-  .nav-cta {
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    text-decoration: none;
-    white-space: nowrap;
-    font-family: inherit;
-    transition: color 0.3s, background 0.3s, border-color 0.3s;
-  }
-  .nav-dropdown-toggle {
-    border: 0;
-    background: transparent;
-    cursor: default;
-  }
-  .nav-links a,
-  .nav-dropdown-toggle { color: rgba(255, 255, 255, 0.7); }
-  .nav-links a:hover,
-  .nav-links a:focus-visible,
-  .nav-dropdown-toggle:hover,
-  .nav-dropdown-toggle:focus-visible,
-  .nav-links a.active { color: var(--copper); }
-  .nav-dropdown { position: relative; }
-  .nav-dropdown-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-  }
-  .nav-dropdown-toggle::after {
-    content: '▾';
-    font-size: 0.6rem;
-    opacity: 0.75;
-  }
-  .nav-dropdown::after {
-    content: '';
-    position: absolute;
-    left: -0.75rem;
-    right: -0.75rem;
-    top: 100%;
-    height: 0;
-  }
-  .nav-dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    min-width: 230px;
-    transform: translateX(-50%);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    background: rgba(7, 17, 31, 0.98);
-    border: 1px solid var(--border-warm);
-    backdrop-filter: blur(10px);
-    z-index: 300;
-    transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
-  }
-  .nav-dropdown-menu a {
-    display: block;
-    padding: 0.9rem 1rem;
-    border-bottom: 1px solid rgba(210, 180, 134, 0.14);
-  }
-  .nav-dropdown-menu a:last-child { border-bottom: none; }
-  .nav-dropdown:hover .nav-dropdown-menu,
-  .nav-dropdown:focus-within .nav-dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translateX(-50%);
-  }
-  .language-switcher {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-  }
-  .language-switcher a {
-    border: 1px solid rgba(210, 180, 134, 0.24);
-    padding: 0.35rem 0.45rem;
-    line-height: 1;
-  }
-  .language-switcher a.active {
-    background: var(--copper);
-    border-color: var(--copper);
-    color: var(--white);
-  }
-  .nav-cta {
-    color: var(--gold);
-    border: 1px solid var(--gold);
-    padding: 0.55rem 1.2rem;
-  }
-  .nav-cta:hover,
-  .nav-cta:focus-visible {
-    background: var(--copper);
-    color: var(--white);
-  }
-  .nav-toggle { display: none; }
-
-  .brand-mark-bg { fill: var(--navy); }
-  .brand-mark-gold { fill: var(--gold); }
-  .brand-mark-deep { fill: var(--gold-deep); }
-  .brand-mark-navy { fill: var(--navy); }
-  .brand-mark-line { stroke: var(--gold); }
-
-  #home {
-    min-height: 100vh;
-    background:
-      radial-gradient(circle at 78% 22%, rgba(183, 106, 63, 0.22), transparent 30%),
-      linear-gradient(135deg, var(--ink) 0%, var(--navy) 52%, #172b4c 100%);
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-  }
-  .page-hero {
-    background: var(--navy);
-    position: relative;
-    display: flex;
-    overflow: hidden;
-  }
-  .page-hero-bg,
-  .page-hero-fade,
-  .page-hero-pattern {
-    position: absolute;
-    inset: 0;
-  }
-  .page-hero-bg { z-index: 1; }
-  .page-hero-fade {
-    z-index: 2;
-    background:
-      radial-gradient(circle at 72% 25%, rgba(183, 106, 63, 0.18), transparent 30%),
-      linear-gradient(to bottom, rgba(7, 17, 31, 0.18), rgba(7, 17, 31, 0.74));
-  }
-  .page-hero-pattern {
-    z-index: 3;
-    background-image:
-      repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(210, 180, 134, 0.035) 80px),
-      repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(210, 180, 134, 0.035) 80px);
-  }
-  .page-hero-content {
-    position: relative;
-    z-index: 4;
-    width: min(920px, 90%);
-  }
-  .page-hero-eyebrow {
-    font-size: 0.68rem;
-    font-weight: 500;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--copper);
-    margin-bottom: 1.8rem;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-  }
-  .page-hero-eyebrow::before {
-    content: '';
-    display: block;
-    width: 34px;
-    height: 1px;
-    background: currentColor;
-    flex: 0 0 auto;
-  }
-  .page-hero-title {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: clamp(3.2rem, 7vw, 6rem);
-    font-weight: 300;
-    line-height: 1.1;
-    color: var(--white);
-    margin-bottom: 2rem;
-  }
-  .page-hero-title em {
-    font-style: italic;
-    color: var(--gold);
-  }
-  .page-hero-sub {
-    font-size: 0.95rem;
-    font-weight: 300;
-    line-height: 1.9;
-    color: rgba(255, 255, 255, 0.72);
-    max-width: 650px;
-    margin-bottom: 3rem;
-  }
-  .hero-video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.68;
-    z-index: 1;
-  }
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    background:
-      radial-gradient(circle at 72% 25%, rgba(183, 106, 63, 0.18), transparent 30%),
-      linear-gradient(to right, rgba(7, 17, 31, 0.96) 0%, rgba(8, 26, 51, 0.72) 50%, rgba(8, 26, 51, 0.28) 100%),
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.62) 100%);
-  }
-  .hero-pattern {
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-    background-image:
-      repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(210, 180, 134, 0.035) 80px),
-      repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(210, 180, 134, 0.035) 80px);
-  }
-  .hero-content {
-    position: relative;
-    z-index: 4;
-    width: min(920px, 90%);
-    margin-top: 70px;
-    padding: 5rem 0 6rem;
-    margin-left: 5%;
-  }
-  .hero-eyebrow,
-  .section-eyebrow {
-    font-size: 0.68rem;
-    font-weight: 500;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--copper);
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-  }
-  .hero-eyebrow { margin-bottom: 1.8rem; }
-  .hero-eyebrow::before,
-  .section-eyebrow::before {
-    content: '';
-    display: block;
-    width: 34px;
-    height: 1px;
-    background: currentColor;
-    flex: 0 0 auto;
-  }
-  .hero-title {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: clamp(3.2rem, 7vw, 6rem);
-    font-weight: 300;
-    line-height: 1.1;
-    color: var(--white);
-    margin-bottom: 2rem;
-  }
-  .hero-title em {
-    font-style: italic;
-    color: var(--gold);
-  }
-  .hero-sub {
-    font-size: 0.95rem;
-    font-weight: 300;
-    line-height: 1.9;
-    color: rgba(255, 255, 255, 0.72);
-    max-width: 650px;
-    margin-bottom: 3rem;
-  }
-  .hero-actions,
-  .button-row {
-    display: flex;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-  }
-  .services-actions { margin-top: 3rem; }
-  .btn-primary,
-  .btn-outline,
-  .btn-light {
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    padding: 1rem 2.2rem;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 48px;
-    transition: opacity 0.3s, color 0.3s, border-color 0.3s, background 0.3s;
-  }
-  .btn-primary {
-    background: var(--copper);
-    color: var(--white);
-    border: 1px solid var(--copper);
-  }
-  .btn-primary:hover,
-  .btn-primary:focus-visible { opacity: 0.9; }
-  .btn-outline,
-  .btn-light {
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    color: rgba(255, 255, 255, 0.84);
-    background: transparent;
-  }
-  .btn-outline:hover,
-  .btn-outline:focus-visible,
-  .btn-light:hover,
-  .btn-light:focus-visible {
-    border-color: var(--gold);
-    color: var(--gold);
-  }
-  .hero-scroll {
-    position: absolute;
-    bottom: 2.5rem;
-    left: 5%;
-    z-index: 4;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    color: rgba(255, 255, 255, 0.45);
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-  }
-  .hero-scroll::after {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 40px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent);
-  }
-
-  section { padding: 7rem 5%; }
-  .section-title {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: clamp(2.25rem, 4vw, 3.55rem);
-    font-weight: 300;
-    line-height: 1.2;
-    color: var(--navy);
-    margin-bottom: 1.5rem;
-  }
-
-  #about {
-    background: var(--cream);
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
-    gap: 5rem;
-    align-items: center;
-  }
-  .about-text,
-  .portfolio-intro,
-  .contact-text,
-  .services-intro {
-    font-size: 0.9rem;
-    font-weight: 300;
-    line-height: 1.9;
-  }
-  .about-text,
-  .portfolio-intro { color: var(--text-muted); }
-  .about-text { margin-bottom: 1.2rem; }
-  .about-quote {
-    margin: 2.5rem 0 0;
-    border-left: 2px solid var(--copper);
-    padding-left: 1.8rem;
-  }
-  .about-quote p {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: 1.25rem;
-    font-style: italic;
-    font-weight: 300;
-    line-height: 1.6;
-    color: var(--navy);
-  }
-  .about-quote cite {
-    display: block;
-    margin-top: 0.8rem;
-    font-size: 0.68rem;
-    font-style: normal;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--copper-dark);
-  }
-  .about-right { display: grid; gap: 1.2rem; }
-  .about-stat {
-    background: var(--white);
-    border: 1px solid var(--border);
-    padding: 1.8rem 2rem;
-    position: relative;
-  }
-  .about-stat::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 3px;
-    height: 100%;
-    background: var(--copper);
-  }
-  .about-stat-num {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: 2.4rem;
-    font-weight: 300;
-    color: var(--navy);
-    line-height: 1;
-    margin-bottom: 0.4rem;
-  }
-  .about-stat-label {
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-  }
-
-  #services { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); }
-  #services .section-title { color: var(--white); }
-  .services-intro {
-    color: rgba(255, 255, 255, 0.66);
-    max-width: 690px;
-    margin-bottom: 4rem;
-  }
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1px;
-    background: var(--line-dark);
-  }
-  .service-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2.5rem 2rem;
-    transition: background 0.3s;
-  }
-  .service-card:hover { background: rgba(255, 255, 255, 0.08); }
-  .service-num {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: 3rem;
-    font-weight: 300;
-    color: rgba(183, 106, 63, 0.48);
-    line-height: 1;
-    margin-bottom: 1rem;
-  }
-  .service-title {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: var(--gold);
-    margin-bottom: 1rem;
-    line-height: 1.3;
-  }
-  .service-desc {
-    font-size: 0.82rem;
-    font-weight: 300;
-    line-height: 1.8;
-    color: rgba(255, 255, 255, 0.6);
-  }
-  .service-link {
-    display: inline-flex;
-    margin-top: 1.4rem;
-    font-size: 0.68rem;
-    font-weight: 500;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--gold);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(210, 180, 134, 0.35);
-    padding-bottom: 0.25rem;
-    transition: color 0.3s, border-color 0.3s;
-  }
-  .service-link:hover,
-  .service-link:focus-visible {
-    color: var(--copper);
-    border-color: var(--copper);
-  }
-
-  #portfolio { background: var(--cream); }
-  .portfolio-intro {
-    max-width: 620px;
-    margin-bottom: 3.5rem;
-  }
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 780px);
-  }
-  .portfolio-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .portfolio-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow);
-  }
-  .portfolio-img {
-    min-height: 320px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: flex-end;
-    background: var(--navy);
-  }
-  .portfolio-slide {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.35s ease, transform 0.5s ease;
-  }
-  .portfolio-slide.is-active { opacity: 1; }
-  .portfolio-card:hover .portfolio-slide.is-active { transform: scale(1.04); }
-  .portfolio-img-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(8, 26, 51, 0.88) 0%, transparent 62%);
-  }
-  .gallery-btn {
-    position: absolute;
-    top: 50%;
-    z-index: 4;
-    width: 40px;
-    height: 40px;
-    transform: translateY(-50%);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    background: rgba(7, 17, 31, 0.58);
-    color: var(--white);
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
-    line-height: 1;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s, border-color 0.3s, color 0.3s;
-  }
-  .gallery-btn:hover,
-  .gallery-btn:focus-visible {
-    background: var(--copper);
-    border-color: var(--copper);
-  }
-  .gallery-prev { left: 1rem; }
-  .gallery-next { right: 1rem; }
-  .gallery-dots {
-    position: absolute;
-    right: 1.4rem;
-    bottom: 1.35rem;
-    z-index: 4;
-    display: flex;
-    gap: 0.45rem;
-  }
-  .gallery-dot {
-    width: 8px;
-    height: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.72);
-    border-radius: 999px;
-    background: transparent;
-    cursor: pointer;
-    padding: 0;
-  }
-  .gallery-dot.is-active {
-    background: var(--gold);
-    border-color: var(--gold);
-  }
-  .portfolio-img-label {
-    position: relative;
-    z-index: 2;
-    padding: 1.2rem 1.5rem;
-    width: 100%;
-  }
-  .portfolio-location,
-  .portfolio-kpi-label {
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 0.3rem;
-  }
-  .portfolio-name {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: var(--white);
-  }
-  .portfolio-body { padding: 1.5rem; }
-  .portfolio-tags {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-  }
-  .tag {
-    font-size: 0.62rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    border: 1px solid var(--border);
-    padding: 0.3rem 0.8rem;
-    color: var(--text-muted);
-  }
-  .portfolio-desc {
-    font-size: 0.82rem;
-    font-weight: 300;
-    line-height: 1.7;
-    color: var(--text-muted);
-  }
-  .portfolio-desc p + p { margin-top: 0.85rem; }
-  .portfolio-kpis {
-    display: flex;
-    gap: 2rem;
-    margin-top: 1.5rem;
-    flex-wrap: wrap;
-  }
-  .portfolio-kpi-value {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
-    font-weight: 300;
-    color: var(--navy);
-  }
-  .portfolio-actions {
-    display: flex;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  .portfolio-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
-    font-size: 0.68rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--copper-dark);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.3s;
-  }
-  .portfolio-cta:hover,
-  .portfolio-cta:focus-visible { border-color: var(--copper-dark); }
-  .portfolio-cta::after { content: '>'; }
-
-  .split-section {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.9fr);
-    gap: 5rem;
-    align-items: center;
-  }
-  .dark-section {
-    background: linear-gradient(135deg, var(--navy) 0%, var(--ink) 100%);
-  }
-  .dark-section .section-title { color: var(--white); }
-  .section-copy {
-    font-size: 0.92rem;
-    font-weight: 300;
-    line-height: 1.9;
-    color: var(--text-muted);
-    margin-bottom: 1.1rem;
-  }
-  .dark-section .section-copy,
-  .dark-section .detail-text,
-  .dark-section .location-copy,
-  .dark-section .unit-text {
-    color: rgba(255, 255, 255, 0.66);
-  }
-  .quick-facts {
-    background: var(--white);
-    padding: 0;
-  }
-  .facts-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border-top: 1px solid var(--border);
-    border-left: 1px solid var(--border);
-  }
-  .fact-item {
-    min-height: 150px;
-    padding: 2rem 1.5rem;
-    border-right: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    background: var(--cream);
-  }
-  .fact-value {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: clamp(1.8rem, 3vw, 2.65rem);
-    font-weight: 300;
-    line-height: 1;
-    color: var(--navy);
-    margin-bottom: 0.7rem;
-  }
-  .fact-label {
-    font-size: 0.64rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    line-height: 1.45;
-    text-transform: uppercase;
-    color: var(--copper-dark);
-  }
-  .media-panel {
-    min-height: 430px;
-    background: var(--navy);
-    position: relative;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-  }
-  .media-panel::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(7, 17, 31, 0.64), transparent 58%);
-    z-index: 1;
-  }
-  .media-panel img,
-  .media-panel .media-placeholder {
-    width: 100%;
-    height: 100%;
-    min-height: inherit;
-    object-fit: cover;
-  }
-  .media-placeholder {
-    display: flex;
-    align-items: flex-end;
-    padding: 1.5rem;
-    background:
-      linear-gradient(135deg, rgba(183, 106, 63, 0.3), rgba(8, 26, 51, 0.2)),
-      var(--navy-mid);
-    color: rgba(255, 255, 255, 0.72);
-    font-size: 0.7rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-  }
-  .detail-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--line-dark);
-    margin-top: 3.5rem;
-  }
-  .detail-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2.35rem 2rem;
-  }
-  .detail-title,
-  .location-title,
-  .unit-title {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: 1.25rem;
-    font-weight: 400;
-    line-height: 1.3;
-    color: var(--gold);
-    margin-bottom: 0.85rem;
-  }
-  .detail-text,
-  .location-copy,
-  .unit-text {
-    font-size: 0.84rem;
-    font-weight: 300;
-    line-height: 1.8;
-  }
-  .location-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-top: 2.5rem;
-  }
-  .location-item {
-    border-left: 2px solid var(--copper);
-    padding-left: 1.2rem;
-  }
-  .location-section .section-title { color: var(--white); }
-  .location-section .section-copy,
-  .location-section .location-copy {
-    color: rgba(255, 255, 255, 0.68);
-  }
-  .location-section .location-title { color: var(--gold); }
-  .map-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    padding: 1.3rem;
-  }
-  .map-card .media-panel {
-    min-height: 360px;
-    box-shadow: none;
-  }
-  .unit-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--border);
-    margin-top: 3rem;
-  }
-  .unit-card {
-    background: var(--white);
-    padding: 2.35rem 2rem;
-  }
-  .unit-card .tag {
-    display: inline-flex;
-    margin-bottom: 1.2rem;
-    color: var(--copper-dark);
-    border-color: rgba(183, 106, 63, 0.24);
-  }
-  .investment-panel {
-    border: 1px solid var(--border-warm);
-    padding: 2.5rem;
-    background: rgba(255, 255, 255, 0.05);
-  }
-  .investment-panel + .investment-panel { margin-top: 1.2rem; }
-  .investment-kicker {
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--copper);
-    margin-bottom: 0.8rem;
-  }
-  .investment-title {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: 1.35rem;
-    font-weight: 300;
-    line-height: 1.45;
-    color: var(--white);
-  }
-  .guide-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.9rem;
-    margin-top: 1.8rem;
-  }
-  .guide-links a {
-    font-size: 0.68rem;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--gold);
-    border: 1px solid rgba(210, 180, 134, 0.32);
-    padding: 0.75rem 1rem;
-    transition: background 0.3s, color 0.3s, border-color 0.3s;
-  }
-  .guide-links a:hover,
-  .guide-links a:focus-visible {
-    background: var(--copper);
-    border-color: var(--copper);
-    color: var(--white);
-  }
-
-  #contact {
-    background: var(--ink);
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
-    gap: 5rem;
-    align-items: start;
-  }
-  #contact .section-title { color: var(--white); }
-  .contact-text {
-    color: rgba(255, 255, 255, 0.66);
-    margin-bottom: 2.5rem;
-  }
-  .contact-info { display: grid; gap: 1.5rem; }
-  .contact-item {
-    display: flex;
-    gap: 1.2rem;
-    align-items: flex-start;
-  }
-  .contact-icon {
-    width: 36px;
-    height: 36px;
-    border: 1px solid var(--border-warm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    font-size: 0.9rem;
-    color: var(--copper);
-  }
-  .contact-item-label {
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--copper);
-    margin-bottom: 0.2rem;
-  }
-  .contact-item-value,
-  .contact-item-value a {
-    font-size: 0.85rem;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.78);
-    text-decoration: none;
-  }
-  .contact-form { display: grid; gap: 1.2rem; }
-  .form-group { display: grid; gap: 0.5rem; }
-  .form-label {
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.58);
-  }
-  .form-input,
-  .form-select,
-  .form-textarea {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border-warm);
-    color: var(--white);
-    font-family: 'Didact Gothic', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 300;
-    padding: 0.85rem 1rem;
-    width: 100%;
-    outline: none;
-    transition: border-color 0.3s, background 0.3s;
-    border-radius: 0;
-  }
-  .form-input:focus,
-  .form-select:focus,
-  .form-textarea:focus {
-    border-color: var(--copper);
-    background: rgba(255, 255, 255, 0.08);
-  }
-  .form-input::placeholder,
-  .form-textarea::placeholder { color: rgba(255, 255, 255, 0.32); }
-  .form-select option {
-    background: var(--navy);
-    color: var(--white);
-  }
-  .form-textarea {
-    resize: vertical;
-    min-height: 130px;
-  }
-  .form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.2rem;
-  }
-  .form-submit {
-    font-family: 'Didact Gothic', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    background: var(--copper);
-    color: var(--white);
-    border: none;
-    padding: 1rem 2.4rem;
-    cursor: pointer;
-    transition: opacity 0.3s, background 0.3s;
-    width: 100%;
-    margin-top: 0.5rem;
-  }
-  .form-submit:hover,
-  .form-submit:focus-visible { opacity: 0.9; }
-  .form-status {
-    min-height: 1.4rem;
-    font-size: 0.82rem;
-    font-weight: 300;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.72);
-  }
-  .form-status.is-success { color: #9ee6b3; }
-  .form-status.is-error { color: #f3a6a6; }
-
-  footer {
-    background: var(--ink);
-    border-top: 1px solid rgba(210, 180, 134, 0.14);
-    padding: 2.5rem 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .footer-copy {
-    font-size: 0.7rem;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.36);
-    letter-spacing: 0.05em;
-  }
-
-  .reveal {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  .reveal.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  @media (max-width: 1180px) {
-    .site-nav { height: auto; min-height: 70px; flex-wrap: wrap; padding-top: 0.8rem; padding-bottom: 0.8rem; }
-    .nav-links { order: 3; width: 100%; justify-content: flex-start; overflow: visible; padding: 0.3rem 0 0.2rem; }
-    .hero-content { margin-top: 96px; }
-  }
-
-  @media (max-width: 900px) {
-    section { padding: 5rem 5%; }
-    #about,
-    #contact,
-    .split-section { grid-template-columns: 1fr; gap: 3rem; }
-    .facts-grid,
-    .detail-grid,
-    .unit-grid { grid-template-columns: 1fr 1fr; }
-    .form-grid { grid-template-columns: 1fr; }
-  }
-
-  @media (max-width: 680px) {
-    .site-nav {
-      height: 70px;
-      min-height: 70px;
-      flex-wrap: nowrap;
-    }
-    .brand-name { font-size: 1.05rem; }
-    .brand-subtitle { font-size: 0.45rem; letter-spacing: 0.12em; }
-    .brand-mark { width: 32px; height: 27px; }
-    .nav-links {
-      position: fixed;
-      top: 70px;
-      left: 0;
-      right: 0;
-      display: none;
-      width: 100%;
-      padding: 1rem 5%;
-      background: rgba(7, 17, 31, 0.98);
-      border-bottom: 1px solid var(--border-warm);
-      overflow: visible;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-    .nav-links.is-open { display: flex; }
-    .nav-dropdown { width: 100%; }
-    .nav-dropdown-toggle::after { display: none; }
-    .nav-dropdown::after { display: none; }
-    .nav-dropdown-menu {
-      position: static;
-      min-width: 0;
-      width: 100%;
-      margin-top: 0.4rem;
-      padding-left: 1rem;
-      transform: none;
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-      background: transparent;
-      border: none;
-      backdrop-filter: none;
-    }
-    .nav-dropdown-menu a {
-      padding: 0.45rem 0;
-      border-bottom: none;
-      color: rgba(255, 255, 255, 0.56);
-    }
-    .nav-cta { display: none; }
-    .nav-toggle {
-      display: inline-flex;
-      position: relative;
-      align-items: center;
-      justify-content: center;
-      width: 42px;
-      height: 42px;
-      border: 1px solid var(--border);
-      background: transparent;
-      color: var(--gold);
-      cursor: pointer;
-    }
-    .nav-toggle span,
-    .nav-toggle::before,
-    .nav-toggle::after {
-      content: '';
-      width: 18px;
-      height: 1px;
-      background: currentColor;
-      display: block;
-      position: absolute;
-      transition: transform 0.2s, opacity 0.2s;
-    }
-    .nav-toggle::before { transform: translateY(-6px); }
-    .nav-toggle::after { transform: translateY(6px); }
-    .nav-toggle[aria-expanded="true"] span { opacity: 0; }
-    .nav-toggle[aria-expanded="true"]::before { transform: rotate(45deg); }
-    .nav-toggle[aria-expanded="true"]::after { transform: rotate(-45deg); }
-    #home { min-height: auto; }
-    .hero-content {
-      width: 90%;
-      margin: 70px auto 0;
-      padding: 6rem 0 7rem;
-    }
-    .hero-title { font-size: clamp(2.35rem, 15vw, 3.4rem); }
-    .hero-eyebrow,
-    .section-eyebrow { letter-spacing: 0.18em; }
-    .hero-actions,
-    .button-row { width: 100%; }
-    .btn-primary,
-    .btn-outline,
-    .btn-light { width: 100%; padding-left: 1rem; padding-right: 1rem; }
-    .portfolio-img { min-height: 250px; }
-    .portfolio-kpis { gap: 1.2rem; }
-    .portfolio-kpis > div { width: calc(50% - 0.6rem); }
-    .facts-grid,
-    .detail-grid,
-    .unit-grid,
-    .location-grid { grid-template-columns: 1fr; }
-    .media-panel { min-height: 300px; }
-    .footer-copy { width: 100%; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      scroll-behavior: auto !important;
-      transition-duration: 0.01ms !important;
-    }
-  }
+  .elaf-hero{min-height:80vh;position:relative;display:flex;align-items:flex-end;padding:9rem 5% 5rem;overflow:hidden;background:var(--ink);}
+  .elaf-hero-bg{position:absolute;inset:0;background:url('../elaf.jpg') center/cover;opacity:.65;z-index:1;}
+  .elaf-hero-overlay{position:absolute;inset:0;background:radial-gradient(circle at 72% 25%,rgba(183,106,63,.16),transparent 30%),linear-gradient(to right,rgba(7,17,31,.96) 0%,rgba(8,26,51,.72) 50%,rgba(8,26,51,.28) 100%),linear-gradient(to bottom,rgba(0,0,0,.1) 0%,rgba(0,0,0,.6) 100%);z-index:2;}
+  .elaf-hero-pattern{position:absolute;inset:0;z-index:3;background-image:repeating-linear-gradient(0deg,transparent,transparent 79px,rgba(210,180,134,.03) 80px),repeating-linear-gradient(90deg,transparent,transparent 79px,rgba(210,180,134,.03) 80px);}
+  .elaf-hero-content{position:relative;z-index:4;max-width:900px;}
+  .elaf-hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3.2rem,7vw,5.8rem);font-weight:300;line-height:1.05;color:var(--white);margin-bottom:1.5rem;}
+  .elaf-hero-title em{font-style:italic;color:var(--gold);}
+  .elaf-hero-sub{font-size:.96rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,.7);max-width:660px;margin-bottom:2.5rem;}
+  .facts-strip{background:var(--white);border-bottom:1px solid var(--border);}
+  .facts-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-left:1px solid var(--border);}
+  .fact-item{padding:2rem 1.5rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--cream);min-height:120px;}
+  .fact-value{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,2.8vw,2.5rem);font-weight:300;line-height:1;color:var(--navy);margin-bottom:.6rem;}
+  .fact-label{font-size:.64rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--copper-dark);line-height:1.45;}
+  .gallery-wrap{position:relative;min-height:380px;background:var(--navy);overflow:hidden;}
+  .gallery-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s ease;}
+  .gallery-slide.is-active{opacity:1;}
+  .gallery-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,26,51,.75) 0%,transparent 55%);z-index:1;}
+  .gallery-btn{position:absolute;top:50%;z-index:3;width:42px;height:42px;transform:translateY(-50%);border:1px solid rgba(255,255,255,.3);background:rgba(7,17,31,.55);color:var(--white);font-family:'Cormorant Garamond',serif;font-size:1.8rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .3s,border-color .3s;}
+  .gallery-btn:hover{background:var(--copper);border-color:var(--copper);}
+  .gallery-prev{left:1rem;}
+  .gallery-next{right:1rem;}
+  .gallery-dots{position:absolute;right:1.5rem;bottom:1.5rem;z-index:3;display:flex;gap:.4rem;}
+  .gallery-dot{width:8px;height:8px;border:1px solid rgba(255,255,255,.65);border-radius:50%;background:transparent;cursor:pointer;padding:0;transition:background .2s;}
+  .gallery-dot.is-active{background:var(--gold);border-color:var(--gold);}
+  .gallery-label{position:absolute;bottom:1.5rem;left:1.5rem;z-index:3;}
+  .gallery-location{font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.25rem;}
+  .gallery-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:var(--white);}
+  .project-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.4rem;}
+  .tag{font-size:.62rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--border);padding:.28rem .75rem;color:var(--text-muted);}
+  .project-kpis{display:flex;gap:2.5rem;flex-wrap:wrap;margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border);}
+  .project-kpi-label{font-size:.62rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.3rem;}
+  .project-kpi-value{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:var(--navy);line-height:1;}
+  .spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-dark);margin-top:3.5rem;}
+  .spec-card{background:rgba(255,255,255,.05);padding:2.2rem 2rem;}
+  .spec-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:400;color:var(--gold);margin-bottom:.8rem;line-height:1.3;}
+  .spec-text{font-size:.84rem;font-weight:300;line-height:1.8;color:rgba(255,255,255,.62);}
+  .location-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;}
+  .location-item{border-left:2px solid var(--copper);padding-left:1.2rem;}
+  .location-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:400;color:var(--gold);margin-bottom:.5rem;line-height:1.3;}
+  .location-text{font-size:.84rem;font-weight:300;line-height:1.7;color:rgba(255,255,255,.64);}
+  .unit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:3rem;}
+  .unit-card{background:var(--white);padding:2.2rem 2rem;}
+  .unit-tag{display:inline-flex;margin-bottom:1.2rem;font-size:.62rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--copper-dark);border:1px solid rgba(183,106,63,.22);padding:.25rem .7rem;}
+  .unit-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:400;color:var(--navy);margin-bottom:.7rem;line-height:1.3;}
+  .unit-text{font-size:.84rem;font-weight:300;line-height:1.8;color:var(--text-muted);}
+  .buyer-fit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--line-dark);margin-top:3rem;}
+  .buyer-card{background:rgba(255,255,255,.05);padding:2.2rem 2rem;transition:background .3s;}
+  .buyer-card:hover{background:rgba(255,255,255,.08);}
+  .buyer-card-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:300;color:rgba(183,106,63,.4);line-height:1;margin-bottom:.9rem;}
+  .buyer-card-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:400;color:var(--gold);margin-bottom:.7rem;line-height:1.3;}
+  .buyer-card-text{font-size:.84rem;font-weight:300;line-height:1.8;color:rgba(255,255,255,.58);}
+  .buyer-card-link{display:inline-flex;margin-top:1.2rem;font-size:.65rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(210,180,134,.3);padding-bottom:.2rem;transition:color .3s;}
+  .buyer-card-link:hover{color:var(--copper);border-color:var(--copper);}
+  .invest-panel{border:1px solid var(--border-warm);padding:2.2rem 2.5rem;background:rgba(255,255,255,.04);margin-bottom:1.2rem;}
+  .invest-panel:last-child{margin-bottom:0;}
+  .invest-kicker{font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--copper);margin-bottom:.8rem;}
+  .invest-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:300;line-height:1.5;color:var(--white);}
+  .contact-info{display:grid;gap:1.5rem;margin-bottom:2.5rem;}
+  .contact-item{display:flex;gap:1.2rem;align-items:flex-start;}
+  .contact-icon{width:36px;height:36px;border:1px solid var(--border-warm);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--copper);font-size:.85rem;}
+  .contact-item-label{font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--copper);margin-bottom:.2rem;}
+  .contact-item-value,.contact-item-value a{font-size:.85rem;font-weight:300;color:rgba(255,255,255,.75);text-decoration:none;}
+  @media(max-width:1180px){.facts-grid{grid-template-columns:repeat(4,1fr);}}
+  @media(max-width:900px){.facts-grid{grid-template-columns:repeat(2,1fr);}.spec-grid{grid-template-columns:1fr 1fr;}.unit-grid{grid-template-columns:1fr 1fr;}.location-grid{grid-template-columns:1fr;}}
+  @media(max-width:680px){.elaf-hero-title{font-size:clamp(2.4rem,13vw,3.5rem);}.facts-grid{grid-template-columns:1fr 1fr;}.spec-grid,.unit-grid,.buyer-fit-grid{grid-template-columns:1fr;}.project-kpis{gap:1.5rem;}.project-kpis>div{min-width:calc(50% - .75rem);}}
 </style>
 </head>
 <body>
+<div id="progress-bar" aria-hidden="true"></div>
+
 <nav class="site-nav" aria-label="Navigation principale">
-  <a href="index.html" class="brand" aria-label="Accueil Rahim International">
-    <svg class="brand-mark" viewBox="100 80 480 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect x="60" y="10" width="560" height="540" rx="16" class="brand-mark-bg"/>
-      <rect x="168" y="318" width="344" height="9" rx="1" class="brand-mark-gold"/>
-      <rect x="168" y="310" width="44" height="22" rx="2" class="brand-mark-deep"/>
-      <rect x="468" y="310" width="44" height="22" rx="2" class="brand-mark-deep"/>
-      <path d="M340,88 C310,160 274,240 295,318 L315,318 C298,240 328,162 340,100 Z" class="brand-mark-gold"/>
-      <path d="M340,88 C370,160 406,240 385,318 L365,318 C382,240 352,162 340,100 Z" class="brand-mark-gold"/>
-      <path d="M340,88 C322,155 308,240 310,318 L318,318 C316,240 330,158 340,100 Z" class="brand-mark-navy"/>
-      <path d="M340,88 C358,155 372,240 370,318 L362,318 C370,240 350,158 340,100 Z" class="brand-mark-navy"/>
-      <line x1="340" y1="88" x2="185" y2="318" class="brand-mark-line" stroke-width="1.4" opacity="0.95"/>
-      <line x1="340" y1="106" x2="210" y2="318" class="brand-mark-line" stroke-width="1.25" opacity="0.88"/>
-      <line x1="340" y1="128" x2="236" y2="318" class="brand-mark-line" stroke-width="1.1" opacity="0.82"/>
-      <line x1="340" y1="153" x2="262" y2="318" class="brand-mark-line" stroke-width="1.0" opacity="0.75"/>
-      <line x1="340" y1="88" x2="495" y2="318" class="brand-mark-line" stroke-width="1.4" opacity="0.95"/>
-      <line x1="340" y1="106" x2="470" y2="318" class="brand-mark-line" stroke-width="1.25" opacity="0.88"/>
-      <line x1="340" y1="128" x2="444" y2="318" class="brand-mark-line" stroke-width="1.1" opacity="0.82"/>
-      <line x1="340" y1="153" x2="418" y2="318" class="brand-mark-line" stroke-width="1.0" opacity="0.75"/>
-    </svg>
-    <span class="brand-text">
-      <span class="brand-name">Rahim <span>International</span></span>
-      <span class="brand-subtitle">Conseil immobilier &amp; consulting</span>
-    </span>
-  </a>
-  <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-controls="nav-links" aria-expanded="false">
-    <span></span>
-  </button>
+  <a href="index.html" class="brand"><img src="../logo.png" alt="" class="brand-logo" aria-hidden="true"><span class="brand-text"><span class="brand-name">Rahim <span>International</span></span><span class="brand-subtitle">Conseil &amp; Consulting Immobilier</span></span></a>
+  <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-controls="nav-links" aria-expanded="false"><span></span></button>
   <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="about.html">À propos</a></li>
-    <li class="nav-dropdown">
-      <button class="nav-dropdown-toggle" type="button" aria-haspopup="true">Acheteurs</button>
-      <div class="nav-dropdown-menu" aria-label="Catégories d'acheteurs">
-        <a href="investors-international.html">Investisseurs internationaux</a>
-        <a href="investors-mre.html">Diaspora marocaine / MRE</a>
-        <a href="investors-local.html">Investisseurs locaux</a>
-      </div>
-    </li>
-    <li><a href="services-developers.html">Promoteurs immobiliers</a></li>
-    <li><a href="guides/index.html">Guides acheteurs</a></li>
-    <li><a href="why-morocco.html">Opportunité du marché</a></li>
+    <li><a href="index.html">Accueil</a></li><li><a href="about.html">Qui Sommes-Nous</a></li>
+    <li class="nav-dropdown"><button class="nav-dropdown-toggle" type="button" aria-haspopup="true">Acheteurs</button><div class="nav-dropdown-menu"><a href="investors-international.html">Acheteurs Internationaux</a><a href="investors-mre.html">Diaspora Marocaine / MRE</a><a href="investors-local.html">Acheteurs Locaux</a></div></li>
+    <li><a href="services-developers.html">Services aux Promoteurs</a></li><li><a href="guides/index.html">Guides d'Achat</a></li><li><a href="why-morocco.html">Pourquoi Kénitra</a></li>
     <li><a href="elaf-sky-view.html" class="active" aria-current="page">Elaf Sky View</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
-    <li class="language-switcher" aria-label="Choix de la langue">
-      <a href="../elaf-sky-view.html">EN</a>
-      <a href="elaf-sky-view.html" class="active" aria-current="page">FR</a>
-      <a href="../ar/elaf-sky-view.html">AR</a>
-    </li>
+    <li><a href="#contact">Contact</a></li>
+    <li class="language-switcher"><a href="../elaf-sky-view.html">EN</a><a href="elaf-sky-view.html" class="active">FR</a><a href="../ar/elaf-sky-view.html">AR</a></li>
   </ul>
-  <a href="index.html#contact" class="nav-cta">Nous contacter</a>
+  <a href="#contact" class="nav-cta">Demander des Détails</a>
 </nav>
+<nav class="breadcrumb"><a href="index.html">Accueil</a><span>›</span><span class="current">Elaf Sky View</span></nav>
+
 <main>
-  <section id="home" class="page-hero" style="min-height:78vh;align-items:flex-end;padding:9rem 5% 5rem;">
-    <div class="page-hero-bg" style="background:linear-gradient(to right,rgba(7,17,31,.96),rgba(8,26,51,.7),rgba(8,26,51,.25)),url('../elaf.jpg') center / cover;opacity:.9" aria-hidden="true"></div>
-    <div class="page-hero-fade" aria-hidden="true"></div>
-    <div class="page-hero-pattern" aria-hidden="true"></div>
-    <div class="page-hero-content">
-      <p class="page-hero-eyebrow">Opportunité actuelle · Kénitra Centre Ville</p>
-      <h1 class="page-hero-title">Elaf Sky View<br><em>Un luxe accessible, pensé concrètement.</em></h1>
-      <p class="page-hero-sub">Un projet résidentiel de 35 appartements au centre de Kénitra, avec des finitions soignées, une infrastructure prête pour l’efficacité énergétique, un parking titré, certaines unités éligibles à Daam Sakani et un emplacement conçu pour la vie quotidienne.</p>
-      <div class="hero-actions"><a href="#contact" class="btn-primary">Demander les détails</a><a href="../elaf-sky-view-brochure.pdf" class="btn-outline" target="_blank" rel="noopener">Voir la brochure</a><a href="#gallery" class="btn-outline">Voir le projet</a></div>
-    </div>
-  </section>
 
-  <section class="quick-facts" aria-label="Chiffres clés Elaf Sky View">
+  <div class="elaf-hero">
+    <div class="elaf-hero-bg" aria-hidden="true"></div>
+    <div class="elaf-hero-overlay" aria-hidden="true"></div>
+    <div class="elaf-hero-pattern" aria-hidden="true"></div>
+    <div class="elaf-hero-content">
+      <p class="page-hero-eyebrow">Opportunité Actuelle · Kénitra Centre Ville</p>
+      <h1 class="elaf-hero-title">Elaf Sky View<br><em>Construit à un Standard Supérieur. Tarifé pour le Vrai Marché.</em></h1>
+      <p class="elaf-hero-sub">Une résidence de 35 unités en centre-ville de Kénitra combinant finitions haut de gamme, infrastructure prête pour l'énergie solaire, parking titré, éligibilité Daam Sakani sélectionnée et un emplacement fait pour la vie quotidienne.</p>
+      <div style="display:flex;gap:1.2rem;flex-wrap:wrap;">
+        <a href="#contact" class="btn-primary">Demander les Détails Complets</a>
+        <a href="../elaf-sky-view-brochure.pdf" class="btn-outline" target="_blank" rel="noopener">Télécharger la Brochure</a>
+        <a href="#gallery" class="btn-outline">Voir la Galerie</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="facts-strip">
     <div class="facts-grid">
-      <div class="fact-item reveal"><div class="fact-value">35</div><div class="fact-label">Appartements résidentiels</div></div>
-      <div class="fact-item reveal"><div class="fact-value">61-108 m²</div><div class="fact-label">Fourchette des surfaces</div></div>
-      <div class="fact-item reveal"><div class="fact-value">11,500</div><div class="fact-label">MAD par mètre carré</div></div>
-      <div class="fact-item reveal"><div class="fact-value">6</div><div class="fact-label">Étages au centre de Kénitra</div></div>
-      <div class="fact-item reveal"><div class="fact-value">10 min</div><div class="fact-label">À pied de la gare TGV</div></div>
-      <div class="fact-item reveal"><div class="fact-value">5 min</div><div class="fact-label">En voiture de l’autoroute</div></div>
-      <div class="fact-item reveal"><div class="fact-value">1</div><div class="fact-label">Place de parking titrée par unité</div></div>
-      <div class="fact-item reveal"><div class="fact-value">Daam</div><div class="fact-label">Certaines unités peuvent être éligibles</div></div>
+      <div class="fact-item"><div class="fact-value">35</div><div class="fact-label">Appartements résidentiels</div></div>
+      <div class="fact-item"><div class="fact-value">61–108 m²</div><div class="fact-label">Gamme de surfaces</div></div>
+      <div class="fact-item"><div class="fact-value">11 500</div><div class="fact-label">MAD par mètre carré</div></div>
+      <div class="fact-item"><div class="fact-value">6</div><div class="fact-label">Étages en centre-ville de Kénitra</div></div>
+      <div class="fact-item"><div class="fact-value">10 min</div><div class="fact-label">À pied de la gare TGV de Kénitra</div></div>
+      <div class="fact-item"><div class="fact-value">5 min</div><div class="fact-label">En voiture de l'autoroute</div></div>
+      <div class="fact-item"><div class="fact-value">1</div><div class="fact-label">Place de parking titrée par unité</div></div>
+      <div class="fact-item"><div class="fact-value">Daam</div><div class="fact-label">Unités sélectionnées éligibles</div></div>
     </div>
-  </section>
+  </div>
 
-  <section id="portfolio">
-    <p class="section-eyebrow">Présentation du projet</p>
-    <h2 class="section-title">Appartements hautement finis<br>au Centre Ville de Kénitra.</h2>
-    <p class="portfolio-intro">Elaf Sky View propose des appartements conçus avec soin dans l’une des villes marocaines les plus dynamiques, avec un équilibre rare entre luxe accessible, infrastructure pratique et confort quotidien.</p>
-    <div class="portfolio-grid">
-      <article class="portfolio-card reveal">
-        <div class="portfolio-img" id="gallery" data-gallery>
-          <img src="../elaf.jpg" alt="Projet résidentiel Elaf Sky View au centre de Kénitra" class="portfolio-slide is-active">
-          <img src="../elaf-interior.png" alt="Finitions intérieures Elaf Sky View" class="portfolio-slide">
-          <img src="../elaf-kitchen.png" alt="Cuisine équipée Elaf Sky View" class="portfolio-slide">
-          <img src="../elaf-location.png" alt="Quartier et contexte urbain Elaf Sky View" class="portfolio-slide">
-          <div class="portfolio-img-overlay" aria-hidden="true"></div>
-          <button class="gallery-btn gallery-prev" type="button" aria-label="Photo précédente Elaf Sky View">&lsaquo;</button>
-          <button class="gallery-btn gallery-next" type="button" aria-label="Photo suivante Elaf Sky View">&rsaquo;</button>
-          <div class="gallery-dots" aria-label="Galerie photo Elaf Sky View"><button class="gallery-dot is-active" type="button" aria-label="Afficher la photo 1"></button><button class="gallery-dot" type="button" aria-label="Afficher la photo 2"></button><button class="gallery-dot" type="button" aria-label="Afficher la photo 3"></button><button class="gallery-dot" type="button" aria-label="Afficher la photo 4"></button></div>
-          <div class="portfolio-img-label"><div class="portfolio-location">Kénitra · Centre Ville</div><h3 class="portfolio-name">Elaf Sky View</h3></div>
+  <section class="bg-cream" style="padding:var(--section-pad);">
+    <p class="section-eyebrow">Présentation du Projet</p>
+    <h2 class="section-title" style="color:var(--navy);">Appartements Haut de Gamme<br>en Centre Ville de Kénitra.</h2>
+    <p style="font-size:.92rem;font-weight:300;line-height:1.9;color:var(--text-muted);max-width:660px;margin-bottom:3rem;">Elaf Sky View propose des appartements soigneusement conçus dans l'une des villes marocaines à la croissance la plus rapide, avec un équilibre rare entre qualité des finitions, infrastructure pratique et commodités du quotidien.</p>
+    <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.7fr);gap:3rem;align-items:start;">
+      <div>
+        <div id="gallery" class="gallery-wrap" data-gallery style="border:1px solid var(--border);">
+          <img src="../elaf.jpg" alt="Résidence Elaf Sky View en centre-ville de Kénitra" class="gallery-slide is-active">
+          <img src="../elaf-interior.png" alt="Finitions intérieures Elaf Sky View" class="gallery-slide">
+          <img src="../elaf-kitchen.png" alt="Cuisine équipée Elaf Sky View" class="gallery-slide">
+          <img src="../elaf-location.png" alt="Contexte urbain Elaf Sky View" class="gallery-slide">
+          <div class="gallery-img-overlay" aria-hidden="true"></div>
+          <button class="gallery-btn gallery-prev" type="button" aria-label="Photo précédente">‹</button>
+          <button class="gallery-btn gallery-next" type="button" aria-label="Photo suivante">›</button>
+          <div class="gallery-dots">
+            <button class="gallery-dot is-active" type="button" aria-label="Photo 1"></button>
+            <button class="gallery-dot" type="button" aria-label="Photo 2"></button>
+            <button class="gallery-dot" type="button" aria-label="Photo 3"></button>
+            <button class="gallery-dot" type="button" aria-label="Photo 4"></button>
+          </div>
+          <div class="gallery-label">
+            <div class="gallery-location">Kénitra · Centre Ville</div>
+            <div class="gallery-name">Elaf Sky View</div>
+          </div>
         </div>
-        <div class="portfolio-body">
-          <div class="portfolio-tags"><span class="tag">Appartements</span><span class="tag">Centre Ville</span><span class="tag">Prêt pour l’énergie</span><span class="tag">Finitions soignées</span><span class="tag">Éligible Daam Sakani</span><span class="tag">Mandat actif</span></div>
-          <div class="portfolio-desc"><p>Situé au Centre Ville, dans un quartier établi et verdoyant à côté d’un jardin public, Elaf Sky View place les résidents à environ 10 minutes à pied de la gare TGV et à environ 5 minutes en voiture de l’autoroute.</p><p>Pensé pour l’investissement locatif comme pour l’habitation à long terme, le projet propose des unités adaptées aux investisseurs et des résidences confortables pour un usage personnel. Chaque appartement comprend une pré-installation de climatisation, des fenêtres et portes vitrées à double isolation, des portes importées de Turquie avec triple verrouillage, des cuisines équipées, des sièges de douche intégrés et des finitions intérieures élevées.</p><p>Chaque appartement bénéficie aussi d’un espace privé en toiture pour de futurs panneaux solaires, relié directement au logement, afin de réduire sensiblement les coûts d’électricité une fois installé. Une place de parking souterrain est attribuée à chaque appartement et intégrée au titre de propriété.</p></div>
-          <div class="portfolio-kpis"><div><div class="portfolio-kpi-label">Unités</div><div class="portfolio-kpi-value">35</div></div><div><div class="portfolio-kpi-label">Surfaces</div><div class="portfolio-kpi-value">61-108 m²</div></div><div><div class="portfolio-kpi-label">Prix</div><div class="portfolio-kpi-value">11,500 MAD/m²</div></div><div><div class="portfolio-kpi-label">Étages</div><div class="portfolio-kpi-value">6</div></div></div>
+        <div class="project-tags" style="margin-top:1.2rem;">
+          <span class="tag">Appartements</span>
+          <span class="tag">Centre Ville</span>
+          <span class="tag">Prêt Énergie Solaire</span>
+          <span class="tag">Finitions Haut de Gamme</span>
+          <span class="tag">Éligible Daam Sakani</span>
+          <span class="tag">Mandat Actif</span>
         </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="split-section location-section">
-    <div>
-      <p class="section-eyebrow">Pourquoi ce projet</p>
-      <h2 class="section-title">Un bon rapport prix-qualité<br>dans une vraie ville.</h2>
-      <p class="section-copy">Elaf Sky View n’est pas présenté comme un luxe spéculatif. C’est un projet résidentiel bien situé et bien fini, dans une ville où la demande quotidienne est réelle et où les prix restent plus accessibles que dans les marchés marocains les plus établis.</p>
-      <p class="section-copy">L’intérêt est pratique : une adresse mature au Centre Ville, des commodités accessibles à pied, des connexions solides, un parking titré et des finitions qui rendent les appartements adaptés à la vie réelle, pas seulement à une brochure de revente.</p>
-      <div class="button-row"><a href="why-morocco.html" class="btn-primary">Opportunité du marché</a><a href="guides/kenitra-vs-rabat.html" class="btn-outline" style="color:var(--navy);border-color:var(--border);">Guide Kénitra vs Rabat</a></div>
-    </div>
-    <div class="media-panel reveal">
-      <img src="../elaf-building.png" alt="Image extérieure du bâtiment Elaf Sky View">
-    </div>
-  </section>
-
-  <section class="dark-section">
-    <p class="section-eyebrow">Qualité de construction</p>
-    <h2 class="section-title">La différence est<br>dans la spécification.</h2>
-    <p class="services-intro">À ce niveau de prix, les détails comptent. Elaf Sky View est conçu pour offrir un ressenti plus fini, plus efficace et plus sécurisé qu’un appartement standard de milieu de marché.</p>
-    <div class="detail-grid">
-      <article class="detail-card reveal"><h3 class="detail-title">Prêt pour le solaire</h3><p class="detail-text">Chaque unité dispose d’un emplacement privé en toiture pour de futurs panneaux solaires, avec une pré-installation pensée pour connecter le système à l’appartement et à l’entrée électrique de sa place de parking souterrain.</p></article>
-      <article class="detail-card reveal"><h3 class="detail-title">Confort &amp; isolation</h3><p class="detail-text">La pré-installation de climatisation et les fenêtres et portes vitrées à double isolation améliorent le confort, l’isolation sonore et l’efficacité énergétique.</p></article>
-      <article class="detail-card reveal"><h3 class="detail-title">Sécurité &amp; portes</h3><p class="detail-text">Les portes principales et intérieures sont importées de Turquie, avec un système de triple verrouillage sur les portes principales.</p></article>
-      <article class="detail-card reveal"><h3 class="detail-title">Cuisines équipées</h3><p class="detail-text">Les appartements comprennent des cuisines équipées, ce qui réduit le travail de préparation pour un usage personnel ou locatif.</p></article>
-      <article class="detail-card reveal"><h3 class="detail-title">Salles de bain finies</h3><p class="detail-text">Les sièges de douche intégrés ajoutent du confort et de la praticité, notamment pour les familles, les proches plus âgés et les séjours longs.</p></article>
-      <article class="detail-card reveal"><h3 class="detail-title">Finitions intérieures</h3><p class="detail-text">Sol, peinture, panneaux muraux et choix de finition visent un rendu plus raffiné sans basculer dans des prix de luxe.</p></article>
-    </div>
-  </section>
-
-  <section class="split-section location-section">
-    <div class="map-card reveal">
-      <div class="media-panel">
-        <img src="../elaf-map.png" alt="Carte indiquant Elaf Sky View au Centre Ville de Kénitra">
       </div>
-    </div>
-    <div>
-      <p class="section-eyebrow">Emplacement</p>
-      <h2 class="section-title">Le confort du Centre Ville.<br>Connecté à la région.</h2>
-      <p class="section-copy">Le projet se situe dans une partie mature et verte du centre de Kénitra, à côté d’un jardin public et à distance de marche des commodités du quotidien. C’est important pour les résidents, les locataires et les familles qui veulent un bien utile au-delà de la première conversation d’achat.</p>
-      <div class="location-grid">
-        <div class="location-item reveal"><h3 class="location-title">Accès TGV</h3><p class="location-copy">Environ 10 minutes à pied de la gare à grande vitesse de Kénitra.</p></div>
-        <div class="location-item reveal"><h3 class="location-title">Accès autoroute</h3><p class="location-copy">Environ 5 minutes en voiture de l’autoroute vers Rabat, Salé, Casablanca et Tanger.</p></div>
-        <div class="location-item reveal"><h3 class="location-title">Commodités quotidiennes</h3><p class="location-copy">Un emplacement central avec commerces, services, cafés, écoles et besoins quotidiens à proximité.</p></div>
-        <div class="location-item reveal"><h3 class="location-title">Cadre verdoyant</h3><p class="location-copy">Un tissu urbain établi avec de la verdure à proximité, et non un développement isolé en périphérie.</p></div>
+      <div>
+        <p style="font-size:.9rem;font-weight:300;line-height:1.9;color:var(--text-muted);margin-bottom:1.2rem;">Situé en Centre Ville, dans un quartier verdoyant et établi à côté d'un jardin public, Elaf Sky View place les résidents à environ 10 minutes à pied de la gare TGV et à 5 minutes en voiture de l'autoroute.</p>
+        <p style="font-size:.9rem;font-weight:300;line-height:1.9;color:var(--text-muted);margin-bottom:1.2rem;">Conçu aussi bien pour les revenus locatifs que pour la résidence durable, chaque unité comprend la pré-installation de la climatisation, des fenêtres et portes vitrées à double isolation, des portes importées de Turquie avec triple système de verrouillage, des cuisines entièrement équipées et des sièges de douche intégrés.</p>
+        <p style="font-size:.9rem;font-weight:300;line-height:1.9;color:var(--text-muted);">Chaque appartement bénéficie également d'un espace privatif sur le toit pour de futurs panneaux solaires, directement connecté au logement et à l'alimentation électrique de sa place de parking souterrain.</p>
+        <div class="project-kpis">
+          <div><div class="project-kpi-label">Unités au Total</div><div class="project-kpi-value">35</div></div>
+          <div><div class="project-kpi-label">Surfaces</div><div class="project-kpi-value">61–108 m²</div></div>
+          <div><div class="project-kpi-label">Prix</div><div class="project-kpi-value">11 500 MAD/m²</div></div>
+          <div><div class="project-kpi-label">Étages</div><div class="project-kpi-value">6</div></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="services">
-    <p class="section-eyebrow">Profils d’acheteurs</p>
-    <h2 class="section-title">Des acheteurs différents.<br>Des raisons différentes.</h2>
-    <p class="services-intro">Elaf Sky View n’est pas un argument unique. Selon le type d’unité, le projet peut répondre à différents profils : primo-accédants, familles MRE, investisseurs locaux ou étrangers qui préparent une installation au Maroc.</p>
-    <div class="services-grid">
-      <article class="service-card reveal"><div class="service-num">01</div><h3 class="service-title">Acheteurs internationaux</h3><p class="service-desc">Une base centrale à Kénitra pour préparer une installation, vivre à long terme, générer un revenu locatif ou détenir un bien marocain accompagné.</p><a href="investors-international.html" class="service-link">Parcours acheteur international</a></article>
-      <article class="service-card reveal"><div class="service-num">02</div><h3 class="service-title">Acheteurs MRE</h3><p class="service-desc">Une résidence secondaire, une base familiale, un investissement locatif ou un futur point de retour avec suivi pendant que vous êtes à l’étranger.</p><a href="investors-mre.html" class="service-link">Parcours MRE</a></article>
-      <article class="service-card reveal"><div class="service-num">03</div><h3 class="service-title">Acheteurs locaux</h3><p class="service-desc">Une opportunité en ville connectée pour comparer accessibilité, usage locatif et valeur à long terme autour de Rabat.</p><a href="investors-local.html" class="service-link">Parcours local</a></article>
-      <article class="service-card reveal"><div class="service-num">04</div><h3 class="service-title">Acheteurs Daam</h3><p class="service-desc">Certaines unités peuvent être éligibles à Daam Sakani, offrant un accès plus abordable à un immeuble de meilleure qualité.</p><a href="guides/daam-sakani-guide.html" class="service-link">Lire le guide Daam</a></article>
+  <section class="bg-navy-grad" style="padding:var(--section-pad);">
+    <p class="section-eyebrow">Qualité de Construction</p>
+    <h2 class="section-title" style="color:var(--white);">La Différence Est<br>dans les Spécifications.</h2>
+    <p style="font-size:.92rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,.65);max-width:660px;margin-bottom:.5rem;">À ce niveau de prix, les détails comptent. Elaf Sky View est conçu pour être plus fini, plus efficace et plus sécurisé que l'appartement standard du marché intermédiaire.</p>
+    <div class="spec-grid stagger">
+      <article class="spec-card reveal"><h3 class="spec-title">Prêt pour l'Énergie Solaire</h3><p class="spec-text">Chaque unité dispose d'un espace privatif sur le toit pour de futurs panneaux solaires, pré-installé et directement connecté à l'entrée électrique de l'appartement et de sa place de parking souterrain.</p></article>
+      <article class="spec-card reveal"><h3 class="spec-title">Infrastructure de Confort</h3><p class="spec-text">La pré-installation de la climatisation et les fenêtres et portes vitrées à double isolation améliorent significativement le confort, le contrôle acoustique et l'efficacité énergétique.</p></article>
+      <article class="spec-card reveal"><h3 class="spec-title">Sécurité &amp; Portes</h3><p class="spec-text">Les portes d'entrée et intérieures sont importées de Turquie, avec des systèmes à triple verrouillage sur les portes principales pour une sécurité quotidienne renforcée.</p></article>
+      <article class="spec-card reveal"><h3 class="spec-title">Cuisines Équipées</h3><p class="spec-text">Les appartements comprennent des cuisines entièrement équipées, réduisant les travaux de mise en place pour les propriétaires qui achètent pour un usage personnel ou pour la location.</p></article>
+      <article class="spec-card reveal"><h3 class="spec-title">Salles de Bain Finies</h3><p class="spec-text">Les sièges de douche intégrés ajoutent confort et fonctionnalité — notamment pour un usage familial, les proches âgés et les résidents de longue durée.</p></article>
+      <article class="spec-card reveal"><h3 class="spec-title">Finitions Intérieures</h3><p class="spec-text">Les sols, la peinture, les revêtements muraux et les choix de finitions offrent une ambiance plus soignée sans atteindre les tarifs du segment luxe.</p></article>
     </div>
   </section>
 
-  <section>
-    <p class="section-eyebrow">Stratégie d’unité</p>
-    <h2 class="section-title">Choisir l’unité<br>selon l’usage réel.</h2>
-    <p class="portfolio-intro">Un bon achat ne consiste pas seulement à choisir le plus bel appartement. La bonne unité dépend de l’usage prévu : habiter, louer, revenir, bénéficier d’une aide ou conserver une valeur à long terme.</p>
-    <div class="unit-grid">
-      <article class="unit-card reveal"><span class="tag">Entrée accessible</span><h3 class="unit-title">Unités éligibles Daam</h3><p class="unit-text">Pour les acheteurs éligibles, certaines unités peuvent offrir un point d’entrée plus accessible dans un immeuble de meilleure qualité. Les conditions et obligations doivent être vérifiées avant réservation.</p></article>
-      <article class="unit-card reveal"><span class="tag">Usage familial</span><h3 class="unit-title">Résidences plus grandes</h3><p class="unit-text">Les plus grandes superficies conviennent mieux aux résidences secondaires, séjours familiaux, habitations longues durées ou acheteurs qui préparent un retour au Maroc.</p></article>
-      <article class="unit-card reveal"><span class="tag">Logique locative</span><h3 class="unit-title">Unités orientées investisseur</h3><p class="unit-text">Pour les acheteurs orientés location, il faut regarder la surface, le coût d’ameublement, le profil du locataire, la gestion et la demande locale.</p></article>
+  <section class="bg-navy-grad" style="padding:var(--section-pad);">
+    <div class="split split-center">
+      <div style="min-height:420px;background:var(--navy-mid);border:1px solid var(--border-warm);overflow:hidden;position:relative;" class="reveal">
+        <img src="../elaf-map.png" alt="Carte montrant l'emplacement d'Elaf Sky View en Centre Ville de Kénitra" style="width:100%;height:100%;object-fit:cover;min-height:420px;">
+      </div>
+      <div>
+        <p class="section-eyebrow">Emplacement</p>
+        <h2 class="section-title" style="color:var(--white);">Commodité du Centre Ville.<br>Connecté à la Région.</h2>
+        <p style="font-size:.9rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,.65);margin-bottom:2rem;">Le projet est situé dans une partie mature et verdoyante du centre de Kénitra, à côté d'un jardin public et à distance de marche des commodités du quotidien.</p>
+        <div class="location-grid">
+          <div class="location-item reveal"><h3 class="location-title">Accès TGV</h3><p class="location-text">Environ 10 minutes à pied de la gare grande vitesse de Kénitra.</p></div>
+          <div class="location-item reveal"><h3 class="location-title">Accès Autoroute</h3><p class="location-text">Environ 5 minutes en voiture vers Rabat, Salé, Casablanca et Tanger.</p></div>
+          <div class="location-item reveal"><h3 class="location-title">Commodités Quotidiennes</h3><p class="location-text">Commerces, services, cafés, écoles et besoins du quotidien à proximité dans un cadre central.</p></div>
+          <div class="location-item reveal"><h3 class="location-title">Cadre Verdoyant</h3><p class="location-text">Tissu urbain établi avec verdure à proximité — pas un développement isolé en périphérie.</p></div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="dark-section split-section">
-    <div>
-      <p class="section-eyebrow">Cas d’investissement</p>
-      <h2 class="section-title">Pourquoi Kénitra,<br>pourquoi maintenant.</h2>
-      <p class="section-copy">Kénitra n’est pas Rabat, et c’est précisément une partie de l’intérêt. Les acheteurs exclus par les prix de la capitale, les familles qui cherchent plus d’espace et les investisseurs qui veulent un meilleur prix d’entrée peuvent trouver une discussion plus pratique dans les villes connectées.</p>
-      <p class="section-copy">Elaf Sky View s’inscrit dans cette opportunité : emplacement central, accès solide, surfaces pratiques et niveau de spécification qui aide le projet à se distinguer dans un marché encore souvent vendu de manière informelle.</p>
-      <div class="guide-links"><a href="guides/kenitra-vs-rabat.html">Kénitra vs Rabat</a><a href="guides/buying-property-morocco.html">Acheter au Maroc</a><a href="guides/preconstruction-guide.html">Guide vente sur plan</a></div>
-    </div>
-    <div>
-      <article class="investment-panel reveal"><p class="investment-kicker">Pour les acheteurs liés à Rabat</p><h3 class="investment-title">Devenir propriétaire dans une ville connectée tout en restant à portée de la capitale.</h3></article>
-      <article class="investment-panel reveal"><p class="investment-kicker">Pour les acheteurs MRE</p><h3 class="investment-title">Une base au pays pouvant servir à la famille, à la location ou à un retour à long terme.</h3></article>
-      <article class="investment-panel reveal"><p class="investment-kicker">Pour les acheteurs internationaux</p><h3 class="investment-title">Une entrée pratique au Maroc en dehors des marchés touristiques déjà très valorisés.</h3></article>
+  <section class="bg-navy" style="padding:var(--section-pad);">
+    <p class="section-eyebrow">Profil des Acheteurs</p>
+    <h2 class="section-title" style="color:var(--white);">Différents Acheteurs.<br>Différentes Raisons de S'intéresser.</h2>
+    <p style="font-size:.9rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,.63);max-width:640px;margin-bottom:.5rem;">Elaf Sky View n'est pas un discours générique. Différents types de logements peuvent correspondre à différents profils d'acheteurs.</p>
+    <div class="buyer-fit-grid stagger">
+      <article class="buyer-card reveal"><div class="buyer-card-num">01</div><h3 class="buyer-card-title">Acheteurs Internationaux</h3><p class="buyer-card-text">Une base centrale à Kénitra pour une relocalisation, une résidence longue durée, des revenus locatifs ou une exposition immobilière au Maroc.</p><a href="investors-international.html" class="buyer-card-link">Parcours Acheteur International →</a></article>
+      <article class="buyer-card reveal"><div class="buyer-card-num">02</div><h3 class="buyer-card-title">Acheteurs MRE</h3><p class="buyer-card-text">Une résidence secondaire, une base familiale, un investissement locatif ou un bien de retour — avec un accompagnement pendant votre absence.</p><a href="investors-mre.html" class="buyer-card-link">Parcours Acheteur MRE →</a></article>
+      <article class="buyer-card reveal"><div class="buyer-card-num">03</div><h3 class="buyer-card-title">Acheteurs Locaux</h3><p class="buyer-card-text">Une opportunité dans une ville secondaire connectée comparant l'accessibilité de la région de Rabat, l'usage locatif et la valeur à long terme.</p><a href="investors-local.html" class="buyer-card-link">Parcours Acheteur Local →</a></article>
+      <article class="buyer-card reveal"><div class="buyer-card-num">04</div><h3 class="buyer-card-title">Acheteurs Daam</h3><p class="buyer-card-text">Des unités sélectionnées peuvent être éligibles au Daam Sakani — offrant aux acheteurs qualifiés l'accès à un immeuble premium à un prix d'entrée plus accessible.</p><a href="guides/daam-sakani-guide.html" class="buyer-card-link">Lire le Guide Daam →</a></article>
     </div>
   </section>
 
-  <section class="split-section">
-    <div>
-      <p class="section-eyebrow">Rahim International</p>
-      <h2 class="section-title">Nous vous aidons à lire<br>le projet correctement.</h2>
-      <p class="section-copy">Notre rôle est de rendre l’opportunité plus claire avant votre engagement. Nous aidons à comparer les unités, expliquer le rapport prix-qualité, coordonner les questions avec le promoteur immobilier et organiser les prochaines étapes avec un vrai suivi.</p>
-      <p class="section-copy">Pour les acheteurs à l’étranger, cela signifie aussi éviter que les échanges, les mises à jour du chantier, les questions de documents et le calendrier de décision deviennent dispersés.</p>
-    </div>
-    <div class="unit-grid" style="grid-template-columns:1fr;gap:1px;margin-top:0;">
-      <article class="unit-card reveal"><span class="tag">01</span><h3 class="unit-title">Sélection de l’unité</h3><p class="unit-text">Nous aidons à faire correspondre budget, surface, usage et profil acheteur.</p></article>
-      <article class="unit-card reveal"><span class="tag">02</span><h3 class="unit-title">Lecture du projet</h3><p class="unit-text">Nous clarifions les finitions, le prix, la livraison, l’éligibilité et les questions importantes avant réservation.</p></article>
-      <article class="unit-card reveal"><span class="tag">03</span><h3 class="unit-title">Suivi</h3><p class="unit-text">Nous gardons le processus organisé depuis la première demande jusqu’à l’étape sérieuse suivante.</p></article>
+  <section class="bg-cream" style="padding:var(--section-pad);">
+    <p class="section-eyebrow">Stratégie par Unité</p>
+    <h2 class="section-title" style="color:var(--navy);">Choisissez l'Unité<br>Selon l'Usage.</h2>
+    <div class="unit-grid stagger">
+      <article class="unit-card reveal"><span class="unit-tag">Stratégie d'Entrée</span><h3 class="unit-title">Unités Éligibles Daam</h3><p class="unit-text">Pour les acheteurs éligibles, des unités sélectionnées créent un point d'entrée plus accessible dans un immeuble de meilleure qualité. L'éligibilité et les obligations doivent être confirmées avant la réservation.</p></article>
+      <article class="unit-card reveal"><span class="unit-tag">Usage Familial</span><h3 class="unit-title">Grandes Résidences</h3><p class="unit-text">Les plans plus spacieux conviennent aux résidences secondaires, séjours familiaux, résidence longue durée ou acheteurs préparant un futur retour au Maroc.</p></article>
+      <article class="unit-card reveal"><span class="unit-tag">Logique Locative</span><h3 class="unit-title">Unités pour Investisseurs</h3><p class="unit-text">Pour les acheteurs orientés location : surface de l'unité, coût d'ameublement, profil locataire, structure de gestion, et si l'emplacement génère une demande régulière.</p></article>
     </div>
   </section>
 
-  <section id="contact" style="background:var(--navy);">
-    <div>
-      <p class="section-eyebrow">Demander les détails</p>
-      <h2 class="section-title" style="color:var(--white);">Vous voulez le dossier complet<br>Elaf Sky View ?</h2>
-      <p class="contact-text">Dites-nous si vous achetez pour y vivre, obtenir un revenu locatif, vérifier Daam Sakani, préparer une installation ou investir à long terme. Nous vous enverrons les bonnes informations et expliquerons quel type d’unité correspond à votre objectif.</p>
-    </div>
-    <div>
-      <form id="contact-form" class="contact-form" action="https://formspree.io/f/xojypvlq" method="POST">
-        <input type="hidden" name="subject" value="Demande Elaf Sky View">
-        <div class="form-grid"><div class="form-group"><label class="form-label" for="first-name">Prénom</label><input id="first-name" name="first_name" type="text" class="form-input" placeholder="Votre prénom" required></div><div class="form-group"><label class="form-label" for="last-name">Nom</label><input id="last-name" name="last_name" type="text" class="form-input" placeholder="Votre nom" required></div></div>
-        <div class="form-group"><label class="form-label" for="email">Email</label><input id="email" name="email" type="email" class="form-input" placeholder="votre@email.com" required></div>
-        <div class="form-group"><label class="form-label" for="profile">Profil</label><select id="profile" name="profile" class="form-select" required><option value="">Sélectionnez votre profil</option><option>Acheteur international</option><option>Acheteur MRE</option><option>Acheteur local / investisseur</option><option>Acheteur Daam Sakani</option><option>Autre</option></select></div>
-        <div class="form-group"><label class="form-label" for="message">Message</label><textarea id="message" name="message" class="form-textarea" placeholder="Dites-nous ce que vous voulez savoir sur Elaf Sky View..."></textarea></div>
-        <p id="form-status" class="form-status" aria-live="polite"></p>
-        <button type="submit" class="form-submit">Demander les détails</button>
-      </form>
+  <section class="bg-navy-grad" style="padding:var(--section-pad);">
+    <div class="split split-center">
+      <div>
+        <p class="section-eyebrow">Argument d'Investissement</p>
+        <h2 class="section-title" style="color:var(--white);">Pourquoi Kénitra,<br>Pourquoi Maintenant.</h2>
+        <p style="font-size:.9rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,.64);margin-bottom:1.2rem;">Kénitra n'est pas Rabat — et c'est précisément l'intérêt. Les acheteurs dont le budget ne permet pas la capitale, les familles qui cherchent plus d'espace et les investisseurs qui veulent des prix d'entrée plus forts peuvent tous trouver une conversation plus pratique dans les villes secondaires connectées.</p>
+        <p style="font-size:.9rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,.64);margin-bottom:2rem;">Elaf Sky View s'inscrit dans cette opportunité : emplacement central, fort accès aux transports, surfaces pratiques et un niveau de spécifications qui distingue le projet.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.9rem;">
+          <a href="guides/kenitra-vs-rabat.html" style="font-size:.66rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--gold);border:1px solid rgba(210,180,134,.3);padding:.7rem 1rem;">Kénitra vs Rabat</a>
+          <a href="guides/buying-property-morocco.html" style="font-size:.66rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--gold);border:1px solid rgba(210,180,134,.3);padding:.7rem 1rem;">Acheter au Maroc</a>
+        </div>
+      </div>
+      <div>
+        <div class="invest-panel reveal"><p class="invest-kicker">Pour les acheteurs de la région de Rabat</p><h3 class="invest-title">Être propriétaire dans une ville connectée tout en restant à portée de la capitale.</h3></div>
+        <div class="invest-panel reveal"><p class="invest-kicker">Pour les acheteurs MRE</p><h3 class="invest-title">Une base au pays pour un usage familial, une stratégie locative ou un plan de retour à long terme.</h3></div>
+        <div class="invest-panel reveal"><p class="invest-kicker">Pour les acheteurs internationaux</p><h3 class="invest-title">Une entrée pratique sur le marché marocain en dehors des marchés touristiques à prix élevés.</h3></div>
+      </div>
     </div>
   </section>
-</main><footer>
-  <a href="#home" class="brand" aria-label="Accueil Rahim International">
-    <svg class="brand-mark" viewBox="100 80 480 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect x="60" y="10" width="560" height="540" rx="16" class="brand-mark-bg"/>
-      <rect x="168" y="318" width="344" height="9" rx="1" class="brand-mark-gold"/>
-      <rect x="168" y="310" width="44" height="22" rx="2" class="brand-mark-deep"/>
-      <rect x="468" y="310" width="44" height="22" rx="2" class="brand-mark-deep"/>
-      <path d="M340,88 C310,160 274,240 295,318 L315,318 C298,240 328,162 340,100 Z" class="brand-mark-gold"/>
-      <path d="M340,88 C370,160 406,240 385,318 L365,318 C382,240 352,162 340,100 Z" class="brand-mark-gold"/>
-      <path d="M340,88 C322,155 308,240 310,318 L318,318 C316,240 330,158 340,100 Z" class="brand-mark-navy"/>
-      <path d="M340,88 C358,155 372,240 370,318 L362,318 C370,240 350,158 340,100 Z" class="brand-mark-navy"/>
-      <line x1="340" y1="88" x2="185" y2="318" class="brand-mark-line" stroke-width="1.4" opacity="0.95"/>
-      <line x1="340" y1="106" x2="210" y2="318" class="brand-mark-line" stroke-width="1.25" opacity="0.88"/>
-      <line x1="340" y1="88" x2="495" y2="318" class="brand-mark-line" stroke-width="1.4" opacity="0.95"/>
-      <line x1="340" y1="106" x2="470" y2="318" class="brand-mark-line" stroke-width="1.25" opacity="0.88"/>
-    </svg>
-    <span class="brand-name">Rahim <span>International</span></span>
-  </a>
-  <div class="footer-copy">© 2026 Rahim International. Tous droits réservés.</div>
+
+  <section class="bg-cream" style="padding:var(--section-pad);">
+    <div class="split split-center">
+      <div>
+        <p class="section-eyebrow">Rahim International</p>
+        <h2 class="section-title" style="color:var(--navy);">Nous Vous Aidons à Lire<br>le Projet Correctement.</h2>
+        <p style="font-size:.9rem;font-weight:300;line-height:1.9;color:var(--text-muted);margin-bottom:1.2rem;">Nous avons trouvé Elaf Sky View de la même façon que vous pourriez — en tant qu'acheteurs, depuis le Canada, pendant cinq mois de va-et-vient entre le Canada et le Maroc, à visiter des projets et à comparer tout ce qui était accessible. Nous avons choisi ce promoteur parce qu'il était le seul dont le projet pouvait être réellement vérifié. Nous avons engagé notre propre argent avant de proposer un mandat. Nous sommes propriétaires dans cet immeuble.</p>
+        <p style="font-size:.9rem;font-weight:300;line-height:1.9;color:var(--text-muted);margin-bottom:1.2rem;">Quand nous vous aidons à évaluer Elaf Sky View, nous ne lisons pas une fiche technique. Nous avons suivi la construction de la dalle aux finitions. Nous connaissons le promoteur directement. Nous connaissons la qualité de construction, l'emplacement à différents moments de la journée et ce que le projet représente par rapport à tout ce qui était disponible sur le marché.</p>
+        <p style="font-size:.9rem;font-weight:300;line-height:1.9;color:var(--text-muted);">Notre rôle est de faciliter la décision — comparer les types d'unités, expliquer le rapport qualité-prix, coordonner avec le promoteur et maintenir le processus organisé pour les acheteurs qui ne peuvent pas être sur place à chaque étape.</p>
+      </div>
+      <div>
+        <div class="unit-grid" style="grid-template-columns:1fr;">
+          <article class="unit-card reveal"><span class="unit-tag">01</span><h3 class="unit-title">Sélection de l'Unité</h3><p class="unit-text">Nous aidons à faire correspondre budget, surface, usage et profil d'acheteur avec la bonne option.</p></article>
+          <article class="unit-card reveal"><span class="unit-tag">02</span><h3 class="unit-title">Analyse du Projet</h3><p class="unit-text">Nous clarifions les finitions, le prix, la livraison, l'éligibilité et les questions qui comptent avant la réservation.</p></article>
+          <article class="unit-card reveal"><span class="unit-tag">03</span><h3 class="unit-title">Suivi</h3><p class="unit-text">Nous maintenons le processus organisé de la première demande jusqu'à la prochaine étape sérieuse.</p></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="background:var(--navy);padding:var(--section-pad);">
+    <div class="split split-center">
+      <div>
+        <p class="section-eyebrow">Demander les Détails</p>
+        <h2 class="section-title" style="color:var(--white);">Vous Souhaitez le Dossier<br>Complet Elaf Sky View ?</h2>
+        <p style="font-size:.9rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,.64);margin-bottom:2.5rem;">Dites-nous si vous achetez pour une résidence, des revenus locatifs, l'éligibilité Daam, une relocalisation ou un investissement à long terme. Nous vous enverrons les bonnes informations et expliquerons quel type d'unité correspond à votre objectif.</p>
+        <div class="contact-info">
+          <div class="contact-item"><div class="contact-icon">✉</div><div><div class="contact-item-label">E-mail</div><div class="contact-item-value"><a href="mailto:contact@RahimInternational.com">contact@RahimInternational.com</a></div></div></div>
+          <div class="contact-item"><div class="contact-icon">☎</div><div><div class="contact-item-label">Téléphone &amp; WhatsApp</div><div class="contact-item-value"><a href="tel:+212642773249">+212 642 77 32 49</a></div></div></div>
+          <div class="contact-item"><div class="contact-icon">◎</div><div><div class="contact-item-label">Adresse</div><div class="contact-item-value">70 Av. Youssef Ben Tachfine, Kénitra 14000, Maroc</div></div></div>
+        </div>
+      </div>
+      <div>
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xojypvlq" method="POST">
+          <input type="hidden" name="subject" value="Demande Elaf Sky View (FR)">
+          <div class="form-grid">
+            <div class="form-group"><label class="form-label" for="first-name">Prénom</label><input id="first-name" name="first_name" type="text" class="form-input" placeholder="Votre prénom" required></div>
+            <div class="form-group"><label class="form-label" for="last-name">Nom</label><input id="last-name" name="last_name" type="text" class="form-input" placeholder="Votre nom" required></div>
+          </div>
+          <div class="form-group"><label class="form-label" for="email">E-mail</label><input id="email" name="email" type="email" class="form-input" placeholder="votre@email.com" required></div>
+          <div class="form-group"><label class="form-label" for="phone">Téléphone / WhatsApp</label><input id="phone" name="phone" type="tel" class="form-input" placeholder="+1 ou +33 ou +212…"></div>
+          <div class="form-group">
+            <label class="form-label" for="profile">Je suis</label>
+            <select id="profile" name="profile" class="form-select" required>
+              <option value="">Sélectionnez votre profil</option>
+              <option>Acheteur international</option>
+              <option>Diaspora marocaine / MRE</option>
+              <option>Acheteur local / investisseur</option>
+              <option>Acheteur Daam Sakani</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group"><label class="form-label" for="message">Message</label><textarea id="message" name="message" class="form-textarea" placeholder="Dites-nous ce que vous souhaitez savoir sur Elaf Sky View…"></textarea></div>
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+          <button type="submit" class="form-submit">Demander les Détails Complets</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><img src="../logo.png" alt="Rahim International" class="footer-brand-logo"><span class="brand-name" style="margin-top:.5rem;">Rahim <span>International</span></span><p class="footer-tagline">Conseil et consulting immobilier pour acheteurs et promoteurs dans la région Rabat-Salé-Kénitra.</p></div>
+    <div><div class="footer-col-label">Navigation</div><div class="footer-links"><a href="index.html">Accueil</a><a href="about.html">Qui Sommes-Nous</a><a href="why-morocco.html">Pourquoi Kénitra</a><a href="elaf-sky-view.html">Elaf Sky View</a><a href="index.html#contact">Contact</a></div></div>
+    <div><div class="footer-col-label">Acheteurs &amp; Guides</div><div class="footer-links"><a href="investors-international.html">Acheteurs Internationaux</a><a href="investors-mre.html">Diaspora Marocaine / MRE</a><a href="investors-local.html">Acheteurs Locaux</a><a href="services-developers.html">Services aux Promoteurs</a><a href="guides/index.html">Guides d'Achat</a></div></div>
+    <div><div class="footer-col-label">Contact</div><div class="footer-contact-item"><div class="footer-contact-icon">✉</div><div><div class="footer-contact-label">E-mail</div><div class="footer-contact-value"><a href="mailto:contact@RahimInternational.com">contact@RahimInternational.com</a></div></div></div><div class="footer-contact-item"><div class="footer-contact-icon">☎</div><div><div class="footer-contact-label">Téléphone &amp; WhatsApp</div><div class="footer-contact-value"><a href="tel:+212642773249">+212 642 77 32 49</a></div></div></div></div>
+  </div>
+  <div class="footer-bottom"><div class="footer-copy">© 2026 Rahim International. Tous droits réservés.</div><div class="footer-langs"><a href="../elaf-sky-view.html">EN</a><a href="elaf-sky-view.html" class="active">FR</a><a href="../ar/elaf-sky-view.html">AR</a></div></div>
 </footer>
-<script>
-  const navToggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('#nav-links');
-
-  navToggle.addEventListener('click', () => {
-    const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
-    navToggle.setAttribute('aria-expanded', String(!isOpen));
-    navToggle.setAttribute('aria-label', isOpen ? 'Ouvrir le menu' : 'Fermer le menu');
-    navLinks.classList.toggle('is-open', !isOpen);
-  });
-
-  navLinks.addEventListener('click', (event) => {
-    if (event.target.matches('a')) {
-      navToggle.setAttribute('aria-expanded', 'false');
-      navToggle.setAttribute('aria-label', 'Ouvrir le menu');
-      navLinks.classList.remove('is-open');
-    }
-  });
-
-  document.querySelector('#contact-form').addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const form = event.currentTarget;
-    const btn = form.querySelector('.form-submit');
-    const status = form.querySelector('#form-status');
-    const originalText = btn.textContent;
-
-    btn.textContent = 'Envoi...';
-    btn.disabled = true;
-    status.textContent = '';
-    status.className = 'form-status';
-
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' }
-      });
-
-      if (!response.ok) {
-        throw new Error('Form submission failed');
-      }
-
-      form.reset();
-      status.textContent = 'Message envoyé. Merci, nous vous répondrons bientôt.';
-      status.classList.add('is-success');
-    } catch (error) {
-      status.textContent = 'Désolé, une erreur est survenue. Vous pouvez écrire directement à contact@RahimInternational.com.';
-      status.classList.add('is-error');
-    } finally {
-      btn.textContent = originalText;
-      btn.disabled = false;
-    }
-  });
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-
-  document.querySelectorAll('[data-gallery]').forEach((gallery) => {
-    const slides = Array.from(gallery.querySelectorAll('.portfolio-slide'));
-    const dots = Array.from(gallery.querySelectorAll('.gallery-dot'));
-    const prev = gallery.querySelector('.gallery-prev');
-    const next = gallery.querySelector('.gallery-next');
-    let activeIndex = 0;
-
-    const showSlide = (index) => {
-      activeIndex = (index + slides.length) % slides.length;
-      slides.forEach((slide, slideIndex) => {
-        slide.classList.toggle('is-active', slideIndex === activeIndex);
-      });
-      dots.forEach((dot, dotIndex) => {
-        dot.classList.toggle('is-active', dotIndex === activeIndex);
-      });
-    };
-
-    prev.addEventListener('click', () => showSlide(activeIndex - 1));
-    next.addEventListener('click', () => showSlide(activeIndex + 1));
-    dots.forEach((dot, dotIndex) => {
-      dot.addEventListener('click', () => showSlide(dotIndex));
-    });
-  });
-</script>
-
+<div class="float-buttons"><a href="https://wa.me/212642773249" class="btn-whatsapp" target="_blank" rel="noopener" aria-label="Chat sur WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a><button class="btn-back-top" aria-label="Retour en haut"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg></button></div>
+<script src="../shared.js"></script>
 </body>
 </html>

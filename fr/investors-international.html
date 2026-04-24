@@ -3,864 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Investisseurs internationaux | Rahim International</title>
-<meta name="description" content="Accompagnement des acheteurs internationaux qui souhaitent s’installer au Maroc, louer, acheter une résidence ou investir dans l’immobilier marocain avec un appui local dans la région Rabat-Salé-Kénitra.">
+<title>Acheter un Bien au Maroc en tant qu'Étranger | Rahim International</title>
+<meta name="description" content="Rahim International accompagne les acheteurs étrangers dans l'immobilier marocain — relocalisation, résidence secondaire ou investissement locatif. Conseil, vérification et suivi complet.">
+<link rel="canonical" href="https://rahiminternational.com/fr/investors-international.html">
+<link rel="icon" type="image/png" href="../logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Didact+Gothic&amp;display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Didact+Gothic&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Didact+Gothic&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="../shared.css">
 <style>
-  :root {
-    --navy: #081a33;
-    --navy-mid: #10294a;
-    --navy-soft: #17375f;
-    --ink: #07111f;
-    --gold: #d2b486;
-    --gold-deep: #b76a3f;
-    --copper: #b76a3f;
-    --copper-dark: #87452c;
-    --cream: #f4f7f8;
-    --steel: #e6edf1;
-    --white: #ffffff;
-    --text-dark: #07111f;
-    --text-muted: #657384;
-    --border: rgba(8, 26, 51, 0.12);
-    --border-warm: rgba(210, 180, 134, 0.24);
-    --line-dark: rgba(255, 255, 255, 0.14);
-    --shadow: 0 28px 80px rgba(8, 26, 51, 0.18);
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Didact Gothic', sans-serif;
-    background: var(--navy);
-    color: var(--text-dark);
-    overflow-x: hidden;
-  }
-  a { color: inherit; }
-  svg { display: block; max-width: 100%; }
-
-  .site-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    min-height: 70px;
-    padding: 0.8rem 5%;
-    background: rgba(7, 17, 31, 0.96);
-    border-bottom: 1px solid var(--border-warm);
-    backdrop-filter: blur(12px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
-  }
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    text-decoration: none;
-    min-width: max-content;
-  }
-  .brand-mark { width: 38px; height: 32px; flex: 0 0 auto; }
-  .brand-name {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: var(--gold);
-    letter-spacing: 0.08em;
-  }
-  .brand-name span { color: var(--white); }
-  .brand-text {
-    display: grid;
-    gap: 0.1rem;
-    line-height: 1;
-  }
-  .brand-subtitle {
-    font-size: 0.54rem;
-    font-weight: 500;
-    letter-spacing: 0.17em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.58);
-    white-space: nowrap;
-  }
-  .brand-mark-bg { fill: var(--navy); }
-  .brand-mark-gold { fill: var(--gold); }
-  .brand-mark-deep { fill: var(--gold-deep); }
-  .brand-mark-navy { fill: var(--navy); }
-  .brand-mark-line { stroke: var(--gold); }
-  .nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: clamp(0.8rem, 1.8vw, 2rem);
-    list-style: none;
-  }
-  .nav-links a,
-  .nav-dropdown-toggle,
-  .nav-cta {
-    font-family: inherit;
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: color 0.3s, background 0.3s, border-color 0.3s;
-  }
-  .nav-dropdown-toggle {
-    border: 0;
-    background: transparent;
-    cursor: default;
-  }
-  .nav-links a,
-  .nav-dropdown-toggle { color: rgba(255, 255, 255, 0.7); }
-  .nav-links a:hover,
-  .nav-links a:focus-visible,
-  .nav-dropdown-toggle:hover,
-  .nav-dropdown-toggle:focus-visible,
-  .nav-links a.active { color: var(--copper); }
-  .nav-dropdown { position: relative; }
-  .nav-dropdown-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-  }
-  .nav-dropdown-toggle::after {
-    content: '▾';
-    font-size: 0.6rem;
-    opacity: 0.75;
-  }
-  .nav-dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    min-width: 230px;
-    transform: translateX(-50%);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    background: rgba(7, 17, 31, 0.98);
-    border: 1px solid var(--border-warm);
-    backdrop-filter: blur(10px);
-    z-index: 300;
-  }
-  .nav-dropdown-menu a {
-    display: block;
-    padding: 0.9rem 1rem;
-    border-bottom: 1px solid rgba(212, 180, 131, 0.12);
-  }
-  .nav-dropdown-menu a:last-child { border-bottom: none; }
-  .nav-dropdown:hover .nav-dropdown-menu,
-  .nav-dropdown:focus-within .nav-dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-  .language-switcher {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-  }
-  .language-switcher a {
-    border: 1px solid rgba(210, 180, 134, 0.24);
-    padding: 0.35rem 0.45rem;
-    line-height: 1;
-  }
-  .language-switcher a.active {
-    background: var(--copper);
-    border-color: var(--copper);
-    color: var(--white);
-  }
-  .nav-cta {
-    color: var(--gold);
-    border: 1px solid var(--gold);
-    padding: 0.55rem 1.2rem;
-  }
-  .nav-cta:hover,
-  .nav-cta:focus-visible {
-    background: var(--copper);
-    color: var(--white);
-  }
-  .nav-toggle { display: none; }
-
-  .page-hero {
-    min-height: 62vh;
-    background:
-      radial-gradient(circle at 78% 22%, rgba(183, 106, 63, 0.22), transparent 30%),
-      linear-gradient(135deg, var(--ink) 0%, var(--navy) 52%, #172b4c 100%);
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    padding: 8rem 5% 5rem;
-    overflow: hidden;
-  }
-  .page-hero-bg,
-  .page-hero-fade,
-  .page-hero-pattern {
-    position: absolute;
-    inset: 0;
-  }
-  .page-hero-bg {
-    background:
-      linear-gradient(to right, rgba(7, 17, 31, 0.94) 0%, rgba(8, 26, 51, 0.76) 58%, rgba(8, 26, 51, 0.2) 100%),
-      url("../international-investors.png") center / cover;
-    opacity: 0.72;
-  }
-  .page-hero-video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.68;
-    z-index: 0;
-  }
-  .page-hero-fade {
-    z-index: 1;
-    background:
-      radial-gradient(circle at 72% 25%, rgba(183, 106, 63, 0.18), transparent 30%),
-      linear-gradient(to right, var(--ink) 0%, rgba(8, 26, 51, 0.86) 42%, rgba(8, 26, 51, 0.28) 100%);
-  }
-  .page-hero-pattern {
-    z-index: 2;
-    background-image:
-      repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(212, 180, 131, 0.04) 80px),
-      repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(212, 180, 131, 0.04) 80px);
-  }
-  .page-hero-content {
-    position: relative;
-    z-index: 3;
-    max-width: 800px;
-  }
-  .page-hero-eyebrow,
-  .section-eyebrow {
-    font-size: 0.68rem;
-    font-weight: 500;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--copper);
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-  }
-  .page-hero-eyebrow::before,
-  .section-eyebrow::before {
-    content: '';
-    width: 34px;
-    height: 1px;
-    background: currentColor;
-    flex: 0 0 auto;
-  }
-  .page-hero-title {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: clamp(3rem, 7vw, 5.5rem);
-    font-weight: 300;
-    line-height: 1.05;
-    color: var(--white);
-  }
-  .page-hero-title em { font-style: italic; color: var(--gold); }
-  .page-hero-sub {
-    font-size: 0.95rem;
-    font-weight: 300;
-    line-height: 1.9;
-    color: rgba(255, 255, 255, 0.72);
-    max-width: 620px;
-    margin-top: 1.5rem;
-  }
-
-  section { padding: 7rem 5%; }
-  .section-title {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    font-weight: 300;
-    line-height: 1.2;
-    color: var(--navy);
-    margin-bottom: 1.5rem;
-  }
-  .intro-text {
-    font-size: 0.9rem;
-    font-weight: 300;
-    line-height: 1.9;
-    color: var(--text-muted);
-    max-width: 740px;
-    margin-bottom: 3.5rem;
-  }
-  .visual-band {
-    min-height: 340px;
-    position: relative;
-    overflow: hidden;
-  }
-  .visual-band-bg,
-  .visual-band-overlay {
-    position: absolute;
-    inset: 0;
-  }
-  .visual-band-bg {
-    background-size: cover;
-    background-position: center;
-  }
-  .visual-band.compass .visual-band-bg { background-image: url('../compass.png'); }
-  .visual-band.notary .visual-band-bg { background-image: url('../notary-keys.png'); }
-  .visual-band-overlay {
-    background:
-      linear-gradient(105deg, rgba(7, 17, 31, 0.94), rgba(8, 26, 51, 0.58)),
-      rgba(8, 26, 51, 0.24);
-  }
-  .visual-band-content {
-    position: relative;
-    z-index: 2;
-    min-height: 340px;
-    display: flex;
-    align-items: center;
-    padding: 4rem 5%;
-  }
-  .visual-band-inner { max-width: 700px; }
-  .visual-band-title {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 4.5vw, 3.3rem);
-    font-weight: 300;
-    line-height: 1.2;
-    color: var(--white);
-    margin-bottom: 1rem;
-  }
-  .visual-band-title em {
-    color: var(--gold);
-    font-style: italic;
-  }
-  .visual-band-copy {
-    font-size: 0.9rem;
-    font-weight: 300;
-    line-height: 1.9;
-    color: rgba(255, 255, 255, 0.72);
-    max-width: 560px;
-  }
-
-  #legal,
-  #services-list,
-  #cta { background: var(--cream); }
-  .legal-grid,
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1px;
-    background: var(--border);
-  }
-  .legal-card,
-  .service-card {
-    background: var(--white);
-    padding: 2rem;
-    position: relative;
-    transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
-  }
-  .service-card { background: var(--white); padding: 2.5rem 2rem; }
-  .legal-card:hover,
-  .service-card:hover {
-    box-shadow: var(--shadow);
-    transform: translateY(-2px);
-  }
-  .legal-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 3px;
-    height: 100%;
-    background: var(--copper);
-  }
-  .legal-card-icon {
-    width: 32px;
-    height: 32px;
-    border: 1px solid var(--copper);
-    color: var(--copper-dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-    font-size: 0.85rem;
-  }
-  .legal-card-title,
-  .service-title,
-  .step-title {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-weight: 400;
-    line-height: 1.3;
-  }
-  .legal-card-title {
-    font-size: 1.2rem;
-    color: var(--navy);
-    margin-bottom: 0.7rem;
-  }
-  .legal-card-text,
-  .service-desc,
-  .step-desc,
-  .check-text,
-  .highlight-sub {
-    font-size: 0.84rem;
-    font-weight: 300;
-    line-height: 1.8;
-  }
-  .legal-card-text,
-  .service-desc { color: var(--text-muted); }
-
-  #how-it-works,
-  #we-do-it-all { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); }
-  #how-it-works .section-title,
-  #we-do-it-all .section-title { color: var(--white); }
-  #how-it-works .intro-text,
-  #we-do-it-all .intro-text { color: rgba(255, 255, 255, 0.66); }
-  .steps-list { display: grid; }
-  .step {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: 2rem;
-    align-items: start;
-    padding: 2.5rem 0;
-    border-bottom: 1px solid rgba(210, 180, 134, 0.12);
-  }
-  .step:last-child { border-bottom: none; }
-  .step-num,
-  .service-num {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: 3.4rem;
-    font-weight: 300;
-    line-height: 1;
-  }
-  .step-num { color: rgba(183, 106, 63, 0.38); }
-  .service-num {
-    color: rgba(183, 106, 63, 0.35);
-    margin-bottom: 1rem;
-  }
-  .step-title {
-    font-size: 1.4rem;
-    color: var(--gold);
-    margin-bottom: 0.6rem;
-  }
-  .step-desc { color: rgba(255, 255, 255, 0.6); }
-  .service-title {
-    font-size: 1.3rem;
-    color: var(--navy);
-    margin-bottom: 1rem;
-  }
-
-  .do-it-all-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
-    gap: 5rem;
-    align-items: start;
-    margin-top: 3rem;
-  }
-  .do-it-all-text {
-    font-size: 0.9rem;
-    font-weight: 300;
-    line-height: 1.9;
-    color: rgba(255, 255, 255, 0.66);
-    margin-bottom: 1.2rem;
-  }
-  .checklist {
-    display: grid;
-    gap: 0.8rem;
-    margin-top: 1.5rem;
-  }
-  .check-item {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-  }
-  .check-mark {
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--copper);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    color: var(--copper);
-    font-size: 0.7rem;
-  }
-  .check-text { color: rgba(255, 255, 255, 0.72); }
-  .do-it-all-highlight {
-    border: 1px solid var(--border-warm);
-    padding: 2.5rem;
-    background: rgba(255, 255, 255, 0.03);
-  }
-  .do-it-all-highlight + .do-it-all-highlight { margin-top: 1.5rem; }
-  .highlight-label {
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--copper);
-    margin-bottom: 1rem;
-  }
-  .highlight-text {
-    font-family: 'Perandory', 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
-    font-weight: 300;
-    line-height: 1.6;
-    color: var(--white);
-    margin-bottom: 1.5rem;
-  }
-  .highlight-sub { color: rgba(255, 255, 255, 0.55); }
-
-  #cta {
-    position: relative;
-    overflow: hidden;
-    background:
-      linear-gradient(105deg, rgba(7, 17, 31, 0.94), rgba(8, 26, 51, 0.72)),
-      url('../buyer-journey.png') center / cover;
-    text-align: center;
-    border-top: 1px solid var(--border-warm);
-  }
-  #cta .section-title { color: var(--white); }
-  #cta .section-eyebrow { justify-content: center; }
-  .cta-sub {
-    font-size: 0.9rem;
-    font-weight: 300;
-    line-height: 1.9;
-    color: rgba(255, 255, 255, 0.72);
-    max-width: 560px;
-    margin: 0 auto 2.5rem;
-  }
-  .cta-actions {
-    display: flex;
-    gap: 1.2rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .btn-gold,
-  .btn-outline-dark {
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    padding: 1rem 2.2rem;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 48px;
-    transition: opacity 0.3s, background 0.3s, color 0.3s;
-  }
-  .btn-gold {
-    background: var(--copper);
-    color: var(--white);
-    border: 1px solid var(--copper);
-  }
-  .btn-gold:hover { opacity: 0.9; }
-  .btn-outline-dark {
-    border: 1px solid rgba(255, 255, 255, 0.42);
-    color: var(--white);
-  }
-  .btn-outline-dark:hover {
-    background: var(--white);
-    border-color: var(--white);
-    color: var(--navy);
-  }
-
-  footer {
-    background: var(--ink);
-    border-top: 1px solid rgba(212, 180, 131, 0.1);
-    padding: 2.5rem 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .footer-copy {
-    font-size: 0.7rem;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.36);
-    letter-spacing: 0.05em;
-  }
-  .reveal {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  .reveal.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  @media (max-width: 1180px) {
-    .site-nav { flex-wrap: wrap; }
-    .nav-links {
-      order: 3;
-      width: 100%;
-      justify-content: flex-start;
-      overflow: visible;
-      padding: 0.3rem 0 0.2rem;
-    }
-  }
-
-  @media (max-width: 900px) {
-    section { padding: 5rem 5%; }
-    .do-it-all-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .page-hero { min-height: 620px; }
-    .step { grid-template-columns: 60px 1fr; }
-  }
-
-  @media (max-width: 680px) {
-    .site-nav {
-      height: 70px;
-      min-height: 70px;
-      flex-wrap: nowrap;
-    }
-    .brand-name { font-size: 1.1rem; }
-    .brand-subtitle { font-size: 0.45rem; letter-spacing: 0.12em; }
-    .brand-mark { width: 32px; height: 27px; }
-    .nav-links {
-      position: fixed;
-      top: 70px;
-      left: 0;
-      right: 0;
-      display: none;
-      width: 100%;
-      padding: 1rem 5%;
-      background: rgba(11, 28, 54, 0.98);
-      border-bottom: 1px solid var(--border);
-      overflow: visible;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-    .nav-links.is-open { display: flex; }
-    .nav-dropdown { width: 100%; }
-    .nav-dropdown-toggle::after { display: none; }
-    .nav-dropdown-menu {
-      position: static;
-      min-width: 0;
-      width: 100%;
-      margin-top: 0.4rem;
-      padding-left: 1rem;
-      transform: none;
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-      background: transparent;
-      border: none;
-      backdrop-filter: none;
-    }
-    .nav-dropdown-menu a {
-      padding: 0.45rem 0;
-      border-bottom: none;
-      color: rgba(255, 255, 255, 0.56);
-    }
-    .nav-cta { display: none; }
-    .nav-toggle {
-      display: inline-flex;
-      position: relative;
-      align-items: center;
-      justify-content: center;
-      width: 42px;
-      height: 42px;
-      border: 1px solid var(--border);
-      background: transparent;
-      color: var(--gold);
-      cursor: pointer;
-    }
-    .nav-toggle span,
-    .nav-toggle::before,
-    .nav-toggle::after {
-      content: '';
-      width: 18px;
-      height: 1px;
-      background: currentColor;
-      display: block;
-      position: absolute;
-      transition: transform 0.2s, opacity 0.2s;
-    }
-    .nav-toggle::before { transform: translateY(-6px); }
-    .nav-toggle::after { transform: translateY(6px); }
-    .nav-toggle[aria-expanded="true"] span { opacity: 0; }
-    .nav-toggle[aria-expanded="true"]::before { transform: rotate(45deg); }
-    .nav-toggle[aria-expanded="true"]::after { transform: rotate(-45deg); }
-    .page-hero {
-      min-height: auto;
-      padding: 8.5rem 5% 5rem;
-    }
-    .page-hero-title { font-size: clamp(2.6rem, 15vw, 3.8rem); }
-    .page-hero-eyebrow,
-    .section-eyebrow { letter-spacing: 0.18em; }
-    .step { grid-template-columns: 1fr; gap: 0.8rem; }
-    .cta-actions,
-    .btn-gold,
-    .btn-outline-dark { width: 100%; }
-    .footer-copy { width: 100%; }
-  }
+  .intro-text{font-size:.92rem;font-weight:300;line-height:1.9;color:var(--text-muted);max-width:720px;margin-bottom:1.5rem;}
+  .dark-intro{color:rgba(255,255,255,.65);}
+  .cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:3rem;}
+  .services-grid-dark{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-dark);margin-top:3rem;}
+  .service-card-dark{background:rgba(255,255,255,.05);padding:2.4rem 2rem;transition:background .3s;}
+  .service-card-dark:hover{background:rgba(255,255,255,.08);}
+  .service-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:rgba(183,106,63,.4);line-height:1;margin-bottom:1rem;}
+  .service-title-dark{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:var(--gold);margin-bottom:.9rem;line-height:1.3;}
+  .service-desc-dark{font-size:.84rem;font-weight:300;line-height:1.8;color:rgba(255,255,255,.58);}
+  .steps-timeline{position:relative;display:grid;gap:1.6rem;max-width:1120px;margin:3rem auto 0;padding:1rem 0;}
+  .steps-timeline::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:1px;transform:translateX(-50%);background:linear-gradient(to bottom,rgba(210,180,134,.1),rgba(183,106,63,.7),rgba(210,180,134,.1));}
+  .timeline-step{position:relative;width:calc(50% - 2.5rem);padding:2rem 2rem 2rem 2.2rem;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(183,106,63,.06));border:1px solid rgba(210,180,134,.16);box-shadow:0 18px 44px rgba(7,17,31,.18);min-height:170px;}
+  .timeline-step:nth-child(odd){justify-self:start;}
+  .timeline-step:nth-child(even){justify-self:end;}
+  .timeline-step::before{content:'';position:absolute;top:2.1rem;width:2.4rem;height:1px;background:rgba(210,180,134,.5);}
+  .timeline-step:nth-child(odd)::before{right:-2.4rem;}
+  .timeline-step:nth-child(even)::before{left:-2.4rem;}
+  .timeline-num{position:absolute;top:1.2rem;width:3rem;height:3rem;border-radius:50%;border:1px solid rgba(210,180,134,.5);background:linear-gradient(135deg,rgba(183,106,63,.96),rgba(135,69,44,.96));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:300;color:var(--white);box-shadow:0 0 0 8px rgba(8,26,51,.85);}
+  .timeline-step:nth-child(odd) .timeline-num{right:-3.9rem;}
+  .timeline-step:nth-child(even) .timeline-num{left:-3.9rem;}
+  .timeline-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;line-height:1.3;color:var(--gold);margin-bottom:.75rem;max-width:28rem;}
+  .timeline-text{font-size:.84rem;font-weight:300;line-height:1.8;color:rgba(255,255,255,.68);}
+  .timeline-note{margin-top:1.5rem;font-size:.88rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,.62);max-width:700px;}
+  .dark-cta{background:var(--ink);text-align:center;}
+  .dark-cta .section-title{color:var(--white);}
+  .dark-cta .section-eyebrow{justify-content:center;}
+  .guide-link-desc{font-size:.78rem;font-weight:300;line-height:1.65;color:var(--text-muted);margin-top:.4rem;}
+  @media(max-width:900px){.cards-grid,.services-grid-dark{grid-template-columns:1fr 1fr;}.steps-timeline::before{left:1.6rem;transform:none;}.timeline-step,.timeline-step:nth-child(odd),.timeline-step:nth-child(even){width:auto;justify-self:stretch;margin-left:3.5rem;padding:1.8rem 1.6rem;min-height:auto;}.timeline-step::before,.timeline-step:nth-child(odd)::before,.timeline-step:nth-child(even)::before{left:-2rem;right:auto;width:2rem;}.timeline-num,.timeline-step:nth-child(odd) .timeline-num,.timeline-step:nth-child(even) .timeline-num{left:-3rem;right:auto;top:1.3rem;width:2.7rem;height:2.7rem;font-size:1rem;}}
+  @media(max-width:680px){.cards-grid,.services-grid-dark{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
-<nav class="site-nav" aria-label="Primary navigation">
-  <a href="index.html" class="brand" aria-label="Rahim International home">
-    <svg class="brand-mark" viewBox="100 80 480 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect x="60" y="10" width="560" height="540" rx="16" class="brand-mark-bg"/>
-      <rect x="168" y="318" width="344" height="9" rx="1" class="brand-mark-gold"/>
-      <rect x="168" y="310" width="44" height="22" rx="2" class="brand-mark-deep"/>
-      <rect x="468" y="310" width="44" height="22" rx="2" class="brand-mark-deep"/>
-      <path d="M340,88 C310,160 274,240 295,318 L315,318 C298,240 328,162 340,100 Z" class="brand-mark-gold"/>
-      <path d="M340,88 C370,160 406,240 385,318 L365,318 C382,240 352,162 340,100 Z" class="brand-mark-gold"/>
-      <path d="M340,88 C322,155 308,240 310,318 L318,318 C316,240 330,158 340,100 Z" class="brand-mark-navy"/>
-      <path d="M340,88 C358,155 372,240 370,318 L362,318 C370,240 350,158 340,100 Z" class="brand-mark-navy"/>
-      <line x1="340" y1="88" x2="185" y2="318" class="brand-mark-line" stroke-width="1.4" opacity="0.95"/>
-      <line x1="340" y1="106" x2="210" y2="318" class="brand-mark-line" stroke-width="1.25" opacity="0.88"/>
-      <line x1="340" y1="128" x2="236" y2="318" class="brand-mark-line" stroke-width="1.1" opacity="0.82"/>
-      <line x1="340" y1="153" x2="262" y2="318" class="brand-mark-line" stroke-width="1.0" opacity="0.75"/>
-      <line x1="340" y1="88" x2="495" y2="318" class="brand-mark-line" stroke-width="1.4" opacity="0.95"/>
-      <line x1="340" y1="106" x2="470" y2="318" class="brand-mark-line" stroke-width="1.25" opacity="0.88"/>
-      <line x1="340" y1="128" x2="444" y2="318" class="brand-mark-line" stroke-width="1.1" opacity="0.82"/>
-      <line x1="340" y1="153" x2="418" y2="318" class="brand-mark-line" stroke-width="1.0" opacity="0.75"/>
-    </svg>
-    <span class="brand-text">
-      <span class="brand-name">Rahim <span>International</span></span>
-      <span class="brand-subtitle">Conseil immobilier &amp; consulting</span>
-    </span>
-  </a>
-  <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-controls="nav-links" aria-expanded="false">
-    <span></span>
-  </button>
+<div id="progress-bar" aria-hidden="true"></div>
+<nav class="site-nav" aria-label="Navigation principale">
+  <a href="index.html" class="brand"><img src="../logo.png" alt="" class="brand-logo" aria-hidden="true"><span class="brand-text"><span class="brand-name">Rahim <span>International</span></span><span class="brand-subtitle">Conseil &amp; Consulting Immobilier</span></span></a>
+  <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-controls="nav-links" aria-expanded="false"><span></span></button>
   <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="about.html">À propos</a></li>
-    <li class="nav-dropdown">
-      <button class="nav-dropdown-toggle active" type="button" aria-haspopup="true">Acheteurs</button>
-      <div class="nav-dropdown-menu" aria-label="Catégories d’acheteurs">
-        <a href="investors-international.html" class="active" aria-current="page">Investisseurs internationaux</a>
-        <a href="investors-mre.html">Diaspora marocaine / MRE</a>
-        <a href="investors-local.html">Investisseurs locaux</a>
-      </div>
-    </li>
-    <li><a href="services-developers.html">Promoteurs immobiliers</a></li>
-    <li><a href="why-morocco.html">Opportunité du marché</a></li>
-    <li><a href="guides/index.html">Guides acheteurs</a></li>
-    <li><a href="elaf-sky-view.html">Elaf Sky View</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
-    <li class="language-switcher" aria-label="Language selection">
-      <a href="../investors-international.html">EN</a>
-      <a href="investors-international.html" class="active" aria-current="page">FR</a>
-      <a href="../ar/investors-international.html">AR</a>
-    </li>
+    <li><a href="index.html">Accueil</a></li><li><a href="about.html">Qui Sommes-Nous</a></li>
+    <li class="nav-dropdown"><button class="nav-dropdown-toggle active" type="button" aria-haspopup="true">Acheteurs</button><div class="nav-dropdown-menu"><a href="investors-international.html" class="active" aria-current="page">Acheteurs Internationaux</a><a href="investors-mre.html">Diaspora Marocaine / MRE</a><a href="investors-local.html">Acheteurs Locaux</a></div></li>
+    <li><a href="services-developers.html">Services aux Promoteurs</a></li><li><a href="guides/index.html">Guides d'Achat</a></li><li><a href="why-morocco.html">Pourquoi Kénitra</a></li><li><a href="elaf-sky-view.html">Elaf Sky View</a></li><li><a href="index.html#contact">Contact</a></li>
+    <li class="language-switcher"><a href="../investors-international.html">EN</a><a href="investors-international.html" class="active">FR</a><a href="../ar/investors-international.html">AR</a></li>
   </ul>
-  <a href="index.html#contact" class="nav-cta">Nous contacter</a>
+  <a href="index.html#contact" class="nav-cta">Nous Contacter</a>
 </nav>
-
+<nav class="breadcrumb"><a href="index.html">Accueil</a><span>›</span><span>Acheteurs</span><span>›</span><span class="current">Acheteurs Internationaux</span></nav>
 <main>
+
   <section class="page-hero">
-    <div class="page-hero-bg" aria-hidden="true"></div>
-    <video class="page-hero-video" autoplay muted loop playsinline poster="../international-investors.png">
-      <source src="../investor.mp4" type="video/mp4">
-    </video>
+    <div class="page-hero-bg" style="background:linear-gradient(to right,rgba(7,17,31,.94) 0%,rgba(8,26,51,.72) 55%,rgba(8,26,51,.18) 100%),url('../kenitratgv.png') center/cover;opacity:.65;" aria-hidden="true"></div>
     <div class="page-hero-fade" aria-hidden="true"></div>
     <div class="page-hero-pattern" aria-hidden="true"></div>
     <div class="page-hero-content">
-      <p class="page-hero-eyebrow">Acheteurs internationaux</p>
-      <h1 class="page-hero-title">Naviguer le marché immobilier marocain<br><em>avec clarté.</em></h1>
-      <p class="page-hero-sub">Que vous envisagiez de vous installer au Maroc, d’abord louer ou acheter, acquérir une résidence ou rechercher un rendement locatif, nous vous aidons à aller au-delà des annonces : contexte de marché, analyse de projet, orientation juridique et suivi local.</p>
+      <p class="page-hero-eyebrow">Acheteurs Internationaux</p>
+      <h1 class="page-hero-title">Le Marché a des Réponses.<br><em>Il Faut Poser les Bonnes Questions.</em></h1>
+      <p class="page-hero-sub">Le marché immobilier marocain ne manque pas d'opportunités. Ce qui manque, c'est l'information organisée. Nous aidons les acheteurs étrangers à obtenir la clarté dont ils ont besoin avant de s'engager.</p>
     </div>
   </section>
 
-  <section id="legal">
-    <p class="section-eyebrow">À qui cela s’adresse</p>
-    <h2 class="section-title">Vous n’achetez pas seulement<br>un appartement.</h2>
-    <p class="intro-text">Les clients internationaux arrivent souvent avec l’une de ces questions : dois-je m’installer au Maroc, louer avant d’acheter, ou acheter un bien marocain comme investissement ? La réponse dépend de plus que le prix. Elle dépend de la ville, du quartier, de la qualité du promoteur immobilier, du cadre légal, de l’usage locatif et de la personne qui garde le processus organisé sur le terrain.</p>
-    <div class="legal-grid">
-      <article class="legal-card reveal"><div class="legal-card-icon">01</div><h3 class="legal-card-title">Relocation &amp; résidence</h3><p class="legal-card-text">Pour les étrangers qui préparent une installation, nous aidons à comparer location, achat, confort quotidien, transport et qualité de vie avant de choisir un bien.</p></article>
-      <article class="legal-card reveal"><div class="legal-card-icon">02</div><h3 class="legal-card-title">Investissement &amp; rendement</h3><p class="legal-card-text">Pour les acheteurs orientés rendement, nous étudions le potentiel locatif, le profil du locataire ou voyageur, l’ameublement, la gestion et la logique de revente.</p></article>
-      <article class="legal-card reveal"><div class="legal-card-icon">03</div><h3 class="legal-card-title">Confiance à distance</h3><p class="legal-card-text">Si vous achetez depuis l’étranger, nous organisons les informations difficiles à vérifier seul : détails du projet, réponses du promoteur immobilier, étapes notariales et suivi.</p></article>
+  <section class="bg-cream" style="padding:var(--section-pad);">
+    <p class="section-eyebrow">Pour Qui</p>
+    <h2 class="section-title" style="color:var(--navy);">Les Détails<br>Font la Différence.</h2>
+    <p class="intro-text">Le marché immobilier marocain est riche en opportunités et pauvre en information organisée. De nombreux bons projets sont encore vendus via des contacts directs et des appels, avec peu de matériel disponible en ligne. La bonne décision dépend de bien plus que du prix — elle dépend de la crédibilité du promoteur, des spécifications exactes, de la structure juridique et de ce qui se passe après l'achat.</p>
+    <div class="cards-grid stagger">
+      <article class="info-card reveal"><div class="card-kicker">01</div><h3 class="card-title">Relocalisation &amp; Résidence</h3><p class="card-text">Pour les acheteurs qui envisagent de vivre au Maroc, nous nous concentrons sur l'usage pratique : emplacement, accessibilité, qualité de construction et habitabilité à long terme — pas seulement le prix d'achat.</p></article>
+      <article class="info-card reveal"><div class="card-kicker">02</div><h3 class="card-title">Investissement &amp; Location</h3><p class="card-text">Pour les acheteurs orientés rendement, nous allons au-delà de l'annonce — demande locataire, mise en location, exigences d'ameublement, structure de gestion et logique de revente.</p></article>
+      <article class="info-card reveal"><div class="card-kicker">03</div><h3 class="card-title">Acheter depuis l'Étranger</h3><p class="card-text">Pour les acheteurs hors du Maroc, nous vérifions ce qui est difficile à évaluer à distance : détails du projet, crédibilité du promoteur, démarches juridiques, structure bancaire et coordination continue.</p></article>
     </div>
   </section>
 
-  <section id="services-list">
-    <p class="section-eyebrow">Notre rôle</p>
-    <h2 class="section-title">L’advisory d’abord.<br>Le brokerage quand il a du sens.</h2>
-    <p class="intro-text">Nous ne commençons pas par pousser une unité. Nous commençons par comprendre l’acheteur, la raison de l’achat et les questions qui doivent être réglées avant un engagement sérieux.</p>
-    <div class="services-grid">
-      <article class="service-card reveal"><div class="service-num">01</div><h3 class="service-title">Clarifier l’objectif</h3><p class="service-desc">Installation, résidence, revenu locatif ou conservation à long terme : chaque parcours change le bien, la ville et le budget qui ont du sens.</p></article>
-      <article class="service-card reveal"><div class="service-num">02</div><h3 class="service-title">Analyser le projet</h3><p class="service-desc">Nous regardons l’emplacement, le prix, les spécifications, la qualité du promoteur immobilier, le processus légal et l’usage concret du bien.</p></article>
-      <article class="service-card reveal"><div class="service-num">03</div><h3 class="service-title">Coordonner le processus</h3><p class="service-desc">Questions bancaires, coordination notariale, communication à distance, ameublement, mise en location et suivi local sont organisés au même endroit.</p></article>
+  <section class="bg-navy-grad" style="padding:var(--section-pad);">
+    <p class="section-eyebrow">Comment Nous Travaillons Avec Vous</p>
+    <h2 class="section-title" style="color:var(--white);">Un Processus Structuré,<br>du Début à la Fin.</h2>
+    <p class="intro-text dark-intro" style="max-width:700px;">Que vous visitiez le Maroc ou que vous achetiez entièrement depuis l'étranger, le processus commence par une consultation structurée — en personne, par vidéo ou par téléphone. C'est là que nous établissons les bases : pourquoi vous souhaitez acheter, ce que le bien doit accomplir, votre budget, votre calendrier et votre niveau d'implication souhaité.</p>
+    <div class="steps-timeline">
+      <article class="timeline-step reveal"><div class="timeline-num">01</div><h3 class="timeline-title">Nous Construisons Votre Profil d'Acheteur</h3><p class="timeline-text">Nous clarifions l'objectif de l'achat — relocalisation, revenus locatifs, résidence secondaire, investissement à long terme — et le traduisons en un cadre d'acquisition précis : type d'emplacement, fourchette de budget, type de bien et niveau de gestion souhaité.</p></article>
+      <article class="timeline-step reveal"><div class="timeline-num">02</div><h3 class="timeline-title">Orientation Marché et Alignement Stratégique</h3><p class="timeline-text">Avant de présenter des biens, nous vous donnons du contexte : niveaux de prix par zone et type de produit, différences entre construction neuve, revente et VEFA (sur plan), positionnement des promoteurs, réalités locatives et risques liés à votre stratégie.</p></article>
+      <article class="timeline-step reveal"><div class="timeline-num">03</div><h3 class="timeline-title">Sélection et Comparaison des Opportunités</h3><p class="timeline-text">Nous constituons une sélection structurée à partir de notre réseau de promoteurs vérifiés et de notre veille de marché, en comparant chaque option sur le prix, la qualité de l'emplacement, la crédibilité du promoteur, les spécifications techniques et l'adéquation avec votre usage prévu.</p></article>
+      <article class="timeline-step reveal"><div class="timeline-num">04</div><h3 class="timeline-title">Validation à Distance Avant Votre Voyage</h3><p class="timeline-text">Pour les acheteurs qui coordonnent depuis l'étranger, nous réduisons les incertitudes avant tout déplacement — premiers filtres, visites vidéo, évaluations initiales et élimination des options faibles pour que votre temps au Maroc soit consacré à l'évaluation.</p></article>
+      <article class="timeline-step reveal"><div class="timeline-num">05</div><h3 class="timeline-title">Inspection, Documentation et Rapport</h3><p class="timeline-text">Pour chaque option sérieuse, nous réalisons une évaluation détaillée sur site avec documentation photo et vidéo, vérification du plan, analyse spatiale, mesure de surface, et inspection des matériaux, finitions, installations et qualité générale de construction.</p></article>
+      <article class="timeline-step reveal"><div class="timeline-num">06</div><h3 class="timeline-title">Vérification Financière, Juridique et Promoteur</h3><p class="timeline-text">Nous examinons le passé de livraison du promoteur, les documents juridiques disponibles, la structure de l'échéancier de paiement et le statut du titre. Nous clarifions également la structure bancaire pour les non-résidents : compte en dirhams convertibles, garantie de rapatriement et options de financement.</p></article>
+      <article class="timeline-step reveal"><div class="timeline-num">07</div><h3 class="timeline-title">Structuration de la Décision et Négociation</h3><p class="timeline-text">Une fois le bien sélectionné, nous confirmons qu'il correspond toujours à votre objectif initial, identifions clairement les compromis, conseillons sur la négociation et aidons à structurer le calendrier de réservation et de paiement sans précipitation.</p></article>
+      <article class="timeline-step reveal"><div class="timeline-num">08</div><h3 class="timeline-title">Coordination de la Réservation et de la Transaction</h3><p class="timeline-text">Nous restons impliqués tout au long de la transaction : processus de réservation, relecture des documents, coordination avec le promoteur ou le vendeur, suivi des paiements et relances de communication.</p></article>
+      <article class="timeline-step reveal"><div class="timeline-num">09</div><h3 class="timeline-title">Suivi Post-Achat</h3><p class="timeline-text">Notre rôle ne s'arrête pas à la réservation. Pour les nouvelles constructions, nous continuons le suivi de chantier, la communication avec le promoteur, les mises à jour sur les délais et la livraison, ainsi que le soutien en cas de problème après votre retour à l'étranger.</p></article>
     </div>
+    <p class="timeline-note" style="max-width:700px;">Notre processus est conçu pour réduire les incertitudes à chaque étape — de la première consultation au suivi post-achat.</p>
   </section>
 
-  <section id="we-do-it-all">
-    <p class="section-eyebrow">Opportunité actuelle</p>
-    <h2 class="section-title">Elaf Sky View<br>pour les acheteurs internationaux.</h2>
-    <div class="do-it-all-grid">
+  <section class="bg-navy-grad" style="padding:var(--section-pad);">
+    <p class="section-eyebrow">Opportunité Actuelle</p>
+    <h2 class="section-title" style="color:var(--white);">Elaf Sky View<br>en Centre Ville de Kénitra.</h2>
+    <div class="split" style="margin-top:3rem;">
       <div>
-        <p class="do-it-all-text">Elaf Sky View offre une base centrale à Kénitra, avec un accès pratique, des finitions premium et des superficies adaptées à la résidence, à une installation progressive, à la location longue durée ou à une stratégie locative gérée.</p>
-        <p class="do-it-all-text">C’est une manière d’entrer sur le marché marocain par une vraie ville de demande quotidienne, pas seulement par un marché touristique. Pour le bon acheteur, l’intérêt se trouve dans la combinaison entre accessibilité, valeur et accompagnement local.</p>
+        <p style="font-size:.9rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,.64);margin-bottom:1.2rem;">Elaf Sky View offre aux acheteurs étrangers un moyen concret d'entrer sur le marché marocain via une vraie ville à demande quotidienne — pas seulement une destination touristique saisonnière.</p>
+        <p style="font-size:.9rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,.64);margin-bottom:2rem;">Le projet combine un emplacement central à Kénitra, des finitions haut de gamme, des surfaces pratiques et un rapport qualité-prix qui convient pour une résidence, une relocalisation ou une stratégie locative.</p>
+        <a href="elaf-sky-view.html" class="btn-gold">Voir Elaf Sky View</a>
       </div>
       <div>
-        <div class="do-it-all-highlight"><div class="highlight-label">Lecture recommandée</div><div class="highlight-text">Avant de nous contacter, lisez le guide qui correspond à votre situation.</div><p class="highlight-sub"><a href="guides/foreign-investor-guide.html">Guide investisseur étranger</a> · <a href="guides/buying-property-morocco.html">Acheter au Maroc</a> · <a href="guides/preconstruction-guide.html">Guide vente sur plan</a></p></div>
+        <div class="highlight-panel">
+          <div class="highlight-kicker">Lecture Recommandée</div>
+          <div class="highlight-title">Si vous découvrez encore le marché, commencez par le guide qui correspond à votre situation.</div>
+          <p style="font-size:.84rem;font-weight:300;color:rgba(255,255,255,.55);line-height:1.9;">
+            <a href="guides/buying-property-morocco.html" style="color:var(--gold);text-decoration:none;">Acheter un Bien au Maroc</a>
+            · <a href="guides/kenitra-vs-rabat.html" style="color:var(--gold);text-decoration:none;">Kénitra vs Rabat</a>
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="cta">
-    <p class="section-eyebrow">Commencer votre parcours</p>
-    <h2 class="section-title">Vous pensez acheter<br>au Maroc ?</h2>
-    <p class="cta-sub">Dites-nous si vous préparez une installation, une location d’abord, l’achat d’une résidence ou un investissement. Nous vous aidons à comprendre le marché, le processus et les bonnes questions à poser.</p>
+  <section class="guide-links-section" style="padding:var(--section-pad);">
+    <p class="section-eyebrow">Aller Plus Loin</p>
+    <h2 class="section-title" style="color:var(--navy);">Guides Pertinents<br>pour Votre Situation.</h2>
+    <p style="font-size:.9rem;font-weight:300;line-height:1.85;color:var(--text-muted);max-width:600px;margin-bottom:2rem;">Ces guides couvrent les détails qui appartiennent aux documents de référence — pas à un aperçu rapide.</p>
+    <div class="guide-links-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+      <a href="guides/buying-property-morocco.html" class="guide-link-card"><div class="guide-link-label">Guide Général</div><div class="guide-link-title">Acheter un Bien au Maroc</div><p class="guide-link-desc">Coûts, processus, inspection et règles bancaires pour les achats depuis l'étranger.</p></a>
+      <a href="guides/kenitra-vs-rabat.html" class="guide-link-card"><div class="guide-link-label">Comparaison Marché</div><div class="guide-link-title">Kénitra vs Rabat</div><p class="guide-link-desc">Comment l'écart de valeur fonctionne pour les acheteurs qui regardent les villes secondaires connectées.</p></a>
+    </div>
+  </section>
+
+  <section class="dark-cta" style="padding:var(--section-pad);">
+    <p class="section-eyebrow">Démarrer</p>
+    <h2 class="section-title">Vous Envisagez d'Acheter<br>au Maroc ?</h2>
+    <p class="cta-sub" style="color:rgba(255,255,255,.62);max-width:540px;margin:0 auto 2.5rem;">Décrivez-nous ce que vous recherchez. Nous vous aiderons à comprendre le marché, le processus et les questions à poser avant d'aller plus loin.</p>
     <div class="cta-actions">
-      <a href="index.html#contact" class="btn-gold">Commencer une conversation</a>
-      <a href="guides/foreign-investor-guide.html" class="btn-outline-dark">Lire le guide acheteur étranger</a>
+      <a href="index.html#contact" class="btn-gold">Démarrer une Conversation</a>
+      <a href="guides/buying-property-morocco.html" class="btn-outline-dark">Lire le Guide Général</a>
       <a href="elaf-sky-view.html" class="btn-outline-dark">Voir Elaf Sky View</a>
     </div>
   </section>
+
 </main>
-
 <footer>
-  <a href="index.html" class="brand" aria-label="Rahim International home">
-    <svg class="brand-mark" viewBox="100 80 480 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect x="60" y="10" width="560" height="540" rx="16" class="brand-mark-bg"/>
-      <rect x="168" y="318" width="344" height="9" rx="1" class="brand-mark-gold"/>
-      <rect x="168" y="310" width="44" height="22" rx="2" class="brand-mark-deep"/>
-      <rect x="468" y="310" width="44" height="22" rx="2" class="brand-mark-deep"/>
-      <path d="M340,88 C310,160 274,240 295,318 L315,318 C298,240 328,162 340,100 Z" class="brand-mark-gold"/>
-      <path d="M340,88 C370,160 406,240 385,318 L365,318 C382,240 352,162 340,100 Z" class="brand-mark-gold"/>
-      <path d="M340,88 C322,155 308,240 310,318 L318,318 C316,240 330,158 340,100 Z" class="brand-mark-navy"/>
-      <path d="M340,88 C358,155 372,240 370,318 L362,318 C370,240 350,158 340,100 Z" class="brand-mark-navy"/>
-      <line x1="340" y1="88" x2="185" y2="318" class="brand-mark-line" stroke-width="1.4" opacity="0.95"/>
-      <line x1="340" y1="106" x2="210" y2="318" class="brand-mark-line" stroke-width="1.25" opacity="0.88"/>
-      <line x1="340" y1="88" x2="495" y2="318" class="brand-mark-line" stroke-width="1.4" opacity="0.95"/>
-      <line x1="340" y1="106" x2="470" y2="318" class="brand-mark-line" stroke-width="1.25" opacity="0.88"/>
-    </svg>
-    <span class="brand-name">Rahim <span>International</span></span>
-  </a>
-  <div class="footer-copy">© 2026 Rahim International. Tous droits réservés.</div>
+  <div class="footer-grid">
+    <div class="footer-brand"><img src="../logo.png" alt="Rahim International" class="footer-brand-logo"><span class="brand-name" style="margin-top:.5rem;">Rahim <span>International</span></span><p class="footer-tagline">Conseil et consulting immobilier pour acheteurs et promoteurs dans la région Rabat-Salé-Kénitra.</p></div>
+    <div><div class="footer-col-label">Navigation</div><div class="footer-links"><a href="index.html">Accueil</a><a href="about.html">Qui Sommes-Nous</a><a href="why-morocco.html">Pourquoi Kénitra</a><a href="elaf-sky-view.html">Elaf Sky View</a><a href="index.html#contact">Contact</a></div></div>
+    <div><div class="footer-col-label">Acheteurs &amp; Guides</div><div class="footer-links"><a href="investors-international.html">Acheteurs Internationaux</a><a href="investors-mre.html">Diaspora Marocaine / MRE</a><a href="investors-local.html">Acheteurs Locaux</a><a href="services-developers.html">Services aux Promoteurs</a><a href="guides/index.html">Guides d'Achat</a></div></div>
+    <div><div class="footer-col-label">Contact</div><div class="footer-contact-item"><div class="footer-contact-icon">✉</div><div><div class="footer-contact-label">E-mail</div><div class="footer-contact-value"><a href="mailto:contact@RahimInternational.com">contact@RahimInternational.com</a></div></div></div><div class="footer-contact-item"><div class="footer-contact-icon">☎</div><div><div class="footer-contact-label">Téléphone &amp; WhatsApp</div><div class="footer-contact-value"><a href="tel:+212642773249">+212 642 77 32 49</a></div></div></div></div>
+  </div>
+  <div class="footer-bottom"><div class="footer-copy">© 2026 Rahim International. Tous droits réservés.</div><div class="footer-langs"><a href="../investors-international.html">EN</a><a href="investors-international.html" class="active">FR</a><a href="../ar/investors-international.html">AR</a></div></div>
 </footer>
-
-<script>
-  const navToggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('#nav-links');
-
-  navToggle.addEventListener('click', () => {
-    const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
-    navToggle.setAttribute('aria-expanded', String(!isOpen));
-    navToggle.setAttribute('aria-label', isOpen ? 'Ouvrir le menu' : 'Fermer le menu');
-    navLinks.classList.toggle('is-open', !isOpen);
-  });
-
-  navLinks.addEventListener('click', (event) => {
-    if (event.target.matches('a')) {
-      navToggle.setAttribute('aria-expanded', 'false');
-      navToggle.setAttribute('aria-label', 'Ouvrir le menu');
-      navLinks.classList.remove('is-open');
-    }
-  });
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-</script>
+<div class="float-buttons"><a href="https://wa.me/212642773249" class="btn-whatsapp" target="_blank" rel="noopener" aria-label="Chat sur WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a><button class="btn-back-top" aria-label="Retour en haut"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg></button></div>
+<script src="../shared.js"></script>
 </body>
 </html>
